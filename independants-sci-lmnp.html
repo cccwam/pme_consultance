@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="PME CONSULTANCE — Packs comptables dédiés aux indépendants et professions libérales, aux SCI et aux loueurs en meublé non professionnel (LMNP). Tarifs transparents, devis en 24h." />
+<meta name="keywords" content="expert-comptable indépendant, comptable profession libérale, comptable SCI, comptable LMNP, liasse 2035, liasse 2072, liasse BIC 2031 2033, visa fiscal expert-comptable" />
+<meta name="author" content="PME CONSULTANCE" />
+<meta property="og:title" content="PME CONSULTANCE — Packs Indépendants, SCI & LMNP" />
+<meta property="og:description" content="Des forfaits calibrés pour votre statut réel : indépendant, profession libérale, SCI ou LMNP. Devis en 24h." />
+<meta property="og:type" content="website" />
+<title>PME CONSULTANCE — Packs Indépendants, SCI & LMNP · Devis en 24h</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ivoire:#F5F1E8;--ivoire-clair:#FAF7F0;--ivoire-fonce:#EDE7D7;
+  --noir:#1A1A1A;--anthracite:#2C2C2C;--gris-texte:#5C5C5C;--gris-clair:#9A958A;
+  --or:#B8985A;--or-fonce:#9A7E48;--marine:#0E1B2C;--blanc:#FFFFFF;
+  --ombre:0 4px 30px rgba(26,26,26,0.06);--ombre-hover:0 12px 40px rgba(26,26,26,0.12);
+  --transition:cubic-bezier(0.4,0,0.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--ivoire);color:var(--noir);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.15;color:var(--noir)}
+h1{font-size:clamp(2.4rem,5.5vw,4.5rem)}
+h2{font-size:clamp(1.9rem,3.8vw,3rem)}
+h3{font-size:clamp(1.3rem,2.2vw,1.7rem)}
+.italique{font-style:italic;color:var(--gris-texte)}
+a{color:inherit;text-decoration:none;transition:color .3s var(--transition)}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.section{padding:110px 0}
+.section-titre{text-align:center;margin-bottom:70px}
+.section-titre .surtitre{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--or);margin-bottom:18px;display:block}
+.section-titre h2{margin-bottom:18px}
+.section-titre p{font-size:1.05rem;color:var(--gris-texte);max-width:640px;margin:0 auto}
+
+/* HEADER */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,27,44,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,152,90,0.2);transition:all .4s var(--transition)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;height:55px}
+.logo img{height:48px;width:auto;object-fit:contain}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{font-size:.85rem;font-weight:400;color:rgba(245,241,232,0.72);position:relative;letter-spacing:.02em}
+.nav a:hover{color:var(--or)}
+.nav a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:1px;background:var(--or);transition:width .3s var(--transition)}
+.nav a:hover::after{width:100%}
+.btn-header{background:var(--or);color:var(--blanc);padding:12px 26px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;border:1px solid var(--or);transition:all .35s var(--transition)}
+.btn-header:hover{background:transparent;border-color:var(--or);color:var(--or)}
+.menu-mobile{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--ivoire)}
+
+/* HERO */
+.hero{min-height:100vh;padding:140px 0 100px;display:flex;align-items:center;background:linear-gradient(135deg,var(--marine) 0%,#152030 55%,#0a1420 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-180px;width:820px;height:820px;border-radius:50%;border:1px solid rgba(184,152,90,0.06);pointer-events:none}
+.hero::after{content:'';position:absolute;top:0px;right:-80px;width:580px;height:580px;border-radius:50%;border:1px solid rgba(184,152,90,0.04);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:center;position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--or);margin-bottom:28px;font-weight:500}
+.hero-eyebrow::before{content:'';width:30px;height:1px;background:var(--or)}
+.hero h1{margin-bottom:28px;color:var(--ivoire-clair)}
+.hero h1 em{color:var(--or);font-style:italic;font-weight:300}
+.hero-sous{font-size:1.1rem;color:rgba(245,241,232,0.65);margin-bottom:36px;max-width:540px;line-height:1.82}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap}
+.btn-primaire{display:inline-flex;align-items:center;gap:14px;background:var(--or);color:var(--blanc);padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--or);cursor:pointer;transition:all .4s var(--transition)}
+.btn-primaire:hover{background:transparent;border-color:var(--or);color:var(--or);transform:translateY(-2px)}
+.btn-primaire .arrow{transition:transform .3s var(--transition)}
+.btn-primaire:hover .arrow{transform:translateX(6px)}
+.btn-secondaire{display:inline-flex;align-items:center;gap:14px;background:transparent;color:var(--ivoire);padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(245,241,232,0.28);cursor:pointer;transition:all .4s var(--transition)}
+.btn-secondaire:hover{background:rgba(245,241,232,0.06);border-color:rgba(245,241,232,0.55)}
+.hero-trust{margin-top:40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.hero-trust-item{display:flex;align-items:center;gap:9px;font-size:.82rem;color:rgba(245,241,232,0.5)}
+.hero-trust-item svg{flex-shrink:0;color:var(--or)}
+
+/* HERO CARDS */
+.hero-visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center}
+.hero-card{position:absolute;backdrop-filter:blur(10px);padding:28px 30px;border:1px solid rgba(184,152,90,0.22);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:transform .4s var(--transition)}
+.hero-card-a{top:10px;left:0;width:258px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite}
+.hero-card-b{bottom:20px;right:0;width:272px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite .9s}
+.hero-card-c{top:44%;left:26%;width:248px;background:var(--or);animation:flotter-mid 6s ease-in-out infinite 1.7s}
+@keyframes flotter{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes flotter-mid{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 12px))}}
+.hero-card .tag{display:inline-block;padding:3px 10px;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;background:rgba(184,152,90,0.15);color:var(--or)}
+.hero-card-c .tag{background:rgba(14,27,44,0.15);color:var(--marine)}
+.hero-card .num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--or);line-height:1;margin-bottom:7px}
+.hero-card-c .num{color:var(--marine)}
+.hero-card .lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,232,0.45)}
+.hero-card-c .lbl{color:rgba(14,27,44,0.65)}
+.hero-card .dsc{font-size:.82rem;margin-top:10px;color:rgba(245,241,232,0.6);line-height:1.55}
+.hero-card-c .dsc{color:rgba(14,27,44,0.72)}
+
+/* BANDEAU CONFIANCE */
+.confiance{padding:46px 0;background:var(--ivoire-fonce);border-top:1px solid rgba(184,152,90,0.12);border-bottom:1px solid rgba(184,152,90,0.12)}
+.confiance-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;align-items:center}
+.confiance-item{text-align:center}
+.confiance-item .pict{font-size:1.8rem;color:var(--or);margin-bottom:10px}
+.confiance-item h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--noir);font-weight:600;margin-bottom:6px}
+.confiance-item p{font-size:.84rem;color:var(--gris-texte)}
+
+/* OFFRES ONGLETS */
+.offres{background:var(--ivoire-fonce)}
+.offres-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin-bottom:50px;border:1px solid rgba(184,152,90,0.22);max-width:820px;margin-left:auto;margin-right:auto}
+.offre-tab{padding:14px 26px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--gris-texte);transition:all .3s var(--transition);font-family:'Inter',sans-serif;position:relative;flex:1;min-width:200px}
+.offre-tab:hover{color:var(--or)}
+.offre-tab.active{background:var(--marine);color:var(--ivoire)}
+.offre-tab.active::after{content:'';position:absolute;bottom:-7px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid var(--marine)}
+
+.offre-panel{display:none;animation:fadeIn .45s var(--transition)}
+.offre-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.offre-left{position:sticky;top:108px}
+.offre-numero{font-family:'Cormorant Garamond',serif;font-size:6rem;color:rgba(184,152,90,0.1);line-height:1;margin-bottom:-18px;font-weight:700}
+.offre-titre{font-size:clamp(1.9rem,3vw,2.7rem);margin-bottom:16px;color:var(--marine)}
+.offre-accroche{font-size:1.03rem;color:var(--gris-texte);margin-bottom:28px;font-style:italic;line-height:1.8;border-left:3px solid var(--or);padding-left:20px}
+.offre-cibles-titre{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:13px;font-weight:600}
+.offre-cibles-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.cible-tag{padding:5px 13px;background:var(--blanc);border:1px solid rgba(184,152,90,0.2);font-size:.79rem;color:var(--anthracite);letter-spacing:.03em}
+.offre-desc{font-size:.9rem;color:var(--gris-texte);line-height:1.84}
+
+.offre-right{background:var(--blanc);padding:44px;border:1px solid rgba(184,152,90,0.15)}
+.offre-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;background:rgba(184,152,90,0.08);border:1px solid rgba(184,152,90,0.22);margin-bottom:24px;font-size:.78rem;color:var(--or-fonce);letter-spacing:.06em}
+.tarifs-titre{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gris-clair);margin-bottom:16px;font-weight:500}
+.tarifs-table{width:100%;border-collapse:collapse;margin-bottom:14px}
+.tarifs-table th,.tarifs-table td{padding:13px 10px;text-align:left;font-size:.86rem;border-bottom:1px solid rgba(26,26,26,0.06)}
+.tarifs-table th{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gris-clair);font-weight:500}
+.tarifs-table td.segment{color:var(--anthracite);font-weight:500}
+.tarifs-table td.prix{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--marine);text-align:right}
+.tarifs-table td.prix .euro{font-size:.9rem;color:var(--or);margin-right:2px}
+.tarifs-note{font-size:.77rem;color:var(--gris-clair);margin:0 0 26px}
+.prestations-titre{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gris-clair);margin-bottom:16px;font-weight:500}
+.prestations-list{list-style:none;margin-bottom:30px}
+.prestations-list li{padding:10px 0 10px 30px;position:relative;font-size:.89rem;color:var(--anthracite);border-bottom:1px solid rgba(26,26,26,0.04);line-height:1.5}
+.prestations-list li:last-child{border-bottom:none}
+.prestations-list li::before{content:'';position:absolute;left:0;top:16px;width:15px;height:8px;border-left:1.5px solid var(--or);border-bottom:1.5px solid var(--or);transform:rotate(-45deg)}
+.btn-mission{width:100%;padding:18px;background:var(--marine);color:var(--ivoire);border:none;font-size:.84rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .4s var(--transition);display:flex;align-items:center;justify-content:center;gap:12px;font-family:'Inter',sans-serif}
+.btn-mission:hover{background:var(--or)}
+.btn-mission .arr{transition:transform .3s var(--transition)}
+.btn-mission:hover .arr{transform:translateX(6px)}
+.offre-garantie{margin-top:14px;text-align:center;font-size:.78rem;color:var(--gris-clair);display:flex;align-items:center;justify-content:center;gap:6px}
+
+.bundle-callout{max-width:980px;margin:0 auto;background:var(--marine);color:var(--ivoire-clair);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;border:1px solid rgba(184,152,90,0.3)}
+.bundle-callout .txt{flex:1;min-width:240px}
+.bundle-callout .txt .lbl{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:8px;display:block}
+.bundle-callout .txt h4{color:var(--ivoire-clair);font-size:1.4rem;margin-bottom:6px}
+.bundle-callout .txt p{font-size:.88rem;color:rgba(245,241,232,0.6)}
+.bundle-callout .btn-secondaire{border-color:rgba(245,241,232,0.4);flex-shrink:0}
+
+/* POURQUOI */
+.pourquoi{background:var(--noir);color:var(--ivoire-clair);position:relative;overflow:hidden}
+.pourquoi::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--or),transparent)}
+.pourquoi h2{color:var(--ivoire-clair)}
+.pourquoi .section-titre p{color:rgba(245,241,232,0.62)}
+.pourquoi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;position:relative;z-index:2}
+.pourquoi-item{text-align:center}
+.pourquoi-item .num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--or);line-height:1;margin-bottom:20px;font-style:italic}
+.pourquoi-item h3{color:var(--ivoire-clair);margin-bottom:14px}
+.pourquoi-item p{font-size:.92rem;color:rgba(245,241,232,0.6);line-height:1.8}
+
+/* PROCESSUS */
+.processus{background:var(--ivoire)}
+.processus-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.processus-timeline::before{content:'';position:absolute;top:30px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--or) 15%,var(--or) 85%,transparent);z-index:0}
+.etape{text-align:center;position:relative;z-index:1}
+.etape .cercle{width:60px;height:60px;border-radius:50%;background:var(--ivoire);border:2px solid var(--or);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--or);font-weight:500}
+.etape h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:10px}
+.etape p{font-size:.88rem;color:var(--gris-texte);padding:0 8px}
+
+/* ESTIMATION SIMULATEUR */
+.estim-box{background:var(--ivoire-clair);border:1px solid rgba(184,152,90,0.25);padding:26px 30px;margin-bottom:30px}
+.estim-box .estim-lbl{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gris-clair);margin-bottom:8px;display:block}
+.estim-box .estim-montant{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--marine)}
+.estim-box .estim-montant .euro{color:var(--or);font-size:1.4rem;margin-right:2px}
+.estim-box .estim-periode{font-size:.85rem;color:var(--gris-texte);margin-left:6px}
+.estim-box .estim-detail{font-size:.8rem;color:var(--gris-clair);margin-top:8px}
+.pack-choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
+.pack-choice{padding:18px 14px;border:1.5px solid rgba(26,26,26,0.1);text-align:center;background:var(--ivoire-clair);cursor:pointer;transition:all .3s var(--transition)}
+.pack-choice:hover{border-color:var(--or)}
+.pack-choice.selected{border-color:var(--or);background:rgba(184,152,90,0.08)}
+.pack-choice .ico{font-size:1.5rem;margin-bottom:8px}
+.pack-choice .nm{font-size:.84rem;font-weight:500;color:var(--noir)}
+.pack-choice .px{font-size:.76rem;color:var(--gris-texte);margin-top:4px}
+.option-toggle{display:flex;align-items:center;gap:12px;padding:16px 18px;border:1.5px solid rgba(26,26,26,0.1);background:var(--ivoire-clair);cursor:pointer;margin-bottom:26px}
+.option-toggle input{width:18px;height:18px;accent-color:var(--or)}
+.option-toggle .lbl{font-size:.87rem;color:var(--anthracite)}
+.option-toggle .lbl strong{color:var(--marine)}
+
+/* CONTACT / LEAD FORM */
+.contact{background:var(--marine);color:var(--ivoire);position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:50%;left:-200px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(184,152,90,0.08);transform:translateY(-50%)}
+.contact::after{content:'';position:absolute;top:50%;right:-280px;width:680px;height:680px;border-radius:50%;border:1px solid rgba(184,152,90,0.05);transform:translateY(-50%)}
+.contact h2{color:var(--ivoire)}
+.contact .section-titre p{color:rgba(245,241,232,0.62)}
+.contact .surtitre{color:var(--or)}
+.contact-card{max-width:840px;margin:0 auto;background:var(--blanc);color:var(--noir);padding:60px 70px;position:relative;z-index:2;box-shadow:0 30px 80px rgba(0,0,0,0.4)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-grp{display:flex;flex-direction:column;gap:7px}
+.form-grp.full{grid-column:1/-1}
+.form-lbl{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris-texte);font-weight:500}
+.form-inp,.form-sel,.form-txt{padding:13px 16px;border:1px solid rgba(26,26,26,0.14);background:var(--ivoire-clair);font-family:'Inter',sans-serif;font-size:.91rem;color:var(--noir);transition:border-color .3s;width:100%}
+.form-inp:focus,.form-sel:focus,.form-txt:focus{outline:none;border-color:var(--or);background:var(--blanc)}
+.form-txt{resize:vertical;min-height:100px}
+
+.form-submit{margin-top:30px;padding-top:30px;border-top:1px solid rgba(26,26,26,0.08)}
+.btn-submit{width:100%;padding:20px;background:var(--marine);color:var(--ivoire);border:none;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .4s var(--transition);display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Inter',sans-serif}
+.btn-submit:hover{background:var(--or)}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed}
+.btn-submit .arr{transition:transform .3s var(--transition)}
+.btn-submit:hover .arr{transform:translateX(6px)}
+.reassurance{margin-top:14px;display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
+.reassurance span{font-size:.77rem;color:var(--gris-clair);display:flex;align-items:center;gap:5px}
+.reassurance svg{color:var(--or);flex-shrink:0}
+
+/* FAQ */
+.faq{background:var(--ivoire-clair)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(184,152,90,0.2)}
+.faq-q{padding:27px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--noir);font-family:'Cormorant Garamond',serif;font-size:1.26rem;font-weight:500}
+.faq-q .plus{font-size:1.5rem;color:var(--or);transition:transform .4s var(--transition);font-weight:300;flex-shrink:0;margin-left:20px}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-r{max-height:0;overflow:hidden;transition:max-height .5s var(--transition);color:var(--gris-texte);font-size:.93rem;line-height:1.84}
+.faq-r-inner{padding:0 40px 26px 0}
+.faq-item.open .faq-r{max-height:600px}
+
+/* CTA FINAL */
+.cta-final{background:var(--noir);text-align:center;padding:120px 0;position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;border:1px solid rgba(184,152,90,0.08)}
+.cta-final h2{margin-bottom:22px;color:var(--ivoire);position:relative;z-index:2}
+.cta-final h2 em{color:var(--or);font-style:italic}
+.cta-final p{font-size:1.06rem;color:rgba(245,241,232,0.62);max-width:530px;margin:0 auto 42px;position:relative;z-index:2}
+.cta-final .hero-cta{justify-content:center;position:relative;z-index:2}
+
+/* FOOTER */
+.footer{background:var(--noir);color:var(--ivoire-fonce);padding:80px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px}
+.footer-logo{height:80px;margin-bottom:22px}
+.footer-logo img{height:100%;width:auto;object-fit:contain}
+.footer-brand p{font-size:.88rem;color:rgba(245,241,232,0.5);max-width:280px;line-height:1.78}
+.footer h5{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--or);margin-bottom:22px;font-style:italic}
+.footer ul{list-style:none}
+.footer li{margin-bottom:11px;font-size:.87rem}
+.footer a{color:rgba(245,241,232,0.5);transition:color .3s}
+.footer a:hover{color:var(--or)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:13px;font-size:.85rem;color:rgba(245,241,232,0.5)}
+.footer-contact-item svg{flex-shrink:0;color:var(--or);margin-top:3px}
+.footer-bottom{padding-top:28px;border-top:1px solid rgba(184,152,90,0.12);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-size:.79rem;color:rgba(245,241,232,0.38)}
+.footer-legal{display:flex;gap:22px;flex-wrap:wrap}
+.footer .signature{font-style:italic;color:var(--or);font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.04em}
+
+/* TOAST */
+.toast{position:fixed;bottom:36px;right:36px;background:var(--marine);color:var(--ivoire);padding:20px 28px;border:1px solid var(--or);font-size:.88rem;z-index:9999;transform:translateY(120px);opacity:0;transition:all .5s var(--transition);max-width:340px;box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.toast.show{transform:translateY(0);opacity:1}
+.toast strong{color:var(--or);display:block;margin-bottom:4px;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+
+/* RESPONSIVE */
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:60px}
+  .hero-visual{height:380px}
+  .offre-panel.active{grid-template-columns:1fr}
+  .offre-left{position:static}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .nav{display:none}
+  .menu-mobile{display:block}
+  .nav.open{display:flex;position:absolute;top:80px;left:0;right:0;background:var(--marine);flex-direction:column;padding:28px;border-top:1px solid rgba(184,152,90,0.15)}
+  .nav.open a{color:var(--ivoire);padding:10px 0}
+  .contact-card{padding:40px 28px}
+  .form-grid{grid-template-columns:1fr}
+  .pourquoi-grid{grid-template-columns:1fr;gap:36px}
+  .processus-timeline{grid-template-columns:1fr 1fr;gap:36px}
+  .processus-timeline::before{display:none}
+  .confiance-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .offres-tabs{flex-wrap:wrap}
+  .offre-tab{padding:11px 16px;font-size:.72rem;min-width:auto}
+  .bundle-callout{flex-direction:column;text-align:center}
+  .pack-choice-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .container{padding:0 18px}
+  .hero{padding:120px 0 80px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn-primaire,.hero-cta .btn-secondaire{width:100%;justify-content:center}
+  .hero-visual{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .confiance-grid{grid-template-columns:1fr}
+  .processus-timeline{grid-template-columns:1fr}
+  .section{padding:80px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+</style>
+<link rel="stylesheet" href="assets/cookies-banner.css">
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="PME CONSULTANCE – Accueil">
+        <img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Offres TPE</a>
+        <a href="pme-eti.html">Offre PME/ETI</a>
+        <a href="facturation-electronique.html">Facturation Électronique</a>
+        <a href="#offres">Nos 3 packs</a>
+        <a href="#faq">FAQ</a>
+        <a href="#devis" class="btn-header">Devis en 24h</a>
+      </nav>
+      <button class="menu-mobile" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow">Indépendants · SCI · LMNP</span>
+        <h1>Trois statuts <em>spécifiques</em>, une expertise sur-mesure.</h1>
+        <p class="hero-sous">PME CONSULTANCE accompagne aussi les indépendants et professions libérales, les gérants de SCI et les loueurs en meublé non professionnel (LMNP) avec des forfaits calibrés sur leurs obligations réelles — pas un pack générique de TPE. <em style="font-style:italic;color:rgba(245,241,232,0.4)">Expertise · Conseils · Disruption · Valeur Ajoutée.</em></p>
+        <div class="hero-cta">
+          <a href="#devis" class="btn-primaire">Obtenir mon devis en 24h <span class="arrow">→</span></a>
+          <a href="#offres" class="btn-secondaire">Découvrir les 3 packs</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+            Cabinet inscrit à l'Ordre des Experts-Comptables
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            100% digital, sans engagement
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Devis en 24h
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-a">
+          <div class="tag">Pack Indépendant / PL</div>
+          <div class="num">250€</div>
+          <div class="lbl">HT / mois</div>
+          <div class="dsc">Tenue régime réel + liasse 2035/BIC + visa fiscal de l'expert-comptable.</div>
+        </div>
+        <div class="hero-card hero-card-c">
+          <div class="tag">Pack SCI</div>
+          <div class="num">900€</div>
+          <div class="lbl">HT / an</div>
+          <div class="dsc">Comptabilité + liasse IS/2072 + secrétariat juridique.</div>
+        </div>
+        <div class="hero-card hero-card-b">
+          <div class="tag">Pack LMNP</div>
+          <div class="num">600€</div>
+          <div class="lbl">HT / an</div>
+          <div class="dsc">Comptabilité + liasse BIC 2031/2033 + optimisation fiscale.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BANDEAU CONFIANCE ══ -->
+<section class="confiance">
+  <div class="container">
+    <div class="confiance-grid">
+      <div class="confiance-item"><div class="pict">⚖</div><h4>Ordre Experts-Comptables</h4><p>Cabinet inscrit &amp; assuré</p></div>
+      <div class="confiance-item"><div class="pict">🔒</div><h4>Données sécurisées</h4><p>Hébergement RGPD France</p></div>
+      <div class="confiance-item"><div class="pict">⚡</div><h4>Réponse 24h max.</h4><p>Expert dédié à votre dossier</p></div>
+      <div class="confiance-item"><div class="pict">€</div><h4>Tarifs transparents</h4><p>Sans surprise, sans engagement</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFFRES PAR ONGLETS ══ -->
+<section class="section offres" id="offres">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Nos forfaits dédiés</span>
+      <h2>Un pack pensé pour <em class="italique">votre statut réel</em></h2>
+      <p>Chaque statut a ses propres obligations fiscales et juridiques. Nous les intégrons dès le départ dans un forfait clair, sans surprise.</p>
+    </div>
+
+    <div class="offres-tabs" role="tablist">
+      <button class="offre-tab active" data-panel="independant" role="tab" aria-selected="true">👤 Indépendant / PL</button>
+      <button class="offre-tab" data-panel="sci" role="tab" aria-selected="false">🏢 SCI</button>
+      <button class="offre-tab" data-panel="lmnp" role="tab" aria-selected="false">🔑 LMNP</button>
+    </div>
+
+    <!-- PANEL INDÉPENDANT -->
+    <div class="offre-panel active" id="panel-independant" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">01</div>
+        <h2 class="offre-titre">Indépendant &amp; Profession Libérale</h2>
+        <p class="offre-accroche">Une tenue comptable simplifiée et le visa fiscal de votre expert-comptable, qui vous évite la majoration de 25% sur vos revenus professionnels.</p>
+        <div class="offre-cibles-titre">Pour qui ?</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">Professions libérales (BNC)</span>
+          <span class="cible-tag">Indépendants au régime réel</span>
+          <span class="cible-tag">Consultants, professions de santé, artisans d'art…</span>
+        </div>
+        <p class="offre-desc">Vous exercez en nom propre au régime réel et souhaitez déléguer votre comptabilité à un expert-comptable inscrit à l'Ordre, sans passer par un abonnement générique de TPE. Ce pack couvre la tenue courante, la liasse fiscale annuelle et le conseil continu, avec un visa fiscal qui vous dispense de la majoration de 25% appliquée aux professionnels non adhérents à un organisme de gestion agréé ou non accompagnés par un expert-comptable habilité.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          100% digital
+        </div>
+        <div class="tarifs-titre">Tarif indicatif HT</div>
+        <table class="tarifs-table">
+          <tr><th>Forfait</th><th style="text-align:right">Tarif</th></tr>
+          <tr><td class="segment">Abonnement mensuel</td><td class="prix"><span class="euro">€</span>250<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+        </table>
+        <p class="tarifs-note">Fourchette de marché observée : 150 € à 300 € HT/mois selon volumétrie — devis définitif après échange sur votre activité.</p>
+        <div class="prestations-titre">Ce que comprend le pack</div>
+        <ul class="prestations-list">
+          <li>Tenue comptable simplifiée au régime réel</li>
+          <li>Télétransmission de la liasse fiscale annuelle (2035 ou 2031/BIC selon activité)</li>
+          <li>Visa fiscal de l'expert-comptable (dispense de la majoration de 25%)</li>
+          <li>Tableau de bord d'activité</li>
+          <li>Conseil fiscal continu par messagerie sécurisée</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectPack('independant')">Demander mon devis en 24h <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Premier échange gratuit · Devis sous 24h · Sans engagement
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL SCI -->
+    <div class="offre-panel" id="panel-sci" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">02</div>
+        <h2 class="offre-titre">SCI — Société Civile Immobilière</h2>
+        <p class="offre-accroche">La gestion comptable et le secrétariat juridique de votre SCI, à l'IS comme à l'impôt sur le revenu, sans mauvaise surprise en assemblée générale.</p>
+        <div class="offre-cibles-titre">Pour qui ?</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">SCI familiales</span>
+          <span class="cible-tag">SCI soumises à l'IS</span>
+          <span class="cible-tag">SCI de gestion locative</span>
+        </div>
+        <p class="offre-desc">Que votre SCI relève de l'impôt sur le revenu (déclaration des revenus fonciers) ou ait opté pour l'impôt sur les sociétés, nous assurons la tenue comptable, l'établissement de la liasse fiscale correspondante et le secrétariat juridique récurrent (convocation et procès-verbal d'assemblée générale annuelle), pour que votre structure reste en règle sans effort de votre part.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 12h1M9 15h1M14 9h1M14 12h1M14 15h1"/></svg>
+          Comptabilité + juridique inclus
+        </div>
+        <div class="tarifs-titre">Tarif indicatif HT</div>
+        <table class="tarifs-table">
+          <tr><th>Forfait</th><th style="text-align:right">Tarif</th></tr>
+          <tr><td class="segment">Forfait annuel</td><td class="prix"><span class="euro">€</span>900<span style="font-size:.7rem;color:var(--gris-texte)">/an</span></td></tr>
+        </table>
+        <p class="tarifs-note">Fourchette de marché observée : 500 € à 900 € HT/an selon volumétrie — devis définitif après échange sur votre situation.</p>
+        <div class="prestations-titre">Ce que comprend le pack</div>
+        <ul class="prestations-list">
+          <li>Tenue comptable annuelle de la SCI</li>
+          <li>Établissement de la liasse fiscale (IS ou déclaration 2072 des revenus fonciers)</li>
+          <li>Secrétariat juridique : convocation et PV d'assemblée générale annuelle</li>
+          <li>Conseil fiscal patrimonial</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectPack('sci')">Demander mon devis en 24h <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Premier échange gratuit · Devis sous 24h · Sans engagement
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL LMNP -->
+    <div class="offre-panel" id="panel-lmnp" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">03</div>
+        <h2 class="offre-titre">LMNP — Loueur en Meublé Non Professionnel</h2>
+        <p class="offre-accroche">Optimisez la fiscalité de votre patrimoine locatif meublé grâce au régime réel et à l'amortissement comptable, plutôt que de rester au micro-BIC par défaut.</p>
+        <div class="offre-cibles-titre">Pour qui ?</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">Propriétaires en location meublée</span>
+          <span class="cible-tag">Investisseurs multi-biens</span>
+          <span class="cible-tag">LMNP au régime réel</span>
+        </div>
+        <p class="offre-desc">Le régime réel permet de déduire l'amortissement de votre bien et de vos meubles, réduisant fortement votre imposition par rapport au micro-BIC. Nous assurons la comptabilité de votre activité LMNP, la production de la liasse fiscale dédiée et le suivi de vos amortissements dans une logique d'optimisation fiscale durable.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg>
+          Optimisation fiscale incluse
+        </div>
+        <div class="tarifs-titre">Tarif indicatif HT</div>
+        <table class="tarifs-table">
+          <tr><th>Forfait</th><th style="text-align:right">Tarif</th></tr>
+          <tr><td class="segment">Forfait annuel</td><td class="prix"><span class="euro">€</span>600<span style="font-size:.7rem;color:var(--gris-texte)">/an</span></td></tr>
+        </table>
+        <p class="tarifs-note">Fourchette de marché observée : 300 € à 600 € HT/an selon volumétrie. Option formalité d'immatriculation LMNP (déclaration d'activité initiale) : +200 € HT, facturée une seule fois.</p>
+        <div class="prestations-titre">Ce que comprend le pack</div>
+        <ul class="prestations-list">
+          <li>Comptabilité LMNP au régime réel</li>
+          <li>Établissement de la liasse fiscale BIC (formulaires 2031 et 2033)</li>
+          <li>Calcul et suivi des amortissements pour optimisation fiscale</li>
+          <li>Option : formalité d'immatriculation LMNP au lancement de l'activité (+200 € HT)</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectPack('lmnp')">Demander mon devis en 24h <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Premier échange gratuit · Devis sous 24h · Sans engagement
+        </p>
+      </div>
+    </div>
+
+    <div class="bundle-callout" style="margin-top:56px">
+      <div class="txt">
+        <span class="lbl">Cas fréquent</span>
+        <h4>Vous cumulez plusieurs statuts ?</h4>
+        <p>Indépendant et associé d'une SCI, ou loueur en LMNP en parallèle de votre activité principale : décrivez-nous votre situation, nous établissons un devis combiné sur-mesure.</p>
+      </div>
+      <button class="btn-secondaire" onclick="preselectPack('combine')">Demander un devis combiné →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ POURQUOI ══ -->
+<section class="section pourquoi" id="valeur">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Notre positionnement</span>
+      <h2>Pourquoi un pack <em style="font-style:italic;color:var(--or)">dédié à votre statut</em> ?</h2>
+      <p>Un indépendant, une SCI et un LMNP n'ont ni les mêmes obligations, ni les mêmes leviers d'optimisation. Un forfait générique de TPE n'y répond pas.</p>
+    </div>
+    <div class="pourquoi-grid">
+      <div class="pourquoi-item">
+        <div class="num">I.</div>
+        <h3>Un forfait <em>calibré</em>, pas générique</h3>
+        <p>Liasse 2035, 2031/2033, 2072 ou IS : chaque statut a sa propre obligation déclarative. Nous l'intégrons dès la souscription, sans option cachée à découvrir plus tard.</p>
+      </div>
+      <div class="pourquoi-item">
+        <div class="num">II.</div>
+        <h3>La conformité <em>sans effort</em></h3>
+        <p>Visa fiscal, secrétariat juridique de la SCI, suivi des amortissements LMNP : les obligations les plus souvent oubliées par les propriétaires et indépendants sont ici prises en charge par défaut.</p>
+      </div>
+      <div class="pourquoi-item">
+        <div class="num">III.</div>
+        <h3>Un expert dédié, <em>à distance</em></h3>
+        <p>Espace client sécurisé, échanges par messagerie ou visio, signature électronique. Un expert-comptable diplômé suit votre dossier, ce n'est pas une plateforme anonyme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESSUS ══ -->
+<section class="section processus" id="processus">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Comment ça marche</span>
+      <h2>Quatre étapes vers la <em class="italique">sérénité</em></h2>
+      <p>Du premier clic à votre premier bilan, un parcours pensé pour votre confort.</p>
+    </div>
+    <div class="processus-timeline">
+      <div class="etape"><div class="cercle">1</div><h4>Devis en 24h</h4><p>Vous choisissez votre pack, nous vous répondons avec un devis détaillé sous 24h.</p></div>
+      <div class="etape"><div class="cercle">2</div><h4>Visio de cadrage</h4><p>30 minutes avec votre expert pour valider votre situation et signer la lettre de mission.</p></div>
+      <div class="etape"><div class="cercle">3</div><h4>Mise en route</h4><p>Accès à votre espace client, transmission des pièces et démarrage immédiat.</p></div>
+      <div class="etape"><div class="cercle">4</div><h4>Accompagnement continu</h4><p>Production comptable, conseils, alertes proactives sur vos échéances fiscales.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FORMULAIRE DE DEVIS ══ -->
+<section class="section contact" id="devis">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Votre devis en 24h</span>
+      <h2>Choisissez votre pack, <em style="font-style:italic;color:var(--or)">recevez votre devis</em></h2>
+      <p>Une estimation immédiate, puis un devis commercial détaillé transmis par email sous 24h.</p>
+    </div>
+    <div class="contact-card">
+      <div class="pack-choice-grid">
+        <div class="pack-choice selected" data-pack="independant"><div class="ico">👤</div><div class="nm">Indépendant / PL</div><div class="px">À partir de 250€/mois HT</div></div>
+        <div class="pack-choice" data-pack="sci"><div class="ico">🏢</div><div class="nm">SCI</div><div class="px">À partir de 900€/an HT</div></div>
+        <div class="pack-choice" data-pack="lmnp"><div class="ico">🔑</div><div class="nm">LMNP</div><div class="px">À partir de 600€/an HT</div></div>
+      </div>
+
+      <div class="option-toggle" id="optionLmnpWrap" style="display:none">
+        <input type="checkbox" id="optionLmnp" />
+        <label for="optionLmnp" class="lbl">Ajouter la <strong>formalité d'immatriculation LMNP</strong> (+200 € HT, facturée une fois)</label>
+      </div>
+
+      <div class="estim-box">
+        <span class="estim-lbl">Votre estimation</span>
+        <span class="estim-montant"><span class="euro">€</span><span id="estimMontant">250</span><span class="estim-periode" id="estimPeriode">/ mois HT</span></span>
+        <p class="estim-detail" id="estimDetail">Pack Indépendant / Profession Libérale — devis définitif transmis sous 24h.</p>
+      </div>
+
+      <form id="devisForm" novalidate>
+        <div class="form-grid">
+          <div class="form-grp">
+            <label class="form-lbl" for="prenom">Prénom *</label>
+            <input class="form-inp" id="prenom" name="prenom" type="text" placeholder="Jean-Paul" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="nom">Nom *</label>
+            <input class="form-inp" id="nom" name="nom" type="text" placeholder="Dupont" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="entreprise">Activité / société (optionnel)</label>
+            <input class="form-inp" id="entreprise" name="entreprise" type="text" placeholder="Nom de votre activité ou de votre SCI" />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="telephone">Téléphone *</label>
+            <input class="form-inp" id="telephone" name="telephone" type="tel" placeholder="+33 6 00 00 00 00" required />
+          </div>
+          <div class="form-grp full">
+            <label class="form-lbl" for="email">Email *</label>
+            <input class="form-inp" id="email" name="email" type="email" placeholder="jpdupont@masociete.fr" required />
+          </div>
+          <div class="form-grp full">
+            <label class="form-lbl" for="message">Précisions sur votre situation (optionnel)</label>
+            <textarea class="form-txt" id="message" name="message" placeholder="Ex : SCI familiale à l'IS, 2 associés, 1 bien locatif…"></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">Recevoir mon devis en 24h <span class="arr">→</span></button>
+          <div class="reassurance">
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>Confidentialité garantie</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Devis sous 24h</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Sans engagement</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Questions fréquentes</span>
+      <h2>Tout comprendre sur <em class="italique">ces 3 packs</em></h2>
+      <p>Les questions les plus posées par les indépendants, gérants de SCI et loueurs LMNP que nous accompagnons.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Quelle est la différence entre le régime réel et le micro-BNC / micro-BIC ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Au micro-BNC ou micro-BIC, un abattement forfaitaire s'applique sur vos recettes sans tenir compte de vos charges réelles. Au régime réel, vous déduisez vos charges (et, pour le LMNP, l'amortissement du bien) telles qu'elles sont, ce qui est souvent plus avantageux dès que votre activité génère des charges ou un investissement significatifs. C'est ce régime que nos 3 packs accompagnent.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Le secrétariat juridique de la SCI est-il vraiment inclus dans le forfait ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Oui, la convocation et le procès-verbal de l'assemblée générale annuelle d'approbation des comptes sont inclus. Les actes exceptionnels (cession de parts, changement de gérant, modification statutaire) font l'objet d'un devis complémentaire, car ils ne relèvent pas de la gestion récurrente.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Je suis à la fois indépendant et gérant d'une SCI, dois-je prendre deux forfaits ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Ce sont deux structures juridiques distinctes avec des obligations fiscales séparées, ce qui suppose en principe deux forfaits. Nous établissons cependant un devis combiné avec un seul interlocuteur pour vos deux dossiers — utilisez le bouton « Demander un devis combiné » ci-dessus.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">En quoi consiste l'option d'immatriculation LMNP à 200 € HT ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Il s'agit de la formalité de déclaration d'activité initiale (formulaire P0i) permettant d'obtenir votre numéro SIRET de loueur en meublé. C'est une formalité facturée une seule fois, au lancement de votre activité, distincte du forfait annuel de comptabilité.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Ces forfaits incluent-ils ma déclaration de revenus personnelle (2042) ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Non. Ces packs couvrent la comptabilité et la liasse professionnelle ou sociale (2035, 2031/2033, 2072 ou liasse IS). La déclaration de revenus personnelle 2042 peut être ajoutée en option, sur devis, à l'image de l'option proposée dans notre Pack Micro-entrepreneur.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Un statut spécifique<br/><em>mérite un forfait sur-mesure.</em></h2>
+    <p>Un premier échange gratuit et confidentiel, un devis détaillé sous 24h.</p>
+    <div class="hero-cta">
+      <a href="#devis" class="btn-primaire">Obtenir mon devis en 24h <span class="arrow">→</span></a>
+      <a href="mailto:contact@pmeconsultance.fr" class="btn-secondaire">Nous écrire directement</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" /></div>
+        <p>Cabinet d'expertise comptable et de conseil, indépendant et haut de gamme. Inscrit à l'Ordre des Experts-Comptables.</p>
+      </div>
+      <div>
+        <h5>Nos 3 packs</h5>
+        <ul>
+          <li><a href="#offres" onclick="openTab('independant')">Indépendant / Profession Libérale</a></li>
+          <li><a href="#offres" onclick="openTab('sci')">SCI</a></li>
+          <li><a href="#offres" onclick="openTab('lmnp')">LMNP</a></li>
+          <li><a href="#devis">Devis en 24h</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Le cabinet</h5>
+        <ul>
+          <li><a href="index.html">Offres TPE / Entrepreneurs</a></li>
+          <li><a href="pme-eti.html">Offre PME / ETI</a></li>
+          <li><a href="facturation-electronique.html">Facturation Électronique</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contact@pmeconsultance.fr
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Devis sous 24h
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PME CONSULTANCE · Tous droits réservés</span>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="cgv.html">CGV</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="politique-ia.html">Politique IA</a>
+      </div>
+      <span class="signature">Expertise · Conseils · Disruption · Valeur Ajoutée</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <strong>Demande envoyée ✓</strong>
+  Votre devis commercial détaillé vous parvient par email sous 24h ouvrées. Merci de votre confiance.
+</div>
+
+<script>
+// Menu mobile
+document.getElementById('menuToggle').addEventListener('click',function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+document.querySelectorAll('.nav a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});});
+
+// Onglets offres
+function openTab(panel){
+  document.querySelectorAll('.offre-tab').forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+  document.querySelectorAll('.offre-panel').forEach(function(p){p.classList.remove('active');});
+  var btn=document.querySelector('[data-panel="'+panel+'"]');
+  var pnl=document.getElementById('panel-'+panel);
+  if(btn&&pnl){btn.classList.add('active');btn.setAttribute('aria-selected','true');pnl.classList.add('active');}
+}
+document.querySelectorAll('.offre-tab').forEach(function(tab){
+  tab.addEventListener('click',function(){openTab(this.dataset.panel);});
+});
+
+// Packs (tarifs de référence — grille site internet)
+var PACKS_SPEC={
+  independant:{nom:'Pack Indépendant / Profession Libérale',base:250,periode:'/ mois HT',ligne:'Tenue simplifiée régime réel + liasse 2035/BIC + visa EC'},
+  sci:{nom:'Pack SCI',base:900,periode:'/ an HT',ligne:'Comptabilité + liasse IS/2072 + secrétariat juridique'},
+  lmnp:{nom:'Pack LMNP',base:600,periode:'/ an HT',ligne:'Comptabilité + liasse BIC 2031/2033 + optimisation fiscale'}
+};
+var packActuel='independant';
+
+function preselectMissionScroll(){document.getElementById('devis').scrollIntoView({behavior:'smooth'});}
+
+function preselectPack(val){
+  if(val==='combine'){
+    document.getElementById('message').value=(document.getElementById('message').value?document.getElementById('message').value+' — ':'')+"Situation combinant plusieurs statuts (indépendant / SCI / LMNP) : merci de me proposer un devis combiné.";
+    preselectMissionScroll();
+    return;
+  }
+  selectionnerPack(val);
+  preselectMissionScroll();
+}
+
+function selectionnerPack(val){
+  packActuel=val;
+  document.querySelectorAll('.pack-choice').forEach(function(c){c.classList.toggle('selected',c.dataset.pack===val);});
+  document.getElementById('optionLmnpWrap').style.display=(val==='lmnp')?'flex':'none';
+  if(val!=='lmnp') document.getElementById('optionLmnp').checked=false;
+  majEstimation();
+}
+
+document.querySelectorAll('.pack-choice').forEach(function(c){
+  c.addEventListener('click',function(){selectionnerPack(this.dataset.pack);});
+});
+document.getElementById('optionLmnp').addEventListener('change',majEstimation);
+
+function majEstimation(){
+  var p=PACKS_SPEC[packActuel];
+  var total=p.base;
+  var detail=p.ligne+' — devis définitif transmis sous 24h.';
+  if(packActuel==='lmnp'&&document.getElementById('optionLmnp').checked){
+    total+=200;
+    detail=p.ligne+' + formalité d\'immatriculation (+200€ HT, one-shot) — devis définitif transmis sous 24h.';
+  }
+  document.getElementById('estimMontant').textContent=total;
+  document.getElementById('estimPeriode').textContent=' '+p.periode;
+  document.getElementById('estimDetail').textContent=detail;
+}
+majEstimation();
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.parentElement;
+    var was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');});
+    if(!was)item.classList.add('open');
+  });
+});
+
+// Formulaire
+/* ⚠️ À remplacer par l'ID de votre formulaire Formspree (voir guide de mise en ligne) */
+var FORMSPREE_ID_INDEP = 'VOTRE_ID_FORMSPREE';
+/* ⚠️ À remplacer par l'URL de webhook Make.com pour l'envoi automatique du devis commercial (voir guide d'automatisation) */
+var MAKE_WEBHOOK_URL_INDEP = 'VOTRE_URL_WEBHOOK_MAKE';
+
+document.getElementById('devisForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var form=this;
+  if(!document.getElementById('prenom').value||!document.getElementById('email').value){
+    alert('Merci de renseigner au minimum votre prénom et votre email.');return;
+  }
+  var p=PACKS_SPEC[packActuel];
+  var optionImmat=(packActuel==='lmnp'&&document.getElementById('optionLmnp').checked);
+  var totalHt=p.base+(optionImmat?200:0);
+  var tva=Math.round(totalHt*0.2*100)/100;
+  var totalTtc=Math.round((totalHt+tva)*100)/100;
+  var payload={
+    _subject:'Nouveau devis site — '+p.nom,
+    offre:p.nom,
+    designation_prestation:p.ligne,
+    option_immatriculation_lmnp:optionImmat?'Oui (+200€ HT, one-shot)':'Non',
+    tarif_estime:totalHt+'€ HT '+p.periode,
+    total_ht:totalHt,
+    tva:tva,
+    total_ttc:totalTtc,
+    prenom:document.getElementById('prenom').value,
+    nom:document.getElementById('nom').value,
+    entreprise:document.getElementById('entreprise').value,
+    telephone:document.getElementById('telephone').value,
+    email:document.getElementById('email').value,
+    message:document.getElementById('message').value
+  };
+  fetch('https://formspree.io/f/'+FORMSPREE_ID_INDEP,{
+    method:'POST',
+    headers:{'Accept':'application/json','Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+  }).catch(function(){/* toast affiché quoi qu'il arrive, fallback mailto disponible dans le CTA final */});
+  fetch(MAKE_WEBHOOK_URL_INDEP,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+  }).catch(function(){/* l'envoi automatique du devis commercial est secondaire : la demande est de toute façon enregistrée via Formspree ci-dessus */});
+  var toast=document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(function(){toast.classList.remove('show');},5000);
+  form.reset();
+  selectionnerPack('independant');
+});
+
+// Smooth scroll ancres
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+// Animations Intersection Observer
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';}
+  });
+},{threshold:0.1});
+document.querySelectorAll('.offre-right,.etape,.pourquoi-item').forEach(function(el){
+  el.style.opacity='0';el.style.transform='translateY(22px)';
+  el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+  obs.observe(el);
+});
+</script>
+<script src="assets/cookies-banner.js" defer></script>
+</body>
+</html>

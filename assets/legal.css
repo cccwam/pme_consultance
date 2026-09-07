@@ -1,0 +1,206 @@
+/* ============================================
+   PME CONSULTANCE — Feuille de style pages légales
+   Reprise charte ivoire / or / serif Cormorant
+   ============================================ */
+
+:root{
+  --ivoire:#F5F1E8;
+  --ivoire-clair:#FAF7F0;
+  --ivoire-fonce:#EDE7D7;
+  --noir:#1A1A1A;
+  --anthracite:#2C2C2C;
+  --gris-texte:#4A4A4A;
+  --gris-meta:#7A756B;
+  --or:#B8985A;
+  --or-fonce:#9A7E48;
+  --marine:#0E1B2C;
+  --blanc:#FFFFFF;
+  --bordure:rgba(184,152,90,0.18);
+  --transition:cubic-bezier(0.4,0,0.2,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--ivoire);
+  color:var(--noir);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.2;color:var(--noir)}
+a{color:var(--or-fonce);text-decoration:none;border-bottom:1px solid transparent;transition:all .25s var(--transition)}
+a:hover{color:var(--noir);border-bottom-color:var(--or)}
+img{max-width:100%;display:block}
+
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+
+/* ===== HEADER ===== */
+.header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(245,241,232,0.95);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--bordure);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;height:55px;border:none}
+.logo img{height:48px;width:auto;object-fit:contain}
+.nav-legal{display:flex;align-items:center;gap:32px}
+.nav-legal a{font-size:.88rem;color:var(--anthracite);border:none}
+.nav-legal a:hover{color:var(--or)}
+.nav-legal .retour{
+  background:var(--noir);color:var(--ivoire);
+  padding:10px 22px;font-size:.82rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  font-weight:500;border:none;
+}
+.nav-legal .retour:hover{background:var(--or);color:var(--blanc)}
+
+/* ===== TITRE DE PAGE ===== */
+.page-titre{
+  padding:90px 0 60px;text-align:center;
+  border-bottom:1px solid var(--bordure);
+  background:radial-gradient(ellipse at top,rgba(184,152,90,0.05),transparent 60%);
+}
+.page-titre .surtitre{
+  font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--or);
+  margin-bottom:18px;display:block;
+}
+.page-titre h1{font-size:clamp(2.2rem,4.5vw,3.4rem);margin-bottom:18px}
+.page-titre h1 em{color:var(--or);font-style:italic}
+.page-titre .meta{font-size:.88rem;color:var(--gris-meta);margin-top:12px;font-style:italic}
+
+/* ===== CORPS DE PAGE ===== */
+.contenu{
+  max-width:880px;margin:0 auto;padding:80px 32px 40px;
+}
+.contenu h2{
+  font-size:1.85rem;margin:60px 0 24px;
+  padding-bottom:16px;border-bottom:1px solid var(--bordure);
+  position:relative;
+}
+.contenu h2:first-child{margin-top:0}
+.contenu h2 .num{
+  color:var(--or);font-style:italic;
+  margin-right:14px;font-family:'Cormorant Garamond',serif;
+}
+.contenu h3{font-size:1.35rem;margin:34px 0 14px;color:var(--anthracite);font-style:italic}
+.contenu h4{font-size:1.05rem;margin:24px 0 10px;font-family:'Inter',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--or-fonce)}
+
+.contenu p{margin-bottom:18px;color:var(--gris-texte);font-size:1rem}
+.contenu ul,.contenu ol{margin:18px 0 22px 24px;color:var(--gris-texte)}
+.contenu li{margin-bottom:10px;padding-left:8px}
+.contenu li::marker{color:var(--or)}
+.contenu strong{color:var(--noir);font-weight:600}
+.contenu em{font-style:italic}
+
+/* ===== ENCADRÉS ===== */
+.encadre{
+  background:var(--blanc);
+  border-left:3px solid var(--or);
+  padding:24px 28px;margin:24px 0;
+}
+.encadre p:last-child{margin-bottom:0}
+.encadre h4{margin-top:0;color:var(--noir);text-transform:none;letter-spacing:0;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;font-weight:500}
+
+.encadre-info{background:rgba(184,152,90,0.06);border-left-color:var(--or)}
+.encadre-attention{background:rgba(194,90,90,0.06);border-left-color:#c25a5a}
+.encadre-attention h4{color:#9a4848}
+
+/* ===== TABLE INFOS ===== */
+.table-infos{
+  width:100%;border-collapse:collapse;
+  margin:24px 0;background:var(--blanc);
+}
+.table-infos th,.table-infos td{
+  padding:14px 18px;text-align:left;
+  border-bottom:1px solid var(--bordure);font-size:.94rem;
+}
+.table-infos th{
+  background:var(--ivoire-fonce);
+  font-family:'Inter',sans-serif;font-weight:500;
+  text-transform:uppercase;letter-spacing:.08em;
+  font-size:.78rem;color:var(--noir);
+  width:35%;
+}
+.table-infos td{color:var(--gris-texte)}
+.table-infos tr:last-child th,.table-infos tr:last-child td{border-bottom:none}
+
+/* ===== SOMMAIRE ===== */
+.sommaire{
+  background:var(--blanc);
+  border:1px solid var(--bordure);
+  padding:32px 36px;margin:0 0 50px;
+}
+.sommaire h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;margin:0 0 18px;
+  font-style:italic;color:var(--noir);
+}
+.sommaire ol{counter-reset:item;list-style:none;margin:0;padding:0}
+.sommaire li{
+  counter-increment:item;
+  padding:6px 0 6px 36px;position:relative;
+  font-size:.95rem;color:var(--gris-texte);
+  border-bottom:1px solid rgba(184,152,90,0.08);
+}
+.sommaire li:last-child{border-bottom:none}
+.sommaire li::before{
+  content:counter(item,upper-roman) ".";
+  position:absolute;left:0;color:var(--or);
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.05rem;font-weight:500;
+}
+.sommaire a{color:var(--anthracite);border:none}
+.sommaire a:hover{color:var(--or)}
+
+/* ===== NOTE BAS DE PAGE ===== */
+.mise-a-jour{
+  text-align:center;padding:60px 0;
+  border-top:1px solid var(--bordure);
+  font-size:.88rem;color:var(--gris-meta);
+  font-style:italic;
+}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--noir);color:rgba(245,241,232,0.7);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;margin-bottom:50px}
+.footer-brand .logo-footer{height:80px;margin-bottom:18px}
+.footer-brand .logo-footer img{height:100%;width:auto;object-fit:contain}
+.footer-brand p{font-size:.9rem;color:rgba(245,241,232,0.55);max-width:300px;line-height:1.7}
+.footer h5{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--or);margin-bottom:18px;font-style:italic}
+.footer ul{list-style:none;padding:0}
+.footer li{margin-bottom:10px;font-size:.88rem}
+.footer a{color:rgba(245,241,232,0.6);border:none;transition:color .3s}
+.footer a:hover{color:var(--or)}
+.footer-bottom{
+  padding-top:25px;border-top:1px solid rgba(184,152,90,0.15);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:14px;font-size:.8rem;color:rgba(245,241,232,0.5);
+}
+
+/* ===== ANCRES & SIGNATURE ===== */
+[id]{scroll-margin-top:100px}
+.signature{
+  font-style:italic;color:var(--or);
+  font-family:'Cormorant Garamond',serif;
+  font-size:.95rem;letter-spacing:.04em;
+  margin-top:14px;display:block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:780px){
+  .nav-legal{gap:14px}
+  .nav-legal a:not(.retour){display:none}
+  .contenu{padding:50px 24px 30px}
+  .contenu h2{font-size:1.5rem}
+  .page-titre{padding:60px 20px 40px}
+  .table-infos th,.table-infos td{padding:10px 12px;font-size:.88rem;display:block;width:100%}
+  .table-infos th{border-bottom:none;padding-bottom:4px}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .sommaire{padding:24px}
+}
+
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}

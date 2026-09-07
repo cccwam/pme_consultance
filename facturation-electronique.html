@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="PME CONSULTANCE — Accompagnement à la réforme de facturation électronique (RFE) 2026-2027 : diagnostic, choix de plateforme agréée, déploiement, veille conformité. Devis en 24h." />
+<meta name="keywords" content="facturation électronique, réforme facturation électronique, plateforme agréée, PDP, e-invoicing, e-reporting, expert-comptable facturation électronique, conformité RFE" />
+<meta name="author" content="PME CONSULTANCE" />
+<meta property="og:title" content="PME CONSULTANCE — Accompagnement Facturation Électronique 2026-2027" />
+<meta property="og:description" content="Diagnostic, choix de plateforme agréée, déploiement et veille conformité. Un cabinet indépendant, sur-mesure. Devis en 24h." />
+<meta property="og:type" content="website" />
+<title>PME CONSULTANCE — Accompagnement Facturation Électronique · Devis en 24h</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ivoire:#F5F1E8;--ivoire-clair:#FAF7F0;--ivoire-fonce:#EDE7D7;
+  --noir:#1A1A1A;--anthracite:#2C2C2C;--gris-texte:#5C5C5C;--gris-clair:#9A958A;
+  --or:#B8985A;--or-fonce:#9A7E48;--marine:#0E1B2C;--blanc:#FFFFFF;
+  --ombre:0 4px 30px rgba(26,26,26,0.06);--ombre-hover:0 12px 40px rgba(26,26,26,0.12);
+  --transition:cubic-bezier(0.4,0,0.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--ivoire);color:var(--noir);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.15;color:var(--noir)}
+h1{font-size:clamp(2.4rem,5.5vw,4.5rem)}
+h2{font-size:clamp(1.9rem,3.8vw,3rem)}
+h3{font-size:clamp(1.3rem,2.2vw,1.7rem)}
+.italique{font-style:italic;color:var(--gris-texte)}
+a{color:inherit;text-decoration:none;transition:color .3s var(--transition)}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.section{padding:110px 0}
+.section-titre{text-align:center;margin-bottom:70px}
+.section-titre .surtitre{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--or);margin-bottom:18px;display:block}
+.section-titre h2{margin-bottom:18px}
+.section-titre p{font-size:1.05rem;color:var(--gris-texte);max-width:640px;margin:0 auto}
+
+/* HEADER */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,27,44,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,152,90,0.2);transition:all .4s var(--transition)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;height:55px}
+.logo img{height:48px;width:auto;object-fit:contain}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:.85rem;font-weight:400;color:rgba(245,241,232,0.72);position:relative;letter-spacing:.02em}
+.nav a:hover{color:var(--or)}
+.nav a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:1px;background:var(--or);transition:width .3s var(--transition)}
+.nav a:hover::after{width:100%}
+.nav .youtube-link{display:inline-flex;align-items:center;gap:6px;color:#FF4B4B}
+.nav .youtube-link:hover{color:#ff6b6b}
+.btn-header{background:var(--or);color:var(--blanc);padding:12px 26px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;border:1px solid var(--or);transition:all .35s var(--transition)}
+.btn-header:hover{background:transparent;border-color:var(--or);color:var(--or)}
+.menu-mobile{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--ivoire)}
+
+/* HERO */
+.hero{min-height:100vh;padding:140px 0 100px;display:flex;align-items:center;background:linear-gradient(135deg,var(--marine) 0%,#152030 55%,#0a1420 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-180px;width:820px;height:820px;border-radius:50%;border:1px solid rgba(184,152,90,0.06);pointer-events:none}
+.hero::after{content:'';position:absolute;top:0px;right:-80px;width:580px;height:580px;border-radius:50%;border:1px solid rgba(184,152,90,0.04);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:center;position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--or);margin-bottom:28px;font-weight:500}
+.hero-eyebrow::before{content:'';width:30px;height:1px;background:var(--or)}
+.hero h1{margin-bottom:28px;color:var(--ivoire-clair)}
+.hero h1 em{color:var(--or);font-style:italic;font-weight:300}
+.hero-sous{font-size:1.1rem;color:rgba(245,241,232,0.65);margin-bottom:36px;max-width:540px;line-height:1.82}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap}
+.btn-primaire{display:inline-flex;align-items:center;gap:14px;background:var(--or);color:var(--blanc);padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--or);cursor:pointer;transition:all .4s var(--transition)}
+.btn-primaire:hover{background:transparent;border-color:var(--or);color:var(--or);transform:translateY(-2px)}
+.btn-primaire .arrow{transition:transform .3s var(--transition)}
+.btn-primaire:hover .arrow{transform:translateX(6px)}
+.btn-secondaire{display:inline-flex;align-items:center;gap:14px;background:transparent;color:var(--ivoire);padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(245,241,232,0.28);cursor:pointer;transition:all .4s var(--transition)}
+.btn-secondaire:hover{background:rgba(245,241,232,0.06);border-color:rgba(245,241,232,0.55)}
+.hero-trust{margin-top:40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.hero-trust-item{display:flex;align-items:center;gap:9px;font-size:.82rem;color:rgba(245,241,232,0.5)}
+.hero-trust-item svg{flex-shrink:0;color:var(--or)}
+
+/* HERO CARDS */
+.hero-visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center}
+.hero-card{position:absolute;backdrop-filter:blur(10px);padding:28px 30px;border:1px solid rgba(184,152,90,0.22);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:transform .4s var(--transition)}
+.hero-card-a{top:10px;left:0;width:258px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite}
+.hero-card-b{bottom:20px;right:0;width:272px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite .9s}
+.hero-card-c{top:44%;left:26%;width:248px;background:var(--or);animation:flotter-mid 6s ease-in-out infinite 1.7s}
+@keyframes flotter{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes flotter-mid{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 12px))}}
+.hero-card .tag{display:inline-block;padding:3px 10px;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;background:rgba(184,152,90,0.15);color:var(--or)}
+.hero-card-c .tag{background:rgba(14,27,44,0.15);color:var(--marine)}
+.hero-card .num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--or);line-height:1;margin-bottom:7px}
+.hero-card-c .num{color:var(--marine)}
+.hero-card .lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,232,0.45)}
+.hero-card-c .lbl{color:rgba(14,27,44,0.65)}
+.hero-card .dsc{font-size:.82rem;margin-top:10px;color:rgba(245,241,232,0.6);line-height:1.55}
+.hero-card-c .dsc{color:rgba(14,27,44,0.72)}
+
+/* BANDEAU CONFIANCE */
+.confiance{padding:46px 0;background:var(--ivoire-fonce);border-top:1px solid rgba(184,152,90,0.12);border-bottom:1px solid rgba(184,152,90,0.12)}
+.confiance-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;align-items:center}
+.confiance-item{text-align:center}
+.confiance-item .pict{font-size:1.8rem;color:var(--or);margin-bottom:10px}
+.confiance-item h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--noir);font-weight:600;margin-bottom:6px}
+.confiance-item p{font-size:.84rem;color:var(--gris-texte)}
+
+/* CONTEXTE / CALENDRIER */
+.contexte{background:var(--ivoire)}
+.contexte-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+.contexte-texte p{font-size:.98rem;color:var(--gris-texte);margin-bottom:20px;line-height:1.85}
+.citation{border-left:3px solid var(--or);padding:6px 0 6px 26px;margin:30px 0;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;color:var(--anthracite);line-height:1.6}
+.citation cite{display:block;margin-top:14px;font-family:'Inter',sans-serif;font-size:.78rem;font-style:normal;letter-spacing:.06em;color:var(--gris-clair);text-transform:uppercase}
+.table-dates{width:100%;border-collapse:collapse;background:var(--blanc);border:1px solid rgba(184,152,90,0.18)}
+.table-dates th,.table-dates td{padding:16px 18px;text-align:left;font-size:.86rem;border-bottom:1px solid rgba(184,152,90,0.14)}
+.table-dates th{background:var(--marine);color:var(--ivoire-clair);font-weight:500;letter-spacing:.03em;font-size:.78rem;text-transform:uppercase}
+.table-dates td:first-child{color:var(--or-fonce);font-weight:600;white-space:nowrap}
+.table-dates tr:last-child td{border-bottom:none}
+
+/* OFFRES ONGLETS */
+.offres{background:var(--ivoire-fonce)}
+.offres-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin-bottom:50px;border:1px solid rgba(184,152,90,0.22);max-width:980px;margin-left:auto;margin-right:auto}
+.offre-tab{padding:14px 26px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--gris-texte);transition:all .3s var(--transition);font-family:'Inter',sans-serif;position:relative;flex:1;min-width:200px}
+.offre-tab:hover{color:var(--or)}
+.offre-tab.active{background:var(--marine);color:var(--ivoire)}
+.offre-tab.active::after{content:'';position:absolute;bottom:-7px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid var(--marine)}
+
+.offre-panel{display:none;animation:fadeIn .45s var(--transition)}
+.offre-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.offre-left{position:sticky;top:108px}
+.offre-numero{font-family:'Cormorant Garamond',serif;font-size:6rem;color:rgba(184,152,90,0.1);line-height:1;margin-bottom:-18px;font-weight:700}
+.offre-titre{font-size:clamp(1.9rem,3vw,2.7rem);margin-bottom:16px;color:var(--marine)}
+.offre-accroche{font-size:1.03rem;color:var(--gris-texte);margin-bottom:28px;font-style:italic;line-height:1.8;border-left:3px solid var(--or);padding-left:20px}
+.offre-cibles-titre{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:13px;font-weight:600}
+.offre-cibles-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.cible-tag{padding:5px 13px;background:var(--blanc);border:1px solid rgba(184,152,90,0.2);font-size:.79rem;color:var(--anthracite);letter-spacing:.03em}
+.offre-desc{font-size:.9rem;color:var(--gris-texte);line-height:1.84}
+
+.offre-right{background:var(--blanc);padding:44px;border:1px solid rgba(184,152,90,0.15)}
+.offre-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;background:rgba(184,152,90,0.08);border:1px solid rgba(184,152,90,0.22);margin-bottom:24px;font-size:.78rem;color:var(--or-fonce);letter-spacing:.06em}
+.tarifs-titre{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gris-clair);margin-bottom:16px;font-weight:500}
+.tarifs-table{width:100%;border-collapse:collapse;margin-bottom:28px}
+.tarifs-table th,.tarifs-table td{padding:13px 10px;text-align:left;font-size:.86rem;border-bottom:1px solid rgba(26,26,26,0.06)}
+.tarifs-table th{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gris-clair);font-weight:500}
+.tarifs-table td.segment{color:var(--anthracite);font-weight:500}
+.tarifs-table td.prix{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--marine);text-align:right}
+.tarifs-table td.prix .euro{font-size:.9rem;color:var(--or);margin-right:2px}
+.tarifs-note{font-size:.77rem;color:var(--gris-clair);margin:-16px 0 26px}
+.prestations-titre{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gris-clair);margin-bottom:16px;font-weight:500}
+.prestations-list{list-style:none;margin-bottom:30px}
+.prestations-list li{padding:10px 0 10px 30px;position:relative;font-size:.89rem;color:var(--anthracite);border-bottom:1px solid rgba(26,26,26,0.04);line-height:1.5}
+.prestations-list li:last-child{border-bottom:none}
+.prestations-list li::before{content:'';position:absolute;left:0;top:16px;width:15px;height:8px;border-left:1.5px solid var(--or);border-bottom:1.5px solid var(--or);transform:rotate(-45deg)}
+.btn-mission{width:100%;padding:18px;background:var(--marine);color:var(--ivoire);border:none;font-size:.84rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .4s var(--transition);display:flex;align-items:center;justify-content:center;gap:12px;font-family:'Inter',sans-serif}
+.btn-mission:hover{background:var(--or)}
+.btn-mission .arr{transition:transform .3s var(--transition)}
+.btn-mission:hover .arr{transform:translateX(6px)}
+.offre-garantie{margin-top:14px;text-align:center;font-size:.78rem;color:var(--gris-clair);display:flex;align-items:center;justify-content:center;gap:6px}
+
+.bundle-callout{max-width:980px;margin:0 auto;background:var(--marine);color:var(--ivoire-clair);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;border:1px solid rgba(184,152,90,0.3)}
+.bundle-callout .txt{flex:1;min-width:240px}
+.bundle-callout .txt .lbl{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:8px;display:block}
+.bundle-callout .txt h4{color:var(--ivoire-clair);font-size:1.4rem;margin-bottom:6px}
+.bundle-callout .txt p{font-size:.88rem;color:rgba(245,241,232,0.6)}
+.bundle-callout .btn-secondaire{border-color:rgba(245,241,232,0.4);flex-shrink:0}
+
+/* POURQUOI */
+.pourquoi{background:var(--noir);color:var(--ivoire-clair);position:relative;overflow:hidden}
+.pourquoi::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--or),transparent)}
+.pourquoi h2{color:var(--ivoire-clair)}
+.pourquoi .section-titre p{color:rgba(245,241,232,0.62)}
+.pourquoi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;position:relative;z-index:2}
+.pourquoi-item{text-align:center}
+.pourquoi-item .num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--or);line-height:1;margin-bottom:20px;font-style:italic}
+.pourquoi-item h3{color:var(--ivoire-clair);margin-bottom:14px}
+.pourquoi-item p{font-size:.92rem;color:rgba(245,241,232,0.6);line-height:1.8}
+
+/* CHIFFRES */
+.chiffres{background:var(--marine);padding:100px 0}
+.chiffres-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(184,152,90,0.08);margin-top:60px}
+.chiffre-item{background:rgba(14,27,44,0.95);padding:48px 24px;text-align:center;border:1px solid rgba(184,152,90,0.07);transition:all .4s var(--transition)}
+.chiffre-item:hover{background:rgba(184,152,90,0.06);border-color:rgba(184,152,90,0.2)}
+.chiffre-val{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.4rem);color:var(--or);line-height:1;margin-bottom:12px;font-style:italic}
+.chiffre-lbl{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,241,232,0.5)}
+.chiffre-dsc{font-size:.82rem;color:rgba(245,241,232,0.35);margin-top:8px}
+
+/* PROCESSUS */
+.processus{background:var(--ivoire)}
+.processus-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.processus-timeline::before{content:'';position:absolute;top:30px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--or) 15%,var(--or) 85%,transparent);z-index:0}
+.etape{text-align:center;position:relative;z-index:1}
+.etape .cercle{width:60px;height:60px;border-radius:50%;background:var(--ivoire);border:2px solid var(--or);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--or);font-weight:500}
+.etape h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:10px}
+.etape p{font-size:.88rem;color:var(--gris-texte);padding:0 8px}
+
+/* YOUTUBE */
+.youtube{background:var(--noir);color:var(--ivoire-clair);position:relative}
+.youtube h2{color:var(--ivoire-clair)}
+.youtube .section-titre p{color:rgba(245,241,232,0.62)}
+.yt-subscribe{display:flex;justify-content:center;margin-bottom:56px}
+.btn-youtube{display:inline-flex;align-items:center;gap:12px;background:#FF0000;color:#fff;padding:16px 34px;font-size:.88rem;font-weight:600;letter-spacing:.04em;border:1px solid #FF0000;transition:all .35s var(--transition)}
+.btn-youtube:hover{background:transparent;color:#FF4B4B;border-color:#FF4B4B}
+.yt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.yt-card{background:rgba(255,255,255,0.03);border:1px solid rgba(184,152,90,0.15);padding:0;overflow:hidden;transition:all .4s var(--transition)}
+.yt-card:hover{border-color:var(--or);transform:translateY(-4px)}
+.yt-thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#1a2438,#0e1b2c);display:flex;align-items:center;justify-content:center;position:relative}
+.yt-thumb .play{width:56px;height:56px;border-radius:50%;background:rgba(255,0,0,0.9);display:flex;align-items:center;justify-content:center;transition:transform .3s}
+.yt-card:hover .yt-thumb .play{transform:scale(1.1)}
+.yt-thumb .ep{position:absolute;top:12px;left:12px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or);background:rgba(0,0,0,0.5);padding:4px 10px}
+.yt-info{padding:20px 22px}
+.yt-info h4{font-size:1.02rem;color:var(--ivoire-clair);line-height:1.4;font-weight:500;font-family:'Inter',sans-serif}
+.yt-more{text-align:center;margin-top:44px}
+.yt-more a{font-size:.88rem;color:var(--or);border-bottom:1px solid var(--or);padding-bottom:3px}
+
+/* CONTACT / LEAD FORM */
+.contact{background:var(--marine);color:var(--ivoire);position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:50%;left:-200px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(184,152,90,0.08);transform:translateY(-50%)}
+.contact::after{content:'';position:absolute;top:50%;right:-280px;width:680px;height:680px;border-radius:50%;border:1px solid rgba(184,152,90,0.05);transform:translateY(-50%)}
+.contact h2{color:var(--ivoire)}
+.contact .section-titre p{color:rgba(245,241,232,0.62)}
+.contact .surtitre{color:var(--or)}
+.contact-card{max-width:840px;margin:0 auto;background:var(--blanc);color:var(--noir);padding:60px 70px;position:relative;z-index:2;box-shadow:0 30px 80px rgba(0,0,0,0.4)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-grp{display:flex;flex-direction:column;gap:7px}
+.form-grp.full{grid-column:1/-1}
+.form-lbl{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris-texte);font-weight:500}
+.form-inp,.form-sel,.form-txt{padding:13px 16px;border:1px solid rgba(26,26,26,0.14);background:var(--ivoire-clair);font-family:'Inter',sans-serif;font-size:.91rem;color:var(--noir);transition:border-color .3s;width:100%}
+.form-inp:focus,.form-sel:focus,.form-txt:focus{outline:none;border-color:var(--or);background:var(--blanc)}
+.form-txt{resize:vertical;min-height:100px}
+.form-sel{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%23B8985A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+
+.missions-section{grid-column:1/-1}
+.missions-lbl{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris-texte);font-weight:500;margin-bottom:13px;display:block}
+.missions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.mission-chk{cursor:pointer}
+.mission-chk input{display:none}
+.mission-box{padding:14px 8px;border:1.5px solid rgba(26,26,26,0.1);text-align:center;background:var(--ivoire-clair);transition:all .3s var(--transition)}
+.mission-chk input:checked + .mission-box{border-color:var(--or);background:rgba(184,152,90,0.06)}
+.mission-box .ico{font-size:1.3rem;color:var(--or);margin-bottom:5px}
+.mission-box .nm{font-size:.74rem;font-weight:500;color:var(--noir)}
+
+.form-submit{margin-top:30px;padding-top:30px;border-top:1px solid rgba(26,26,26,0.08)}
+.btn-submit{width:100%;padding:20px;background:var(--marine);color:var(--ivoire);border:none;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .4s var(--transition);display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Inter',sans-serif}
+.btn-submit:hover{background:var(--or)}
+.btn-submit .arr{transition:transform .3s var(--transition)}
+.btn-submit:hover .arr{transform:translateX(6px)}
+.reassurance{margin-top:14px;display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
+.reassurance span{font-size:.77rem;color:var(--gris-clair);display:flex;align-items:center;gap:5px}
+.reassurance svg{color:var(--or);flex-shrink:0}
+
+/* FAQ */
+.faq{background:var(--ivoire-clair)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(184,152,90,0.2)}
+.faq-q{padding:27px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--noir);font-family:'Cormorant Garamond',serif;font-size:1.26rem;font-weight:500}
+.faq-q .plus{font-size:1.5rem;color:var(--or);transition:transform .4s var(--transition);font-weight:300;flex-shrink:0;margin-left:20px}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-r{max-height:0;overflow:hidden;transition:max-height .5s var(--transition);color:var(--gris-texte);font-size:.93rem;line-height:1.84}
+.faq-r-inner{padding:0 40px 26px 0}
+.faq-item.open .faq-r{max-height:600px}
+
+/* CTA FINAL */
+.cta-final{background:var(--noir);text-align:center;padding:120px 0;position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;border:1px solid rgba(184,152,90,0.08)}
+.cta-final h2{margin-bottom:22px;color:var(--ivoire);position:relative;z-index:2}
+.cta-final h2 em{color:var(--or);font-style:italic}
+.cta-final p{font-size:1.06rem;color:rgba(245,241,232,0.62);max-width:530px;margin:0 auto 42px;position:relative;z-index:2}
+.cta-final .hero-cta{justify-content:center;position:relative;z-index:2}
+
+/* FOOTER */
+.footer{background:var(--noir);color:var(--ivoire-fonce);padding:80px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px}
+.footer-logo{height:80px;margin-bottom:22px}
+.footer-logo img{height:100%;width:auto;object-fit:contain}
+.footer-brand p{font-size:.88rem;color:rgba(245,241,232,0.5);max-width:280px;line-height:1.78}
+.footer h5{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--or);margin-bottom:22px;font-style:italic}
+.footer ul{list-style:none}
+.footer li{margin-bottom:11px;font-size:.87rem}
+.footer a{color:rgba(245,241,232,0.5);transition:color .3s}
+.footer a:hover{color:var(--or)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:13px;font-size:.85rem;color:rgba(245,241,232,0.5)}
+.footer-contact-item svg{flex-shrink:0;color:var(--or);margin-top:3px}
+.footer-bottom{padding-top:28px;border-top:1px solid rgba(184,152,90,0.12);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-size:.79rem;color:rgba(245,241,232,0.38)}
+.footer-legal{display:flex;gap:22px;flex-wrap:wrap}
+.footer .signature{font-style:italic;color:var(--or);font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.04em}
+
+/* TOAST */
+.toast{position:fixed;bottom:36px;right:36px;background:var(--marine);color:var(--ivoire);padding:20px 28px;border:1px solid var(--or);font-size:.88rem;z-index:9999;transform:translateY(120px);opacity:0;transition:all .5s var(--transition);max-width:340px;box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.toast.show{transform:translateY(0);opacity:1}
+.toast strong{color:var(--or);display:block;margin-bottom:4px;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+
+/* RESPONSIVE */
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:60px}
+  .hero-visual{height:380px}
+  .contexte-grid{grid-template-columns:1fr;gap:40px}
+  .offre-panel.active{grid-template-columns:1fr}
+  .offre-left{position:static}
+  .chiffres-grid{grid-template-columns:repeat(2,1fr)}
+  .yt-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .nav{display:none}
+  .menu-mobile{display:block}
+  .nav.open{display:flex;position:absolute;top:80px;left:0;right:0;background:var(--marine);flex-direction:column;padding:28px;border-top:1px solid rgba(184,152,90,0.15)}
+  .nav.open a{color:var(--ivoire);padding:10px 0}
+  .contact-card{padding:40px 28px}
+  .form-grid{grid-template-columns:1fr}
+  .missions-grid{grid-template-columns:repeat(2,1fr)}
+  .pourquoi-grid{grid-template-columns:1fr;gap:36px}
+  .processus-timeline{grid-template-columns:1fr 1fr;gap:36px}
+  .processus-timeline::before{display:none}
+  .confiance-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .offres-tabs{flex-wrap:wrap}
+  .offre-tab{padding:11px 16px;font-size:.72rem;min-width:auto}
+  .bundle-callout{flex-direction:column;text-align:center}
+}
+@media(max-width:560px){
+  .container{padding:0 18px}
+  .hero{padding:120px 0 80px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn-primaire,.hero-cta .btn-secondaire{width:100%;justify-content:center}
+  .hero-visual{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .chiffres-grid{grid-template-columns:1fr}
+  .yt-grid{grid-template-columns:1fr}
+  .confiance-grid{grid-template-columns:1fr}
+  .processus-timeline{grid-template-columns:1fr}
+  .missions-grid{grid-template-columns:1fr 1fr}
+  .section{padding:80px 0}
+  .table-dates{font-size:.8rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+</style>
+<link rel="stylesheet" href="assets/cookies-banner.css">
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="PME CONSULTANCE – Accueil">
+        <img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Offres TPE</a>
+        <a href="pme-eti.html">Offre PME/ETI</a>
+        <a href="independants-sci-lmnp.html">Indép. / SCI / LMNP</a>
+        <a href="#offres">Notre accompagnement</a>
+        <a href="#youtube" class="youtube-link">▶ YouTube</a>
+        <a href="#faq">FAQ</a>
+        <a href="#devis" class="btn-header">Devis en 24h</a>
+      </nav>
+      <button class="menu-mobile" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow">Réforme de la facturation électronique · 2026-2027</span>
+        <h1>Abordez la <em>RFE</em> comme un atout, pas comme une contrainte.</h1>
+        <p class="hero-sous">PME CONSULTANCE accompagne les entreprises assujetties — de l'indépendant au groupe multi-entités — dans leur mise en conformité à la réforme de facturation électronique : diagnostic, choix indépendant de plateforme agréée, déploiement sur-mesure et veille continue. <em style="font-style:italic;color:rgba(245,241,232,0.4)">Expertise · Conseils · Disruption · Valeur Ajoutée.</em></p>
+        <div class="hero-cta">
+          <a href="#devis" class="btn-primaire">Obtenir mon devis en 24h <span class="arrow">→</span></a>
+          <a href="#offres" class="btn-secondaire">Découvrir l'accompagnement</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+            Cabinet inscrit à l'Ordre des Experts-Comptables
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Indépendant vis-à-vis de tout éditeur de plateforme
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Devis détaillé sous 24h
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-a">
+          <div class="tag">Échéance 1</div>
+          <div class="num">01.09.26</div>
+          <div class="lbl">Réception obligatoire</div>
+          <div class="dsc">Pour toutes les entreprises assujetties à la TVA, sans exception de taille.</div>
+        </div>
+        <div class="hero-card hero-card-c">
+          <div class="tag">Plateformes</div>
+          <div class="num">150+</div>
+          <div class="lbl">Plateformes agréées</div>
+          <div class="dsc">Un choix qui mérite un conseil indépendant, pas une recommandation liée à un éditeur.</div>
+        </div>
+        <div class="hero-card hero-card-b">
+          <div class="tag">Sanction</div>
+          <div class="num">15 000 €</div>
+          <div class="lbl">Plafond annuel</div>
+          <div class="dsc">Risque encouru en cas de non-conformité aux obligations de facturation et d'e-reporting.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BANDEAU CONFIANCE ══ -->
+<section class="confiance">
+  <div class="container">
+    <div class="confiance-grid">
+      <div class="confiance-item"><div class="pict">⚖</div><h4>Ordre Experts-Comptables</h4><p>Cabinet inscrit &amp; assuré</p></div>
+      <div class="confiance-item"><div class="pict">🗓</div><h4>Fenêtre 2026-2027</h4><p>18 mois pour se mettre en conformité</p></div>
+      <div class="confiance-item"><div class="pict">🔎</div><h4>Conseil indépendant</h4><p>Aucun lien capitalistique avec un éditeur</p></div>
+      <div class="confiance-item"><div class="pict">⚡</div><h4>Devis sous 24h</h4><p>Diagnostic engagé en quelques jours</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTEXTE RÉGLEMENTAIRE ══ -->
+<section class="section contexte" id="contexte">
+  <div class="container">
+    <div class="contexte-grid">
+      <div class="contexte-texte">
+        <span class="surtitre" style="color:var(--or);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:18px">Comprendre la réforme</span>
+        <h2 style="margin-bottom:22px">Un calendrier <em class="italique">serré</em>, une obligation pour <em class="italique">tous</em></h2>
+        <p>La réforme de la facturation électronique interentreprises repose sur l'article 26 de la loi de finances pour 2022. Elle rend obligatoire, selon un calendrier échelonné, la réception puis l'émission de factures dématérialisées via une Plateforme Agréée (PA) ou le Portail Public de Facturation (PPF), ainsi qu'un dispositif d'e-reporting pour les flux hors périmètre B2B domestique.</p>
+        <p>Le Portail Public de Facturation a été recentré en 2024 sur l'annuaire central et les services partagés de la DGFiP : l'écosystème repose désormais sur plus de 150 Plateformes Agréées privées, en concurrence, que chaque entreprise doit choisir elle-même. Ce choix — et son bon paramétrage — devient un véritable acte de gestion.</p>
+        <div class="citation">
+          « La réforme de la facture électronique constitue un tournant pour les entreprises. Ce n'est pas une contrainte administrative, mais un véritable levier de compétitivité et de sécurisation. »
+          <cite>— Président du Conseil national de l'Ordre des Experts-Comptables</cite>
+        </div>
+      </div>
+      <div>
+        <table class="table-dates">
+          <tr><th>Échéance</th><th>Obligation</th><th>Entreprises concernées</th></tr>
+          <tr><td>1er sept. 2026</td><td>Réception des factures électroniques</td><td>Toutes les entreprises assujetties à la TVA</td></tr>
+          <tr><td>1er sept. 2026</td><td>Émission des factures électroniques</td><td>Grandes entreprises et ETI</td></tr>
+          <tr><td>1er sept. 2027</td><td>Émission des factures électroniques</td><td>PME, TPE, micro-entreprises, auto-entrepreneurs</td></tr>
+          <tr><td>1er sept. 2026</td><td>E-reporting (B2C, international, secteurs exonérés)</td><td>Grandes entreprises et ETI</td></tr>
+          <tr><td>1er sept. 2027</td><td>E-reporting (B2C, international, secteurs exonérés)</td><td>PME, TPE, micro-entreprises, auto-entrepreneurs</td></tr>
+        </table>
+        <p style="font-size:.8rem;color:var(--gris-clair);margin-top:14px">Sanctions en cas de non-conformité : 50 € par facture non émise dans les règles (plafond 15 000 €/an) ; 500 € par défaut de télétransmission d'e-reporting (plafond 15 000 €/an), sans compter le risque de blocage de flux avec des partenaires déjà conformes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFFRES PAR ONGLETS ══ -->
+<section class="section offres" id="offres">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Notre accompagnement</span>
+      <h2>Quatre briques pour une mise en conformité <em class="italique">sur-mesure</em></h2>
+      <p>Chaque mission est calibrée sur votre profil réel — pas un abonnement standardisé. Tarifs indicatifs HT, devis définitif sous 24h après votre demande.</p>
+    </div>
+
+    <div class="offres-tabs" role="tablist">
+      <button class="offre-tab active" data-panel="diagnostic" role="tab" aria-selected="true">🔍 Diagnostic Flash</button>
+      <button class="offre-tab" data-panel="deploiement" role="tab" aria-selected="false">⚙️ Déploiement sur-mesure</button>
+      <button class="offre-tab" data-panel="veille" role="tab" aria-selected="false">🛰 Veille &amp; Conformité</button>
+      <button class="offre-tab" data-panel="pilotage" role="tab" aria-selected="false">📈 Pilotage augmenté</button>
+    </div>
+
+    <!-- PANEL DIAGNOSTIC -->
+    <div class="offre-panel active" id="panel-diagnostic" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">01</div>
+        <h2 class="offre-titre">Diagnostic Flash</h2>
+        <p class="offre-accroche">Le point de départ indispensable : savoir précisément où vous en êtes avant le 1er septembre 2026.</p>
+        <div class="offre-cibles-titre">Pour qui ?</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">Tous profils, premier contact</span>
+          <span class="cible-tag">Dirigeants pressés par l'échéance</span>
+          <span class="cible-tag">Entreprises multi-flux (B2B, B2C, export)</span>
+        </div>
+        <p class="offre-desc">Audit de vos flux de facturation actuels (volumes, formats, ERP, partenaires), cartographie des obligations applicables à votre profil, score de préparation et feuille de route priorisée. Une mission courte, pensée pour donner une vision claire et actionnable en quelques jours.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Résultat livré en quelques jours
+        </div>
+        <div class="tarifs-titre">Tarifs indicatifs HT par profil</div>
+        <table class="tarifs-table">
+          <tr><th>Profil</th><th style="text-align:right">Tarif</th></tr>
+          <tr><td class="segment">Micro / Indépendant</td><td class="prix"><span class="euro">€</span>350</td></tr>
+          <tr><td class="segment">TPE (1-10 salariés)</td><td class="prix"><span class="euro">€</span>490</td></tr>
+          <tr><td class="segment">PME (11-250 salariés)</td><td class="prix"><span class="euro">€</span>890</td></tr>
+          <tr><td class="segment">ETI (250+ salariés)</td><td class="prix">dès <span class="euro">€</span>1 500</td></tr>
+        </table>
+        <p class="tarifs-note">ETI : montant plancher, devis systématique au-delà selon complexité.</p>
+        <div class="prestations-titre">Ce que comprend la mission</div>
+        <ul class="prestations-list">
+          <li>Audit des flux de facturation actuels (volumes, formats, ERP, partenaires)</li>
+          <li>Cartographie des obligations applicables (B2B, B2C, international, secteur)</li>
+          <li>Score de préparation à la réforme</li>
+          <li>Feuille de route priorisée et chiffrée</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('diagnostic')">Demander mon devis en 24h <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Premier échange gratuit · Devis sous 24h · Confidentialité garantie
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL DÉPLOIEMENT -->
+    <div class="offre-panel" id="panel-deploiement" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">02</div>
+        <h2 class="offre-titre">Déploiement sur-mesure</h2>
+        <p class="offre-accroche">La mission cœur : de la sélection de plateforme jusqu'à la formation de vos équipes, un accompagnement complet et indépendant.</p>
+        <div class="offre-cibles-titre">Pour qui ?</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">Entreprises ayant réalisé leur diagnostic</span>
+          <span class="cible-tag">Dirigeants voulant déléguer l'exécution technique</span>
+          <span class="cible-tag">Multi-entités nécessitant une stratégie consolidée</span>
+        </div>
+        <p class="offre-desc">Sélection indépendante et argumentée de la plateforme agréée la mieux adaptée parmi les plus de 150 plateformes agréées par la DGFiP, paramétrage technique, interfaçage avec votre outil comptable et/ou votre ERP, formation de vos équipes, et accompagnement du mandat de facturation en conformité avec la déontologie de l'Ordre.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Indépendance totale vis-à-vis des éditeurs
+        </div>
+        <div class="tarifs-titre">Tarifs indicatifs HT par profil</div>
+        <table class="tarifs-table">
+          <tr><th>Profil</th><th style="text-align:right">Tarif</th></tr>
+          <tr><td class="segment">Micro / Indépendant</td><td class="prix"><span class="euro">€</span>690</td></tr>
+          <tr><td class="segment">TPE (1-10 salariés)</td><td class="prix"><span class="euro">€</span>1 290</td></tr>
+          <tr><td class="segment">PME (11-250 salariés)</td><td class="prix"><span class="euro">€</span>2 900</td></tr>
+          <tr><td class="segment">ETI (250+ salariés)</td><td class="prix">dès <span class="euro">€</span>6 500</td></tr>
+        </table>
+        <p class="tarifs-note">ETI : montant plancher, devis systématique au-delà.</p>
+        <div class="prestations-titre">Ce que comprend la mission</div>
+        <ul class="prestations-list">
+          <li>Sélection et recommandation argumentée de plateforme agréée</li>
+          <li>Paramétrage technique et création de compte</li>
+          <li>Interfaçage avec votre outil comptable et/ou votre ERP</li>
+          <li>Formation de vos équipes aux nouveaux flux et statuts de facture</li>
+          <li>Accompagnement du mandat de facturation, conforme à la déontologie de l'Ordre</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('deploiement')">Demander mon devis en 24h <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Premier échange gratuit · Devis sous 24h · Confidentialité garantie
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL VEILLE -->
+    <div class="offre-panel" id="panel-veille" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">03</div>
+        <h2 class="offre-titre">Veille &amp; Conformité continue</h2>
+        <p class="offre-accroche">La mise en conformité n'est qu'une étape : la réglementation continuera d'évoluer après votre déploiement.</p>
+        <div class="offre-cibles-titre">Pour qui ?</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">Clients déjà déployés</span>
+          <span class="cible-tag">Entreprises voulant sécuriser durablement leurs flux</span>
+        </div>
+        <p class="offre-desc">Un abonnement mensuel qui transforme un pic de mise en conformité en tranquillité durable : veille réglementaire active sur les évolutions DGFiP, formats et statuts de facture, hotline conformité, contrôle périodique de la bonne exécution des flux, et mise à jour proactive en cas d'évolution du calendrier ou des obligations.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          Abonnement mensuel, sans engagement long
+        </div>
+        <div class="tarifs-titre">Tarifs indicatifs HT / mois par profil</div>
+        <table class="tarifs-table">
+          <tr><th>Profil</th><th style="text-align:right">Tarif</th></tr>
+          <tr><td class="segment">Micro / Indépendant</td><td class="prix"><span class="euro">€</span>39<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+          <tr><td class="segment">TPE (1-10 salariés)</td><td class="prix"><span class="euro">€</span>89<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+          <tr><td class="segment">PME (11-250 salariés)</td><td class="prix"><span class="euro">€</span>190<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+          <tr><td class="segment">ETI (250+ salariés)</td><td class="prix">dès <span class="euro">€</span>450<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+        </table>
+        <div class="prestations-titre">Ce que comprend l'abonnement</div>
+        <ul class="prestations-list">
+          <li>Veille réglementaire active (évolutions DGFiP, formats, statuts de facture)</li>
+          <li>Hotline conformité</li>
+          <li>Contrôle périodique de la bonne exécution des flux</li>
+          <li>Mise à jour proactive en cas d'évolution des obligations</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('veille')">Demander mon devis en 24h <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Premier échange gratuit · Devis sous 24h · Confidentialité garantie
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL PILOTAGE -->
+    <div class="offre-panel" id="panel-pilotage" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">04</div>
+        <h2 class="offre-titre">Pilotage financier augmenté</h2>
+        <p class="offre-accroche">Notre différenciateur central : transformer une obligation légale en véritable outil de pilotage.</p>
+        <div class="offre-cibles-titre">Pour qui ?</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">TPE / PME / ETI en croissance</span>
+          <span class="cible-tag">Dirigeants voulant une vision temps réel de leur trésorerie</span>
+        </div>
+        <p class="offre-desc">Une fois vos flux de facturation électronique déployés, les données de facturation deviennent structurées et disponibles en temps réel. Nous les exploitons pour alimenter un pilotage de trésorerie, un suivi des délais de paiement, une relance clients automatisée et un reporting de gestion mensuel — l'expression la plus directe de notre positionnement haut de gamme, disruptif dans sa méthode.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM9 3v18M3 9h6M3 15h6"/></svg>
+          Option de montée en gamme
+        </div>
+        <div class="tarifs-titre">Tarifs indicatifs HT / mois par profil</div>
+        <table class="tarifs-table">
+          <tr><th>Profil</th><th style="text-align:right">Tarif</th></tr>
+          <tr><td class="segment">TPE (1-10 salariés)</td><td class="prix"><span class="euro">€</span>250<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+          <tr><td class="segment">PME (11-250 salariés)</td><td class="prix"><span class="euro">€</span>590<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+          <tr><td class="segment">ETI (250+ salariés)</td><td class="prix">dès <span class="euro">€</span>1 200<span style="font-size:.7rem;color:var(--gris-texte)">/mois</span></td></tr>
+        </table>
+        <p class="tarifs-note">Non proposé en standard aux micro-entreprises à ce stade.</p>
+        <div class="prestations-titre">Ce que comprend l'option</div>
+        <ul class="prestations-list">
+          <li>Exploitation des données de facturation pour le pilotage de trésorerie</li>
+          <li>Suivi des délais de paiement</li>
+          <li>Relance clients automatisée</li>
+          <li>Reporting de gestion mensuel</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('pilotage')">Demander mon devis en 24h <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Premier échange gratuit · Devis sous 24h · Confidentialité garantie
+        </p>
+      </div>
+    </div>
+
+    <div class="bundle-callout" style="margin-top:56px">
+      <div class="txt">
+        <span class="lbl">Formule recommandée</span>
+        <h4>Mission complète — Diagnostic + Déploiement</h4>
+        <p>Dès 1 040 € HT (Micro) · 1 780 € HT (TPE) · 3 790 € HT (PME) · dès 8 000 € HT (ETI)</p>
+      </div>
+      <button class="btn-secondaire" onclick="preselectMission('complete')">Demander ce devis en 24h →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ POURQUOI ══ -->
+<section class="section pourquoi" id="valeur">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Notre positionnement</span>
+      <h2>Ce qui distingue notre <em style="font-style:italic;color:var(--or)">accompagnement RFE</em></h2>
+      <p>Sur un marché où les écarts de prix vont de 1 à plus de 50 pour un même diagnostic, nous avons choisi la transparence et l'indépendance.</p>
+    </div>
+    <div class="pourquoi-grid">
+      <div class="pourquoi-item">
+        <div class="num">I.</div>
+        <h3><em>Indépendance</em> totale</h3>
+        <p>Aucun lien capitalistique avec un éditeur de plateforme agréée. Notre recommandation est un acte de conseil, pas un acte de distribution — un différenciateur fort face aux réseaux adossés à un éditeur unique.</p>
+      </div>
+      <div class="pourquoi-item">
+        <div class="num">II.</div>
+        <h3><em>Rapidité</em> d'exécution</h3>
+        <p>Devis sous 24h, diagnostic engagé en quelques jours. Le marché récompensera les cabinets capables de délivrer vite — pas ceux qui font attendre leurs clients plusieurs semaines.</p>
+      </div>
+      <div class="pourquoi-item">
+        <div class="num">III.</div>
+        <h3>Passerelle vers le <em>pilotage financier</em></h3>
+        <p>Nous ne traitons pas la RFE comme une simple contrainte technique isolée : c'est le point de départ d'un pilotage financier augmenté, connecté à votre trésorerie et à votre performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHIFFRES CLÉS ══ -->
+<section class="chiffres">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">En chiffres</span>
+      <h2 style="color:var(--ivoire-clair)">La réforme, <em style="font-style:italic;color:var(--or)">en repères</em></h2>
+    </div>
+    <div class="chiffres-grid">
+      <div class="chiffre-item"><div class="chiffre-val">150+</div><div class="chiffre-lbl">Plateformes agréées</div><div class="chiffre-dsc">Analysées pour un choix indépendant et argumenté</div></div>
+      <div class="chiffre-item"><div class="chiffre-val">18 mois</div><div class="chiffre-lbl">Fenêtre réglementaire</div><div class="chiffre-dsc">Entre le second semestre 2026 et le premier semestre 2027</div></div>
+      <div class="chiffre-item"><div class="chiffre-val">15 000 €</div><div class="chiffre-lbl">Sanction plafond / an</div><div class="chiffre-dsc">Par obligation (facturation ou e-reporting) non respectée</div></div>
+      <div class="chiffre-item"><div class="chiffre-val">24h</div><div class="chiffre-lbl">Devis détaillé</div><div class="chiffre-dsc">Un engagement, pas une promesse marketing</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESSUS ══ -->
+<section class="section processus" id="processus">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Notre méthode</span>
+      <h2>De la première demande à la <em class="italique">conformité durable</em></h2>
+      <p>Un parcours pensé pour aller vite, sans jamais sacrifier le sur-mesure.</p>
+    </div>
+    <div class="processus-timeline">
+      <div class="etape"><div class="cercle">1</div><h4>Devis en 24h</h4><p>Vous nous décrivez votre situation, nous vous répondons avec un devis détaillé sous 24h.</p></div>
+      <div class="etape"><div class="cercle">2</div><h4>Diagnostic Flash</h4><p>Audit de vos flux, cartographie des obligations et score de préparation en quelques jours.</p></div>
+      <div class="etape"><div class="cercle">3</div><h4>Déploiement sur-mesure</h4><p>Choix indépendant de plateforme, paramétrage, interfaçage et formation de vos équipes.</p></div>
+      <div class="etape"><div class="cercle">4</div><h4>Veille continue</h4><p>Conformité pérenne et, si vous le souhaitez, passage au pilotage financier augmenté.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ YOUTUBE ══ -->
+<section class="section youtube" id="youtube">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Notre expertise, en vidéo</span>
+      <h2>La chaîne <em style="font-style:italic;color:var(--or)">@FEConsultance</em></h2>
+      <p>Décryptages, dates clés, mythes déconstruits : nous partageons publiquement l'expertise que nous mettons ensuite au service de votre accompagnement sur-mesure.</p>
+    </div>
+    <div class="yt-subscribe">
+      <a href="https://www.youtube.com/@FEConsultance?sub_confirmation=1" target="_blank" rel="noopener" class="btn-youtube">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>
+        S'abonner à la chaîne YouTube
+      </a>
+    </div>
+    <div class="yt-grid">
+      <div class="yt-card"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">
+        <div class="yt-thumb"><span class="ep">Épisode 1</span><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="yt-info"><h4>La facturation électronique, c'est quoi (vraiment) ?</h4></div>
+      </a></div>
+      <div class="yt-card"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">
+        <div class="yt-thumb"><span class="ep">Épisode 2</span><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="yt-info"><h4>3 dates que vous DEVEZ retenir sur la facturation électronique</h4></div>
+      </a></div>
+      <div class="yt-card"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">
+        <div class="yt-thumb"><span class="ep">Épisode 5</span><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="yt-info"><h4>Tout savoir sur les Plateformes Agréées (PA)</h4></div>
+      </a></div>
+      <div class="yt-card"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">
+        <div class="yt-thumb"><span class="ep">Épisode 6</span><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="yt-info"><h4>E-invoicing vs E-reporting : 2 minutes pour comprendre</h4></div>
+      </a></div>
+      <div class="yt-card"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">
+        <div class="yt-thumb"><span class="ep">Épisode 9</span><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="yt-info"><h4>Combien ça va vraiment vous coûter ?</h4></div>
+      </a></div>
+      <div class="yt-card"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">
+        <div class="yt-thumb"><span class="ep">Épisode 10</span><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <div class="yt-info"><h4>Les sanctions si vous ne respectez pas la facturation électronique</h4></div>
+      </a></div>
+    </div>
+    <div class="yt-more"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">Voir tous les épisodes sur la chaîne →</a></div>
+  </div>
+</section>
+
+<!-- ══ FORMULAIRE DE DEVIS ══ -->
+<section class="section contact" id="devis">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Votre devis en 24h</span>
+      <h2>Décrivez votre situation, <em style="font-style:italic;color:var(--or)">nous nous occupons du reste</em></h2>
+      <p>Un premier échange gratuit et confidentiel, puis un devis détaillé sous 24h.</p>
+    </div>
+    <div class="contact-card">
+      <form id="devisForm" novalidate>
+        <div class="form-grid">
+          <div class="form-grp">
+            <label class="form-lbl" for="prenom">Prénom *</label>
+            <input class="form-inp" id="prenom" name="prenom" type="text" placeholder="Jean-Paul" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="nom">Nom *</label>
+            <input class="form-inp" id="nom" name="nom" type="text" placeholder="Dupont" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="societe">Société / activité *</label>
+            <input class="form-inp" id="societe" name="societe" type="text" placeholder="Ma Société" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="taille">Taille de la structure *</label>
+            <select class="form-sel form-inp" id="taille" name="taille" required>
+              <option value="" disabled selected>Sélectionnez…</option>
+              <option>Micro-entreprise / Indépendant</option>
+              <option>TPE (1 à 10 salariés)</option>
+              <option>PME (11 à 250 salariés)</option>
+              <option>ETI (250 salariés et +)</option>
+            </select>
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="telephone">Téléphone *</label>
+            <input class="form-inp" id="telephone" name="telephone" type="tel" placeholder="+33 6 00 00 00 00" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="email">Email *</label>
+            <input class="form-inp" id="email" name="email" type="email" placeholder="jpdupont@masociete.fr" required />
+          </div>
+          <div class="missions-section">
+            <span class="missions-lbl">Brique(s) qui vous intéresse(nt) *</span>
+            <div class="missions-grid">
+              <label class="mission-chk">
+                <input type="checkbox" name="brique" value="diagnostic" id="chk-diagnostic" />
+                <div class="mission-box"><div class="ico">🔍</div><div class="nm">Diagnostic Flash</div></div>
+              </label>
+              <label class="mission-chk">
+                <input type="checkbox" name="brique" value="deploiement" id="chk-deploiement" />
+                <div class="mission-box"><div class="ico">⚙️</div><div class="nm">Déploiement</div></div>
+              </label>
+              <label class="mission-chk">
+                <input type="checkbox" name="brique" value="veille" id="chk-veille" />
+                <div class="mission-box"><div class="ico">🛰</div><div class="nm">Veille &amp; Conformité</div></div>
+              </label>
+              <label class="mission-chk">
+                <input type="checkbox" name="brique" value="pilotage" id="chk-pilotage" />
+                <div class="mission-box"><div class="ico">📈</div><div class="nm">Pilotage augmenté</div></div>
+              </label>
+            </div>
+          </div>
+          <div class="form-grp full">
+            <label class="form-lbl" for="message">Précisions sur votre situation (optionnel)</label>
+            <textarea class="form-txt" id="message" name="message" placeholder="Ex : nous facturons environ 200 clients/mois en France et à l'étranger, actuellement sur Excel…"></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">Recevoir mon devis en 24h <span class="arr">→</span></button>
+          <div class="reassurance">
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>Confidentialité garantie</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Devis sous 24h</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Sans engagement</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Questions fréquentes</span>
+      <h2>Tout comprendre sur la <em class="italique">réforme et notre accompagnement</em></h2>
+      <p>Les questions les plus posées par les dirigeants que nous accompagnons.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Quelles sont les dates clés à retenir ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Réception des factures électroniques obligatoire pour toutes les entreprises assujetties à la TVA dès le 1er septembre 2026. Émission des factures électroniques et e-reporting (flux B2C, international, secteurs exonérés) obligatoires pour les grandes entreprises et ETI dès le 1er septembre 2026, puis pour les PME, TPE, micro-entreprises et auto-entrepreneurs à partir du 1er septembre 2027.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Que risque-t-on en cas de non-conformité ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">50 € par facture non émise dans les règles, plafonnés à 15 000 € par an, et 500 € par défaut de télétransmission d'e-reporting, également plafonnés à 15 000 € par an. À cela s'ajoutent des risques opérationnels indirects : blocage de flux, rejet de factures par des partenaires déjà conformes, et un risque de contrôle fiscal renforcé, la donnée facture devenant nativement disponible pour l'administration.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Qu'est-ce qu'une Plateforme Agréée et comment la choisir parmi plus de 150 ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Depuis le recentrage du Portail Public de Facturation en 2024, chaque entreprise doit choisir et payer sa propre Plateforme Agréée (PA) pour émettre et recevoir ses factures électroniques. Plus de 150 plateformes sont agréées par la DGFiP, avec des fonctionnalités, des tarifs et des niveaux d'intégration très différents. Notre mission de Déploiement sur-mesure inclut une recommandation argumentée et indépendante, sans lien capitalistique avec aucun éditeur.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Pourquoi passer par un cabinet plutôt qu'un auto-diagnostic en ligne à 79 € ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Les outils d'auto-diagnostic en ligne sont utiles pour une première sensibilisation, mais ils ne remplacent pas l'accompagnement à la mise en œuvre et n'engagent aucune responsabilité professionnelle. Notre mission va jusqu'au déploiement complet et à la formation de vos équipes, avec la responsabilité d'un expert-comptable inscrit à l'Ordre.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Cet accompagnement remplace-t-il mon expert-comptable actuel ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Non. Il s'agit d'une mission ponctuelle et indépendante, réalisable en complément de votre expert-comptable actuel. Si vous souhaitez ensuite devenir client PME CONSULTANCE pour votre comptabilité, nous intégrons naturellement cette brique à votre suivi global.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Que se passe-t-il après le déploiement ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">La réglementation continuera d'évoluer au-delà de votre mise en conformité. Nous proposons un abonnement de Veille &amp; Conformité continue pour sécuriser durablement vos flux, puis, si vous le souhaitez, l'option Pilotage financier augmenté pour transformer vos données de facturation en véritable outil de gestion de trésorerie.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<section class="cta-final">
+  <div class="container">
+    <h2>La fenêtre réglementaire<br/><em>se referme progressivement.</em></h2>
+    <p>Un premier échange gratuit et confidentiel, un devis détaillé sous 24h. Anticipez plutôt que de subir.</p>
+    <div class="hero-cta">
+      <a href="#devis" class="btn-primaire">Obtenir mon devis en 24h <span class="arrow">→</span></a>
+      <a href="mailto:contact@pmeconsultance.fr" class="btn-secondaire">Nous écrire directement</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" /></div>
+        <p>Cabinet d'expertise comptable et de conseil, indépendant et haut de gamme. Inscrit à l'Ordre des Experts-Comptables.</p>
+      </div>
+      <div>
+        <h5>Notre accompagnement</h5>
+        <ul>
+          <li><a href="#offres" onclick="openTab('diagnostic')">Diagnostic Flash</a></li>
+          <li><a href="#offres" onclick="openTab('deploiement')">Déploiement sur-mesure</a></li>
+          <li><a href="#offres" onclick="openTab('veille')">Veille &amp; Conformité</a></li>
+          <li><a href="#offres" onclick="openTab('pilotage')">Pilotage augmenté</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Le cabinet</h5>
+        <ul>
+          <li><a href="index.html">Offres TPE / Entrepreneurs</a></li>
+          <li><a href="pme-eti.html">Offre PME / ETI</a></li>
+          <li><a href="independants-sci-lmnp.html">Indépendants / SCI / LMNP</a></li>
+          <li><a href="https://www.youtube.com/@FEConsultance" target="_blank" rel="noopener">Chaîne YouTube @FEConsultance</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contact@pmeconsultance.fr
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Devis sous 24h
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PME CONSULTANCE · Tous droits réservés</span>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="cgv.html">CGV</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="politique-ia.html">Politique IA</a>
+      </div>
+      <span class="signature">Expertise · Conseils · Disruption · Valeur Ajoutée</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <strong>Demande envoyée ✓</strong>
+  Votre devis détaillé vous parvient sous 24h ouvrées. Merci de votre confiance.
+</div>
+
+<script>
+// Menu mobile
+document.getElementById('menuToggle').addEventListener('click',function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+document.querySelectorAll('.nav a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});});
+
+// Onglets offres
+function openTab(panel){
+  document.querySelectorAll('.offre-tab').forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+  document.querySelectorAll('.offre-panel').forEach(function(p){p.classList.remove('active');});
+  var btn=document.querySelector('[data-panel="'+panel+'"]');
+  var pnl=document.getElementById('panel-'+panel);
+  if(btn&&pnl){btn.classList.add('active');btn.setAttribute('aria-selected','true');pnl.classList.add('active');}
+}
+document.querySelectorAll('.offre-tab').forEach(function(tab){
+  tab.addEventListener('click',function(){openTab(this.dataset.panel);});
+});
+
+// Pré-sélection depuis les CTA de mission
+function preselectMission(val){
+  if(val==='complete'){
+    var d=document.getElementById('chk-diagnostic'); if(d) d.checked=true;
+    var p=document.getElementById('chk-deploiement'); if(p) p.checked=true;
+  } else {
+    var map={diagnostic:'chk-diagnostic',deploiement:'chk-deploiement',veille:'chk-veille',pilotage:'chk-pilotage'};
+    var id=map[val];
+    if(id){var cb=document.getElementById(id);if(cb)cb.checked=true;}
+  }
+  document.getElementById('devis').scrollIntoView({behavior:'smooth'});
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.parentElement;
+    var was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');});
+    if(!was)item.classList.add('open');
+  });
+});
+
+// Formulaire
+/* ⚠️ À remplacer par l'ID de votre formulaire Formspree (voir guide de mise en ligne) */
+var FORMSPREE_ID_FE = 'VOTRE_ID_FORMSPREE';
+
+document.getElementById('devisForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var form=this;
+  if(!document.getElementById('prenom').value||!document.getElementById('email').value){
+    alert('Merci de renseigner au minimum votre prénom et votre email.');return;
+  }
+  var briques=Array.prototype.slice.call(document.querySelectorAll('input[name="brique"]:checked')).map(function(c){return c.value;});
+  var payload={
+    _subject:'Nouvelle demande — Facturation Électronique',
+    prenom:document.getElementById('prenom').value,
+    nom:document.getElementById('nom').value,
+    societe:document.getElementById('societe').value,
+    taille:document.getElementById('taille').value,
+    telephone:document.getElementById('telephone').value,
+    email:document.getElementById('email').value,
+    briques:briques.length?briques.join(', '):'Non précisé — diagnostic recommandé',
+    message:document.getElementById('message').value
+  };
+  fetch('https://formspree.io/f/'+FORMSPREE_ID_FE,{
+    method:'POST',
+    headers:{'Accept':'application/json','Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+  }).catch(function(){/* toast affiché quoi qu'il arrive, fallback mailto disponible dans le CTA final */});
+  var toast=document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(function(){toast.classList.remove('show');},5000);
+  form.reset();
+});
+
+// Smooth scroll ancres
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+// Animations Intersection Observer
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';}
+  });
+},{threshold:0.1});
+document.querySelectorAll('.offre-right,.chiffre-item,.etape,.pourquoi-item,.yt-card').forEach(function(el){
+  el.style.opacity='0';el.style.transform='translateY(22px)';
+  el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+  obs.observe(el);
+});
+</script>
+<script src="assets/cookies-banner.js" defer></script>
+</body>
+</html>

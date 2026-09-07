@@ -1,0 +1,211 @@
+/* ============================================
+   PME CONSULTANCE — Bandeau cookies CNIL
+   Conforme aux lignes directrices CNIL du 17 septembre 2020
+   - 3 boutons sur le même niveau (Accepter / Refuser / Personnaliser)
+   - Pas de cookie wall, refus aussi simple qu'accepter
+   - Aucun cookie déposé avant consentement
+   ============================================ */
+
+.pmc-cookies-overlay{
+  position:fixed;inset:0;
+  background:rgba(14,27,44,0.45);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  z-index:9998;
+  display:none;
+  animation:pmcFade .35s ease both;
+}
+.pmc-cookies-overlay.show{display:block}
+
+.pmc-cookies-banner{
+  position:fixed;
+  bottom:24px;left:24px;right:24px;
+  max-width:1100px;margin:0 auto;
+  background:#FAF7F0;
+  color:#1A1A1A;
+  border:1px solid rgba(184,152,90,0.25);
+  box-shadow:0 24px 70px rgba(14,27,44,0.25);
+  padding:32px 36px;
+  z-index:9999;
+  display:none;
+  animation:pmcSlideUp .45s cubic-bezier(0.4,0,0.2,1) both;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+}
+.pmc-cookies-banner.show{display:block}
+
+@keyframes pmcFade{from{opacity:0}to{opacity:1}}
+@keyframes pmcSlideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+.pmc-cookies-banner h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.6rem;font-weight:500;color:#1A1A1A;
+  margin:0 0 12px;line-height:1.2;
+}
+.pmc-cookies-banner h3 em{color:#B8985A;font-style:italic}
+
+.pmc-cookies-banner p{
+  font-size:.94rem;line-height:1.65;color:#4A4A4A;
+  margin:0 0 22px;max-width:760px;
+}
+.pmc-cookies-banner p a{
+  color:#9A7E48;text-decoration:underline;
+  text-underline-offset:3px;
+}
+.pmc-cookies-banner p a:hover{color:#1A1A1A}
+
+.pmc-cookies-actions{
+  display:flex;gap:12px;flex-wrap:wrap;
+  align-items:center;
+}
+.pmc-cookies-btn{
+  padding:13px 26px;
+  font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
+  font-weight:500;font-family:inherit;
+  border:1px solid;cursor:pointer;
+  transition:all .35s cubic-bezier(0.4,0,0.2,1);
+  background:transparent;
+}
+.pmc-cookies-btn-accept{
+  background:#1A1A1A;color:#F5F1E8;border-color:#1A1A1A;
+}
+.pmc-cookies-btn-accept:hover{background:#B8985A;border-color:#B8985A;color:#FFFFFF}
+.pmc-cookies-btn-refuse{
+  background:#FAF7F0;color:#1A1A1A;border-color:#1A1A1A;
+}
+.pmc-cookies-btn-refuse:hover{background:#1A1A1A;color:#F5F1E8}
+.pmc-cookies-btn-custom{
+  background:transparent;color:#4A4A4A;border-color:rgba(26,26,26,0.2);
+}
+.pmc-cookies-btn-custom:hover{color:#1A1A1A;border-color:#1A1A1A}
+
+/* ===== PANNEAU PERSONNALISATION ===== */
+.pmc-cookies-modal{
+  position:fixed;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%) scale(.96);
+  width:calc(100% - 40px);max-width:620px;
+  max-height:calc(100vh - 80px);
+  background:#FFFFFF;color:#1A1A1A;
+  border:1px solid rgba(184,152,90,0.25);
+  box-shadow:0 30px 80px rgba(14,27,44,0.35);
+  z-index:10000;
+  display:none;
+  flex-direction:column;
+  opacity:0;
+  transition:opacity .3s,transform .3s;
+  font-family:'Inter',sans-serif;
+}
+.pmc-cookies-modal.show{
+  display:flex;opacity:1;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+.pmc-cookies-modal-header{
+  padding:28px 32px 18px;
+  border-bottom:1px solid rgba(184,152,90,0.2);
+  display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
+}
+.pmc-cookies-modal-header h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.5rem;font-weight:500;margin:0;
+}
+.pmc-cookies-modal-header h3 em{color:#B8985A;font-style:italic}
+.pmc-cookies-close{
+  background:none;border:none;cursor:pointer;
+  font-size:1.5rem;line-height:1;color:#7A756B;
+  padding:0;transition:color .25s;
+}
+.pmc-cookies-close:hover{color:#1A1A1A}
+
+.pmc-cookies-modal-body{
+  padding:24px 32px;overflow-y:auto;flex:1;
+}
+.pmc-cookies-intro{
+  font-size:.92rem;color:#4A4A4A;line-height:1.65;
+  margin-bottom:24px;
+}
+
+.pmc-categorie{
+  background:#FAF7F0;
+  border:1px solid rgba(184,152,90,0.18);
+  padding:20px 22px;margin-bottom:14px;
+}
+.pmc-categorie-header{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:16px;margin-bottom:8px;
+}
+.pmc-categorie h4{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:1.15rem;font-weight:500;font-style:italic;
+  color:#1A1A1A;margin:0;line-height:1.3;
+}
+.pmc-categorie p{
+  font-size:.85rem;color:#5C5C5C;
+  margin:0;line-height:1.6;
+}
+.pmc-categorie-toujours{
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#B8985A;font-weight:500;
+  background:rgba(184,152,90,0.1);padding:4px 10px;
+  white-space:nowrap;
+}
+
+/* ===== TOGGLE SWITCH ===== */
+.pmc-switch{
+  position:relative;display:inline-block;
+  width:46px;height:26px;flex-shrink:0;
+}
+.pmc-switch input{opacity:0;width:0;height:0}
+.pmc-slider{
+  position:absolute;cursor:pointer;
+  top:0;left:0;right:0;bottom:0;
+  background:#D5CFC1;
+  transition:.35s;
+}
+.pmc-slider::before{
+  position:absolute;content:"";
+  height:20px;width:20px;left:3px;bottom:3px;
+  background:#FFFFFF;
+  transition:.35s;
+  box-shadow:0 1px 3px rgba(0,0,0,0.2);
+}
+.pmc-switch input:checked + .pmc-slider{background:#B8985A}
+.pmc-switch input:checked + .pmc-slider::before{transform:translateX(20px)}
+.pmc-switch input:disabled + .pmc-slider{opacity:.5;cursor:not-allowed}
+
+.pmc-cookies-modal-footer{
+  padding:20px 32px;
+  border-top:1px solid rgba(184,152,90,0.2);
+  display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap;
+  background:#FAF7F0;
+}
+
+/* ===== BOUTON FOOTER "GÉRER MES COOKIES" ===== */
+.pmc-cookies-trigger{
+  background:none;border:none;cursor:pointer;
+  color:inherit;font:inherit;
+  padding:0;
+  border-bottom:1px solid transparent;
+  transition:all .25s;
+}
+.pmc-cookies-trigger:hover{
+  color:#B8985A;border-bottom-color:#B8985A;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:680px){
+  .pmc-cookies-banner{
+    bottom:0;left:0;right:0;
+    padding:24px 22px;
+  }
+  .pmc-cookies-banner h3{font-size:1.3rem}
+  .pmc-cookies-actions{flex-direction:column;align-items:stretch}
+  .pmc-cookies-btn{width:100%;text-align:center}
+  .pmc-cookies-modal-header,.pmc-cookies-modal-body,.pmc-cookies-modal-footer{
+    padding-left:22px;padding-right:22px;
+  }
+  .pmc-cookies-modal-footer{flex-direction:column-reverse;align-items:stretch}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .pmc-cookies-overlay,.pmc-cookies-banner,.pmc-cookies-modal{animation:none;transition:none}
+}

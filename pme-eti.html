@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="PME CONSULTANCE — Expertise comptable & conseil stratégique pour les PME-ETI. Révision des comptes, Offre 360°, CFO Partagé, M&A. Votre partenaire financier de confiance." />
+<meta name="keywords" content="expert comptable PME ETI, révision comptes annuels, CFO partagé, offre 360 expertise comptable, conseil M&A, cession acquisition PME" />
+<meta name="author" content="PME CONSULTANCE" />
+<meta property="og:title" content="PME CONSULTANCE — Expertise comptable & conseil stratégique PME-ETI" />
+<meta property="og:description" content="Votre partenaire financier stratégique. Révision des comptes, CFO Partagé, Offre 360° et M&A pour les PME & ETI ambitieuses." />
+<meta property="og:type" content="website" />
+<title>PME CONSULTANCE — Expertise · Conseil · Stratégie · Valeur Ajoutée PME-ETI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ivoire:#F5F1E8;--ivoire-clair:#FAF7F0;--ivoire-fonce:#EDE7D7;
+  --noir:#1A1A1A;--anthracite:#2C2C2C;--gris-texte:#5C5C5C;--gris-clair:#9A958A;
+  --or:#B8985A;--or-fonce:#9A7E48;--marine:#0E1B2C;--blanc:#FFFFFF;
+  --ombre:0 4px 30px rgba(26,26,26,0.06);--ombre-hover:0 12px 40px rgba(26,26,26,0.12);
+  --transition:cubic-bezier(0.4,0,0.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--ivoire);color:var(--noir);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.15;color:var(--noir)}
+h1{font-size:clamp(2.4rem,5.5vw,4.5rem)}
+h2{font-size:clamp(1.9rem,3.8vw,3rem)}
+h3{font-size:clamp(1.3rem,2.2vw,1.7rem)}
+.italique{font-style:italic;color:var(--gris-texte)}
+a{color:inherit;text-decoration:none;transition:color .3s var(--transition)}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.section{padding:110px 0}
+.section-titre{text-align:center;margin-bottom:70px}
+.section-titre .surtitre{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--or);margin-bottom:18px;display:block}
+.section-titre h2{margin-bottom:18px}
+.section-titre p{font-size:1.05rem;color:var(--gris-texte);max-width:640px;margin:0 auto}
+
+/* HEADER */
+.annonce-bar{position:fixed;top:0;left:0;right:0;z-index:1001;background:var(--or);color:var(--marine);text-align:center;padding:11px 20px;font-size:.82rem;letter-spacing:.01em;font-weight:500}
+.annonce-bar a{color:var(--marine);text-decoration:underline;text-underline-offset:3px;font-weight:700;margin-left:6px;white-space:nowrap}
+.annonce-bar .pastille{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--marine);margin-right:9px;vertical-align:middle}
+.header{position:fixed;top:42px;left:0;right:0;z-index:1000;background:rgba(14,27,44,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,152,90,0.2);transition:all .4s var(--transition)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;height:55px}
+.logo img{height:48px;width:auto;object-fit:contain}
+.nav{display:flex;align-items:center;gap:36px}
+.nav a{font-size:.88rem;font-weight:400;color:rgba(245,241,232,0.72);position:relative;letter-spacing:.02em}
+.nav a:hover{color:var(--or)}
+.nav a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:1px;background:var(--or);transition:width .3s var(--transition)}
+.nav a:hover::after{width:100%}
+.btn-header{background:var(--or);color:var(--blanc);padding:12px 26px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;border:1px solid var(--or);transition:all .35s var(--transition)}
+.btn-header:hover{background:transparent;border-color:var(--or);color:var(--or)}
+.menu-mobile{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--ivoire)}
+
+/* HERO */
+.hero{min-height:100vh;padding:182px 0 100px;display:flex;align-items:center;background:linear-gradient(135deg,var(--marine) 0%,#152030 55%,#0a1420 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-180px;width:820px;height:820px;border-radius:50%;border:1px solid rgba(184,152,90,0.06);pointer-events:none}
+.hero::after{content:'';position:absolute;top:0px;right:-80px;width:580px;height:580px;border-radius:50%;border:1px solid rgba(184,152,90,0.04);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:center;position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.38em;text-transform:uppercase;color:var(--or);margin-bottom:28px;font-weight:500}
+.hero-eyebrow::before{content:'';width:30px;height:1px;background:var(--or)}
+.hero h1{margin-bottom:28px;color:var(--ivoire-clair)}
+.hero h1 em{color:var(--or);font-style:italic;font-weight:300}
+.hero-sous{font-size:1.1rem;color:rgba(245,241,232,0.65);margin-bottom:42px;max-width:530px;line-height:1.82}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap}
+.btn-primaire{display:inline-flex;align-items:center;gap:14px;background:var(--or);color:var(--blanc);padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--or);cursor:pointer;transition:all .4s var(--transition)}
+.btn-primaire:hover{background:transparent;border-color:var(--or);color:var(--or);transform:translateY(-2px)}
+.btn-primaire .arrow{transition:transform .3s var(--transition)}
+.btn-primaire:hover .arrow{transform:translateX(6px)}
+.btn-secondaire{display:inline-flex;align-items:center;gap:14px;background:transparent;color:var(--ivoire);padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(245,241,232,0.28);cursor:pointer;transition:all .4s var(--transition)}
+.btn-secondaire:hover{background:rgba(245,241,232,0.06);border-color:rgba(245,241,232,0.55)}
+.hero-trust{margin-top:48px;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.hero-trust-item{display:flex;align-items:center;gap:9px;font-size:.82rem;color:rgba(245,241,232,0.5)}
+.hero-trust-item svg{flex-shrink:0;color:var(--or)}
+
+/* HERO CARDS */
+.hero-visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center}
+.hero-card{position:absolute;backdrop-filter:blur(10px);padding:28px 30px;border:1px solid rgba(184,152,90,0.22);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:transform .4s var(--transition)}
+.hero-card-a{top:10px;left:0;width:258px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite}
+.hero-card-b{bottom:20px;right:0;width:272px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite .9s}
+.hero-card-c{top:44%;left:26%;width:248px;background:var(--or);animation:flotter-mid 6s ease-in-out infinite 1.7s}
+@keyframes flotter{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes flotter-mid{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 12px))}}
+.hero-card .tag{display:inline-block;padding:3px 10px;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;background:rgba(184,152,90,0.15);color:var(--or)}
+.hero-card-c .tag{background:rgba(14,27,44,0.15);color:var(--marine)}
+.hero-card .num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--or);line-height:1;margin-bottom:7px}
+.hero-card-c .num{color:var(--marine)}
+.hero-card .lbl{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,232,0.45)}
+.hero-card-c .lbl{color:rgba(14,27,44,0.65)}
+.hero-card .dsc{font-size:.82rem;margin-top:10px;color:rgba(245,241,232,0.6);line-height:1.55}
+.hero-card-c .dsc{color:rgba(14,27,44,0.72)}
+
+/* BANDEAU CONFIANCE */
+.confiance{padding:46px 0;background:var(--ivoire-fonce);border-top:1px solid rgba(184,152,90,0.12);border-bottom:1px solid rgba(184,152,90,0.12)}
+.confiance-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;align-items:center}
+.confiance-item{text-align:center}
+.confiance-item .pict{font-size:1.8rem;color:var(--or);margin-bottom:10px}
+.confiance-item h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--noir);font-weight:600;margin-bottom:6px}
+.confiance-item p{font-size:.84rem;color:var(--gris-texte)}
+
+/* OFFRES ONGLETS */
+.offres{background:var(--ivoire)}
+.offres-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin-bottom:64px;border:1px solid rgba(184,152,90,0.22);max-width:900px;margin-left:auto;margin-right:auto}
+.offre-tab{padding:14px 30px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--gris-texte);transition:all .3s var(--transition);font-family:'Inter',sans-serif;position:relative}
+.offre-tab:hover{color:var(--or)}
+.offre-tab.active{background:var(--marine);color:var(--ivoire)}
+.offre-tab.active::after{content:'';position:absolute;bottom:-7px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid var(--marine)}
+
+.offre-panel{display:none;animation:fadeIn .45s var(--transition)}
+.offre-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.offre-left{position:sticky;top:108px}
+.offre-numero{font-family:'Cormorant Garamond',serif;font-size:6rem;color:rgba(184,152,90,0.1);line-height:1;margin-bottom:-18px;font-weight:700}
+.offre-titre{font-size:clamp(1.9rem,3vw,2.7rem);margin-bottom:16px;color:var(--marine)}
+.offre-accroche{font-size:1.05rem;color:var(--gris-texte);margin-bottom:30px;font-style:italic;line-height:1.8;border-left:3px solid var(--or);padding-left:20px}
+.offre-cibles-titre{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:13px;font-weight:600}
+.offre-cibles-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.cible-tag{padding:5px 13px;background:var(--ivoire-fonce);border:1px solid rgba(184,152,90,0.2);font-size:.79rem;color:var(--anthracite);letter-spacing:.03em}
+.offre-desc{font-size:.9rem;color:var(--gris-texte);line-height:1.84}
+
+.offre-right{background:var(--blanc);padding:48px;border:1px solid rgba(184,152,90,0.15)}
+.offre-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;background:rgba(184,152,90,0.08);border:1px solid rgba(184,152,90,0.22);margin-bottom:26px;font-size:.78rem;color:var(--or-fonce);letter-spacing:.06em}
+.offre-prix-bloc{padding-bottom:26px;border-bottom:1px solid rgba(184,152,90,0.15);margin-bottom:26px}
+.offre-prix-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gris-clair);margin-bottom:6px}
+.offre-prix-val{font-family:'Cormorant Garamond',serif;font-size:3.1rem;color:var(--marine);line-height:1}
+.offre-prix-val .eur{font-size:1.5rem;color:var(--or);vertical-align:top}
+.offre-prix-val .per{font-size:.88rem;color:var(--gris-texte);font-family:'Inter',sans-serif;margin-left:4px}
+.offre-prix-note{font-size:.77rem;color:var(--gris-clair);margin-top:6px}
+.prestations-titre{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gris-clair);margin-bottom:18px;font-weight:500}
+.prestations-list{list-style:none;margin-bottom:34px}
+.prestations-list li{padding:11px 0 11px 30px;position:relative;font-size:.91rem;color:var(--anthracite);border-bottom:1px solid rgba(26,26,26,0.04);line-height:1.5}
+.prestations-list li:last-child{border-bottom:none}
+.prestations-list li::before{content:'';position:absolute;left:0;top:18px;width:15px;height:8px;border-left:1.5px solid var(--or);border-bottom:1.5px solid var(--or);transform:rotate(-45deg)}
+.btn-mission{width:100%;padding:18px;background:var(--marine);color:var(--ivoire);border:none;font-size:.84rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .4s var(--transition);display:flex;align-items:center;justify-content:center;gap:12px;font-family:'Inter',sans-serif}
+.btn-mission:hover{background:var(--or)}
+.btn-mission .arr{transition:transform .3s var(--transition)}
+.btn-mission:hover .arr{transform:translateX(6px)}
+.offre-garantie{margin-top:14px;text-align:center;font-size:.78rem;color:var(--gris-clair);display:flex;align-items:center;justify-content:center;gap:6px}
+
+/* POURQUOI */
+.pourquoi{background:var(--marine);color:var(--ivoire-clair);position:relative;overflow:hidden}
+.pourquoi::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--or),transparent)}
+.pourquoi h2{color:var(--ivoire-clair)}
+.pourquoi .section-titre p{color:rgba(245,241,232,0.62)}
+.pourquoi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;position:relative;z-index:2}
+.pourquoi-item{text-align:center}
+.pourquoi-item .num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--or);line-height:1;margin-bottom:20px;font-style:italic}
+.pourquoi-item h3{color:var(--ivoire-clair);margin-bottom:14px}
+.pourquoi-item p{font-size:.92rem;color:rgba(245,241,232,0.6);line-height:1.8}
+
+/* DIFFÉRENCIATEURS */
+.diff{background:var(--ivoire-clair);padding:80px 0}
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(184,152,90,0.1)}
+.diff-item{background:var(--blanc);padding:50px 44px;transition:all .45s var(--transition);cursor:default}
+.diff-item:hover{background:var(--marine)}
+.diff-item:hover h3,.diff-item:hover .diff-num{color:rgba(184,152,90,0.15)}
+.diff-item:hover p{color:rgba(245,241,232,0.62)}
+.diff-item:hover .diff-icone{border-color:rgba(184,152,90,0.4);color:var(--or)}
+.diff-num{font-family:'Cormorant Garamond',serif;font-size:4rem;color:rgba(184,152,90,0.09);font-weight:700;line-height:1;margin-bottom:-14px;transition:color .45s}
+.diff-icone{width:52px;height:52px;border:1px solid rgba(184,152,90,0.25);display:flex;align-items:center;justify-content:center;color:var(--or);margin-bottom:22px;transition:all .45s}
+.diff-item h3{margin-bottom:13px;transition:color .45s}
+.diff-item p{font-size:.91rem;color:var(--gris-texte);line-height:1.78;transition:color .45s}
+
+/* PROCESSUS */
+.processus{background:var(--ivoire)}
+.processus-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.processus-timeline::before{content:'';position:absolute;top:30px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--or) 15%,var(--or) 85%,transparent);z-index:0}
+.etape{text-align:center;position:relative;z-index:1}
+.etape .cercle{width:60px;height:60px;border-radius:50%;background:var(--ivoire);border:2px solid var(--or);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--or);font-weight:500}
+.etape h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:10px}
+.etape p{font-size:.88rem;color:var(--gris-texte);padding:0 8px}
+
+/* CONTACT / LEAD FORM */
+.contact{background:var(--noir);color:var(--ivoire);position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:50%;left:-200px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(184,152,90,0.08);transform:translateY(-50%)}
+.contact::after{content:'';position:absolute;top:50%;right:-280px;width:680px;height:680px;border-radius:50%;border:1px solid rgba(184,152,90,0.05);transform:translateY(-50%)}
+.contact h2{color:var(--ivoire)}
+.contact .section-titre p{color:rgba(245,241,232,0.62)}
+.contact .surtitre{color:var(--or)}
+.contact-card{max-width:840px;margin:0 auto;background:var(--blanc);color:var(--noir);padding:60px 70px;position:relative;z-index:2;box-shadow:0 30px 80px rgba(0,0,0,0.4)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-grp{display:flex;flex-direction:column;gap:7px}
+.form-grp.full{grid-column:1/-1}
+.form-lbl{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris-texte);font-weight:500}
+.form-inp,.form-sel,.form-txt{padding:13px 16px;border:1px solid rgba(26,26,26,0.14);background:var(--ivoire-clair);font-family:'Inter',sans-serif;font-size:.91rem;color:var(--noir);transition:border-color .3s;width:100%}
+.form-inp:focus,.form-sel:focus,.form-txt:focus{outline:none;border-color:var(--or);background:var(--blanc)}
+.form-txt{resize:vertical;min-height:100px}
+.form-sel{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%23B8985A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+
+.missions-section{grid-column:1/-1}
+.missions-lbl{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris-texte);font-weight:500;margin-bottom:13px;display:block}
+.missions-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:11px}
+.mission-chk{cursor:pointer}
+.mission-chk input{display:none}
+.mission-box{padding:14px 8px;border:1.5px solid rgba(26,26,26,0.1);text-align:center;background:var(--ivoire-clair);transition:all .3s var(--transition)}
+.mission-chk input:checked + .mission-box{border-color:var(--or);background:rgba(184,152,90,0.06)}
+.mission-box .ico{font-size:1.3rem;color:var(--or);margin-bottom:5px}
+.mission-box .nm{font-size:.76rem;font-weight:500;color:var(--noir)}
+
+.form-submit{margin-top:30px;padding-top:30px;border-top:1px solid rgba(26,26,26,0.08)}
+.btn-submit{width:100%;padding:20px;background:var(--marine);color:var(--ivoire);border:none;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .4s var(--transition);display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Inter',sans-serif}
+.btn-submit:hover{background:var(--or)}
+.btn-submit .arr{transition:transform .3s var(--transition)}
+.btn-submit:hover .arr{transform:translateX(6px)}
+.reassurance{margin-top:14px;display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
+.reassurance span{font-size:.77rem;color:var(--gris-clair);display:flex;align-items:center;gap:5px}
+.reassurance svg{color:var(--or);flex-shrink:0}
+
+/* FAQ */
+.faq{background:var(--ivoire-clair)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(184,152,90,0.2)}
+.faq-q{padding:27px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--noir);font-family:'Cormorant Garamond',serif;font-size:1.26rem;font-weight:500}
+.faq-q .plus{font-size:1.5rem;color:var(--or);transition:transform .4s var(--transition);font-weight:300;flex-shrink:0;margin-left:20px}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-r{max-height:0;overflow:hidden;transition:max-height .5s var(--transition);color:var(--gris-texte);font-size:.93rem;line-height:1.84}
+.faq-r-inner{padding:0 40px 26px 0}
+.faq-item.open .faq-r{max-height:500px}
+
+/* CTA FINAL */
+.cta-final{background:var(--marine);text-align:center;padding:120px 0;position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;border:1px solid rgba(184,152,90,0.05)}
+.cta-final h2{margin-bottom:22px;color:var(--ivoire-clair);position:relative;z-index:2}
+.cta-final h2 em{color:var(--or);font-style:italic}
+.cta-final p{font-size:1.06rem;color:rgba(245,241,232,0.62);max-width:530px;margin:0 auto 42px;position:relative;z-index:2}
+.cta-final .hero-cta{justify-content:center;position:relative;z-index:2}
+
+/* FOOTER */
+.footer{background:var(--noir);color:var(--ivoire-fonce);padding:80px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px}
+.footer-logo{height:80px;margin-bottom:22px}
+.footer-logo img{height:100%;width:auto;object-fit:contain}
+.footer-brand p{font-size:.88rem;color:rgba(245,241,232,0.5);max-width:280px;line-height:1.78}
+.footer h5{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--or);margin-bottom:22px;font-style:italic}
+.footer ul{list-style:none}
+.footer li{margin-bottom:11px;font-size:.87rem}
+.footer a{color:rgba(245,241,232,0.5);transition:color .3s}
+.footer a:hover{color:var(--or)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:13px;font-size:.85rem;color:rgba(245,241,232,0.5)}
+.footer-contact-item svg{flex-shrink:0;color:var(--or);margin-top:3px}
+.footer-bottom{padding-top:28px;border-top:1px solid rgba(184,152,90,0.12);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-size:.79rem;color:rgba(245,241,232,0.38)}
+.footer-legal{display:flex;gap:22px;flex-wrap:wrap}
+.footer .signature{font-style:italic;color:var(--or);font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.04em}
+
+/* TOAST */
+.toast{position:fixed;bottom:36px;right:36px;background:var(--marine);color:var(--ivoire);padding:20px 28px;border:1px solid var(--or);font-size:.88rem;z-index:9999;transform:translateY(120px);opacity:0;transition:all .5s var(--transition);max-width:340px;box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.toast.show{transform:translateY(0);opacity:1}
+.toast strong{color:var(--or);display:block;margin-bottom:4px;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+
+/* RESPONSIVE */
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:60px}
+  .hero-visual{height:380px}
+  .offre-panel.active{grid-template-columns:1fr}
+  .offre-left{position:static}
+  .diff-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .nav{display:none}
+  .menu-mobile{display:block}
+  .nav.open{display:flex;position:absolute;top:80px;left:0;right:0;background:var(--marine);flex-direction:column;padding:28px;border-top:1px solid rgba(184,152,90,0.15)}
+  .nav.open a{color:var(--ivoire);padding:10px 0}
+  .contact-card{padding:40px 28px}
+  .form-grid{grid-template-columns:1fr}
+  .missions-grid{grid-template-columns:repeat(2,1fr)}
+  .pourquoi-grid{grid-template-columns:1fr;gap:36px}
+  .processus-timeline{grid-template-columns:1fr 1fr;gap:36px}
+  .processus-timeline::before{display:none}
+  .confiance-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .offres-tabs{flex-wrap:wrap}
+  .offre-tab{padding:11px 16px;font-size:.74rem}
+}
+@media(max-width:560px){
+  .container{padding:0 18px}
+  .annonce-bar{font-size:.72rem;padding:9px 14px}
+  .header{top:52px}
+  .hero{padding:150px 0 80px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn-primaire,.hero-cta .btn-secondaire{width:100%;justify-content:center}
+  .hero-visual{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .confiance-grid{grid-template-columns:1fr}
+  .processus-timeline{grid-template-columns:1fr}
+  .missions-grid{grid-template-columns:1fr 1fr}
+  .section{padding:80px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+</style>
+<link rel="stylesheet" href="assets/cookies-banner.css">
+</head>
+<body>
+
+<div class="annonce-bar"><span class="pastille"></span>Réforme de la Facturation Électronique — réception obligatoire dès le 1er septembre 2026.<a href="facturation-electronique.html">Découvrir notre accompagnement, devis en 24h →</a></div>
+
+<!-- ══ HEADER ══ -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="PME CONSULTANCE – Accueil">
+        <img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#offres">Nos missions</a>
+        <a href="#valeur">Notre valeur</a>
+        <a href="#processus">Notre approche</a>
+        <a href="#faq">FAQ</a>
+        <a href="facturation-electronique.html">Facturation Électronique</a>
+        <a href="independants-sci-lmnp.html">Indép. / SCI / LMNP</a>
+        <a href="#contact" class="btn-header">Prendre rendez-vous</a>
+      </nav>
+      <button class="menu-mobile" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow">Cabinet d'expertise comptable & conseil · PME-ETI</span>
+        <h1>Votre partenaire <em>stratégique</em> pour piloter, sécuriser &amp; valoriser votre entreprise.</h1>
+        <p class="hero-sous">PME CONSULTANCE accompagne les dirigeants, DAF et actionnaires de PME &amp; ETI avec des missions à haute valeur ajoutée : révision des comptes, pilotage financier partagé, performance 360° et opérations M&amp;A. <em style="font-style:italic;color:rgba(245,241,232,0.4)">Expertise · Conseils · Disruption · Valeur Ajoutée.</em></p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primaire">Demander un entretien <span class="arrow">→</span></a>
+          <a href="#offres" class="btn-secondaire">Découvrir nos missions</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+            Inscrit à l'Ordre des Experts-Comptables
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Premier entretien gratuit &amp; confidentiel
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Réponse sous 24h
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-a">
+          <div class="tag">Révision</div>
+          <div class="num">100%</div>
+          <div class="lbl">Fiabilité des comptes</div>
+          <div class="dsc">Comptes révisés, anomalies détectées, partenaires rassurés.</div>
+        </div>
+        <div class="hero-card hero-card-c">
+          <div class="tag">CFO Partagé</div>
+          <div class="num">+35%</div>
+          <div class="lbl">Gain de visibilité</div>
+          <div class="dsc">Pilotez avec les outils d'une grande entreprise.</div>
+        </div>
+        <div class="hero-card hero-card-b">
+          <div class="tag">M&amp;A</div>
+          <div class="num">NDA</div>
+          <div class="lbl">Confidentialité systématique</div>
+          <div class="dsc">Cessions, acquisitions & due diligences sécurisées.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BANDEAU CONFIANCE ══ -->
+<section class="confiance">
+  <div class="container">
+    <div class="confiance-grid">
+      <div class="confiance-item"><div class="pict">⚖</div><h4>Ordre Experts-Comptables</h4><p>Cabinet inscrit &amp; assuré</p></div>
+      <div class="confiance-item"><div class="pict">🏭</div><h4>PME &amp; ETI</h4><p>De 5 M€ à 150 M€ de CA</p></div>
+      <div class="confiance-item"><div class="pict">🔒</div><h4>Confidentialité totale</h4><p>NDA systématique · Secret professionnel</p></div>
+      <div class="confiance-item"><div class="pict">📊</div><h4>Vision 360°</h4><p>Comptable · Financier · Stratégique</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFFRES PAR ONGLETS ══ -->
+<section class="section offres" id="offres">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Nos missions</span>
+      <h2>Quatre expertises au service de votre <em class="italique">ambition</em></h2>
+      <p>Des missions structurées, portées par des experts dédiés, pour accompagner toutes les étapes de la vie de votre entreprise.</p>
+    </div>
+
+    <div class="offres-tabs" role="tablist">
+      <button class="offre-tab active" data-panel="revision" role="tab" aria-selected="true">📋 Révision des comptes</button>
+      <button class="offre-tab" data-panel="trois60" role="tab" aria-selected="false">🔭 Offre 360°</button>
+      <button class="offre-tab" data-panel="cfo" role="tab" aria-selected="false">🎯 CFO Partagé</button>
+      <button class="offre-tab" data-panel="ma" role="tab" aria-selected="false">🤝 M&amp;A</button>
+      <button class="offre-tab" data-panel="fe" role="tab" aria-selected="false">🧾 Facturation Électronique</button>
+    </div>
+
+    <!-- PANEL RÉVISION -->
+    <div class="offre-panel active" id="panel-revision" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">01</div>
+        <h2 class="offre-titre">Révision des comptes annuels</h2>
+        <p class="offre-accroche">Sécurisez vos états financiers, renforcez la confiance de vos partenaires et obtenez des comptes fiables pour vos décisions stratégiques.</p>
+        <div class="offre-cibles-titre">Cette mission est faite pour vous si…</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">PME non soumise à audit légal</span>
+          <span class="cible-tag">Levée de fonds ou refinancement</span>
+          <span class="cible-tag">Actionnaires exigeants</span>
+          <span class="cible-tag">Préparation à une cession</span>
+        </div>
+        <p class="offre-desc">La révision contractuelle est une mission intermédiaire entre la compilation et l'audit légal. Elle vous offre la rigueur d'un regard externe expert, sans les contraintes du commissariat aux comptes — et constitue un signal fort de fiabilité vis-à-vis de vos banquiers, investisseurs et repreneurs potentiels.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Mission certifiante · Norme ISRE 2400
+        </div>
+        <div class="offre-prix-bloc">
+          <div class="offre-prix-label">À partir de</div>
+          <div class="offre-prix-val"><span class="eur">€</span>2 500<span class="per">/ exercice HT</span></div>
+          <div class="offre-prix-note">Selon taille et complexité de l'entreprise</div>
+        </div>
+        <div class="prestations-titre">Ce que comprend la mission</div>
+        <ul class="prestations-list">
+          <li>Examen analytique approfondi (bilan, compte de résultat, annexes)</li>
+          <li>Revue des cycles significatifs : achats, ventes, trésorerie, paie</li>
+          <li>Vérification des méthodes comptables et de leur cohérence</li>
+          <li>Entretiens avec la direction et le responsable comptable</li>
+          <li>Rapport de révision formalisé (conclusions limitées)</li>
+          <li>Note de recommandations personnalisées</li>
+          <li>Restitution orale auprès de la direction ou du conseil</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('revision')">Discuter de cette mission <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Entretien gratuit · Devis sous 48h · Confidentialité garantie
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL 360° -->
+    <div class="offre-panel" id="panel-trois60" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">02</div>
+        <h2 class="offre-titre">Offre 360°</h2>
+        <p class="offre-accroche">Une vision globale, continue et stratégique de votre situation financière, fiscale, sociale et juridique — un seul interlocuteur expert pour tout maîtriser.</p>
+        <div class="offre-cibles-titre">Cette mission est faite pour vous si…</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">PME en forte croissance</span>
+          <span class="cible-tag">Groupe multi-entités</span>
+          <span class="cible-tag">Dirigeant manquant de temps</span>
+          <span class="cible-tag">ETI recherchant un partenaire global</span>
+        </div>
+        <p class="offre-desc">L'Offre 360° est notre formule d'accompagnement global. Votre expert dédié devient le chef d'orchestre de toutes vos obligations et de votre performance : comptabilité, fiscalité, social, juridique et conseil stratégique. Un seul interlocuteur, une vision consolidée, une réactivité maximale.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Notre formule la plus complète · Expert dédié
+        </div>
+        <div class="offre-prix-bloc">
+          <div class="offre-prix-label">À partir de</div>
+          <div class="offre-prix-val"><span class="eur">€</span>890<span class="per">/ mois HT</span></div>
+          <div class="offre-prix-note">Engagement annuel · Ajusté selon volume</div>
+        </div>
+        <div class="prestations-titre">Ce que comprend la mission</div>
+        <ul class="prestations-list">
+          <li>Tenue de comptabilité et arrêtés périodiques (mensuel/trimestriel)</li>
+          <li>Établissement des comptes annuels (bilan, CR, annexe)</li>
+          <li>Déclarations fiscales complètes (IS, TVA, CET, CVAE…)</li>
+          <li>Gestion sociale (bulletins de paie, DSN, charges sociales)</li>
+          <li>Secrétariat juridique annuel</li>
+          <li>Tableau de bord financier personnalisé mensuel</li>
+          <li>Conseil fiscal proactif et optimisation rémunération dirigeant</li>
+          <li>Hotline dédiée — réponse garantie sous 4h ouvrées</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('360')">Discuter de cette mission <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Entretien gratuit · Devis sous 48h · Confidentialité garantie
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL CFO PARTAGÉ -->
+    <div class="offre-panel" id="panel-cfo" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">03</div>
+        <h2 class="offre-titre">Mission CFO Partagé</h2>
+        <p class="offre-accroche">Bénéficiez d'un Directeur Financier de haut niveau, à temps partagé et à coût maîtrisé — pour piloter votre croissance avec rigueur et vision.</p>
+        <div class="offre-cibles-titre">Cette mission est faite pour vous si…</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">PME sans DAF interne</span>
+          <span class="cible-tag">ETI en transformation</span>
+          <span class="cible-tag">Levée de fonds</span>
+          <span class="cible-tag">Crise ou retournement</span>
+        </div>
+        <p class="offre-desc">Votre entreprise mérite un pilotage financier de grande entreprise, sans en supporter le coût fixe. Notre CFO partagé s'intègre à votre comité de direction, structure vos outils de gestion, accompagne vos négociations bancaires et vous prépare aux échéances stratégiques — levée, cession, croissance externe.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          Expert financier sénior · Disponibilité sur mesure
+        </div>
+        <div class="offre-prix-bloc">
+          <div class="offre-prix-label">À partir de</div>
+          <div class="offre-prix-val"><span class="eur">€</span>1 500<span class="per">/ mois HT</span></div>
+          <div class="offre-prix-note">Selon le nombre de jours / mois engagés</div>
+        </div>
+        <div class="prestations-titre">Ce que comprend la mission</div>
+        <ul class="prestations-list">
+          <li>Présence physique ou distancielle (1 à 3 jours / mois)</li>
+          <li>Supervision et contrôle de la fonction comptable interne</li>
+          <li>Construction et animation du budget annuel et forecasts</li>
+          <li>Reporting mensuel à destination de la direction et actionnaires</li>
+          <li>Relation banques, assureurs-crédit, investisseurs</li>
+          <li>Mise en place et suivi des KPIs financiers</li>
+          <li>Accompagnement des opérations de financement</li>
+          <li>Présence aux comités de direction et conseils d'administration</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('cfo')">Discuter de cette mission <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Entretien gratuit · Devis sous 48h · Confidentialité garantie
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL M&A -->
+    <div class="offre-panel" id="panel-ma" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">04</div>
+        <h2 class="offre-titre">Conseil M&amp;A</h2>
+        <p class="offre-accroche">Cession, acquisition, LBO, rapprochement stratégique — nous vous accompagnons à chaque étape pour maximiser la valeur et sécuriser l'exécution.</p>
+        <div class="offre-cibles-titre">Cette mission est faite pour vous si…</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">Cédant en processus de vente</span>
+          <span class="cible-tag">Acquéreur (build-up, OBO)</span>
+          <span class="cible-tag">Dirigeant en LBO/MBI/MBO</span>
+          <span class="cible-tag">Actionnaires cherchant liquidité</span>
+        </div>
+        <p class="offre-desc">Réussir une opération M&amp;A requiert une expertise financière, fiscale et comptable de premier ordre. PME CONSULTANCE intervient côté cédant et acquéreur pour structurer les opérations, réaliser les due diligences, valoriser les actifs et sécuriser les transactions.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Mission sur-mesure · NDA systématique
+        </div>
+        <div class="offre-prix-bloc">
+          <div class="offre-prix-label">Honoraires</div>
+          <div class="offre-prix-val" style="font-size:2.2rem">Sur devis</div>
+          <div class="offre-prix-note">Success fee + forfait · Selon taille de l'opération</div>
+        </div>
+        <div class="prestations-titre">Ce que comprend la mission</div>
+        <ul class="prestations-list">
+          <li>Valorisation de l'entreprise (DCF, comparables, transactions)</li>
+          <li>Vendor due diligence (VDD) financier et fiscal</li>
+          <li>Acquisition due diligence (ADD) financière et fiscale</li>
+          <li>Analyse de la structure de financement de l'opération</li>
+          <li>Assistance à la rédaction du SPA (garantie d'actif et de passif)</li>
+          <li>Optimisation fiscale du schéma d'acquisition</li>
+          <li>Coordination avec conseils juridiques, notaires et banquiers</li>
+          <li>Suivi post-acquisition (intégration, earn-out, reporting)</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('ma')">Discuter de cette mission <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Entretien gratuit · Confidentialité absolue · NDA inclus
+        </p>
+      </div>
+    </div>
+
+    <!-- PANEL FACTURATION ÉLECTRONIQUE -->
+    <div class="offre-panel" id="panel-fe" role="tabpanel">
+      <div class="offre-left">
+        <div class="offre-numero">05</div>
+        <h2 class="offre-titre">Accompagnement Facturation Électronique</h2>
+        <p class="offre-accroche">La réforme de facturation électronique (RFE) s'impose à toutes les entreprises assujetties à la TVA. Nous en faisons un motif de contact, pas une contrainte subie.</p>
+        <div class="offre-cibles-titre">Cette mission est faite pour vous si…</div>
+        <div class="offre-cibles-list">
+          <span class="cible-tag">PME devant émettre en factures électroniques dès 2027</span>
+          <span class="cible-tag">ETI concernée dès septembre 2026</span>
+          <span class="cible-tag">Groupe multi-entités à consolider</span>
+          <span class="cible-tag">Dirigeant voulant un conseil indépendant</span>
+        </div>
+        <p class="offre-desc">Diagnostic de vos flux actuels, sélection indépendante d'une plateforme agréée parmi les plus de 150 agréées par la DGFiP, paramétrage, interfaçage avec votre ERP, formation de vos équipes, puis abonnement de veille et de conformité continue. Une mission complète, sans lien capitalistique avec aucun éditeur de plateforme.</p>
+      </div>
+      <div class="offre-right">
+        <div class="offre-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Indépendance totale · Devis sous 24h
+        </div>
+        <div class="offre-prix-bloc">
+          <div class="offre-prix-label">Mission complète (diagnostic + déploiement) à partir de</div>
+          <div class="offre-prix-val"><span class="eur">€</span>3 790<span class="per">HT · PME</span></div>
+          <div class="offre-prix-note">Diagnostic seul dès 890€ HT · ETI : dès 8 000€ HT, devis systématique au-delà</div>
+        </div>
+        <div class="prestations-titre">Ce que comprend la mission</div>
+        <ul class="prestations-list">
+          <li>Audit des flux de facturation actuels et score de préparation</li>
+          <li>Sélection indépendante et argumentée de la plateforme agréée</li>
+          <li>Paramétrage technique et interfaçage avec votre ERP</li>
+          <li>Formation de vos équipes aux nouveaux flux et statuts de facture</li>
+          <li>Option Veille & Conformité continue (dès 190€ HT / mois)</li>
+          <li>Option Pilotage financier augmenté (dès 590€ HT / mois)</li>
+        </ul>
+        <button class="btn-mission" onclick="preselectMission('fe')">Discuter de cette mission <span class="arr">→</span></button>
+        <p class="offre-garantie">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
+          Entretien gratuit · Devis sous 24h · Confidentialité garantie
+        </p>
+        <p style="text-align:center;margin-top:18px"><a href="facturation-electronique.html" style="font-size:.82rem;color:var(--or);border-bottom:1px solid var(--or);padding-bottom:2px">Voir le barème complet par profil (Micro à ETI) →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ POURQUOI ══ -->
+<section class="section pourquoi" id="valeur">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Notre promesse</span>
+      <h2>Ce qui distingue <em style="font-style:italic;color:var(--or)">PME CONSULTANCE</em></h2>
+      <p>Nous ne sommes pas un cabinet standard. Nous sommes votre partenaire de performance.</p>
+    </div>
+    <div class="pourquoi-grid">
+      <div class="pourquoi-item">
+        <div class="num">I.</div>
+        <h3><em>Expertise sectorielle</em> ciblée PME-ETI</h3>
+        <p>Nos experts ont tous exercé en environnement PME et ETI. Nous connaissons vos contraintes, votre culture de la décision, votre rapport au temps et à l'action.</p>
+      </div>
+      <div class="pourquoi-item">
+        <div class="num">II.</div>
+        <h3><em>Interlocuteur unique</em>, vision transversale</h3>
+        <p>Un seul expert dédié qui maîtrise votre dossier de A à Z — de la comptabilité courante à la stratégie financière. Fini les silos et les messages perdus.</p>
+      </div>
+      <div class="pourquoi-item">
+        <div class="num">III.</div>
+        <h3><em>Engagement</em> sur les délais et la qualité</h3>
+        <p>Remise des livrables à date, reporting structuré, comptes-rendus systématiques. Votre temps est précieux : nous le respectons inconditionnellement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DIFFÉRENCIATEURS (HOVER CARDS) ══ -->
+<section class="diff">
+  <div class="container">
+    <div class="diff-grid">
+      <div class="diff-item">
+        <div class="diff-num">A</div>
+        <div class="diff-icone"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>Comptes révisés &amp; certifiés</h3>
+        <p>Un regard indépendant sur vos états financiers. Des conclusions formalisées selon les normes ISRE 2400. Une sécurité renforcée pour vos partenaires financiers.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-num">B</div>
+        <div class="diff-icone"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <h3>Réactivité 24h garantie</h3>
+        <p>Chaque client PME-ETI bénéficie d'une ligne directe avec son expert dédié. Délais de réponse stricts, engagement écrit dans la lettre de mission.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-num">C</div>
+        <div class="diff-icone"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3zM9 3v18M3 9h6M3 15h6"/></svg></div>
+        <h3>Reporting financier sur-mesure</h3>
+        <p>Tableaux de bord conçus pour votre activité. Indicateurs pertinents, présentation claire, fréquence adaptée à votre rythme de décision.</p>
+      </div>
+      <div class="diff-item">
+        <div class="diff-num">D</div>
+        <div class="diff-icone"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Confidentialité &amp; déontologie absolues</h3>
+        <p>Secret professionnel de l'expert-comptable, NDA systématique pour les missions sensibles. Votre information ne sort jamais de notre cabinet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESSUS ══ -->
+<section class="section processus" id="processus">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Notre approche</span>
+      <h2>Un accompagnement <em class="italique">structuré en 4 temps</em></h2>
+      <p>De la première prise de contact à la livraison des livrables, chaque étape est pensée pour vous offrir le maximum de valeur ajoutée.</p>
+    </div>
+    <div class="processus-timeline">
+      <div class="etape"><div class="cercle">1</div><h4>Entretien de cadrage</h4><p>Échange confidentiel gratuit pour comprendre vos enjeux et définir le périmètre d'intervention.</p></div>
+      <div class="etape"><div class="cercle">2</div><h4>Proposition de mission</h4><p>Lettre de mission détaillée, calendrier, composition de l'équipe et honoraires transparents.</p></div>
+      <div class="etape"><div class="cercle">3</div><h4>Exécution &amp; reporting</h4><p>Réalisation avec points d'avancement réguliers, accès sécurisé aux documents et communication proactive.</p></div>
+      <div class="etape"><div class="cercle">4</div><h4>Restitution &amp; suivi</h4><p>Présentation des livrables, restitution orale à la direction, recommandations et plan d'action partagé.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FORMULAIRE DE PRISE DE CONTACT ══ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Prenons contact</span>
+      <h2>Discutons de vos <em style="font-style:italic;color:var(--or)">enjeux financiers</em></h2>
+      <p>Un premier entretien confidentiel et gratuit pour évaluer ensemble la mission la plus adaptée à vos besoins.</p>
+    </div>
+    <div class="contact-card">
+      <form id="contactForm" novalidate>
+        <div class="form-grid">
+          <div class="form-grp">
+            <label class="form-lbl" for="prenom">Prénom *</label>
+            <input class="form-inp" id="prenom" name="prenom" type="text" placeholder="Jean-Paul" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="nom">Nom *</label>
+            <input class="form-inp" id="nom" name="nom" type="text" placeholder="Dupont" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="poste">Fonction *</label>
+            <select class="form-sel form-inp" id="poste" name="poste" required>
+              <option value="" disabled selected>Votre fonction…</option>
+              <option>Dirigeant / PDG / DG</option>
+              <option>Directeur Financier (DAF / CFO)</option>
+              <option>Directeur Général Adjoint</option>
+              <option>Actionnaire / Investisseur</option>
+              <option>Directeur Administratif</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="societe">Société *</label>
+            <input class="form-inp" id="societe" name="societe" type="text" placeholder="Ma Société SAS" required />
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="ca">Chiffre d'affaires *</label>
+            <select class="form-sel form-inp" id="ca" name="ca" required>
+              <option value="" disabled selected>Tranche de CA…</option>
+              <option>Entre 1 M€ et 5 M€</option>
+              <option>Entre 5 M€ et 20 M€</option>
+              <option>Entre 20 M€ et 50 M€</option>
+              <option>Entre 50 M€ et 150 M€</option>
+              <option>Plus de 150 M€</option>
+            </select>
+          </div>
+          <div class="form-grp">
+            <label class="form-lbl" for="telephone">Téléphone *</label>
+            <input class="form-inp" id="telephone" name="telephone" type="tel" placeholder="+33 6 00 00 00 00" required />
+          </div>
+          <div class="form-grp full">
+            <label class="form-lbl" for="email">Email professionnel *</label>
+            <input class="form-inp" id="email" name="email" type="email" placeholder="jpdupont@masociete.fr" required />
+          </div>
+          <div class="missions-section">
+            <span class="missions-lbl">Mission(s) qui vous intéresse(nt) *</span>
+            <div class="missions-grid">
+              <label class="mission-chk">
+                <input type="checkbox" name="mission" value="revision" id="chk-revision" />
+                <div class="mission-box"><div class="ico">📋</div><div class="nm">Révision des comptes</div></div>
+              </label>
+              <label class="mission-chk">
+                <input type="checkbox" name="mission" value="360" id="chk-360" />
+                <div class="mission-box"><div class="ico">🔭</div><div class="nm">Offre 360°</div></div>
+              </label>
+              <label class="mission-chk">
+                <input type="checkbox" name="mission" value="cfo" id="chk-cfo" />
+                <div class="mission-box"><div class="ico">🎯</div><div class="nm">CFO Partagé</div></div>
+              </label>
+              <label class="mission-chk">
+                <input type="checkbox" name="mission" value="ma" id="chk-ma" />
+                <div class="mission-box"><div class="ico">🤝</div><div class="nm">M&amp;A</div></div>
+              </label>
+              <label class="mission-chk">
+                <input type="checkbox" name="mission" value="fe" id="chk-fe" />
+                <div class="mission-box"><div class="ico">🧾</div><div class="nm">Facturation Électronique</div></div>
+              </label>
+            </div>
+          </div>
+          <div class="form-grp full">
+            <label class="form-lbl" for="message">Décrivez brièvement votre situation (optionnel)</label>
+            <textarea class="form-txt" id="message" name="message" placeholder="Ex : Nous envisageons une acquisition et avons besoin d'un accompagnement en due diligence financière pour le T3 2026…"></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">Demander mon entretien gratuit <span class="arr">→</span></button>
+          <div class="reassurance">
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>Confidentialité totale</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Réponse sous 24h</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Sans engagement</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-titre">
+      <span class="surtitre">Vos questions</span>
+      <h2>Questions <em class="italique">fréquemment posées</em></h2>
+      <p>Les dirigeants et DAF nous posent souvent ces questions lors du premier entretien.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Quelle différence entre révision contractuelle et commissariat aux comptes ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Le commissariat aux comptes est une mission légale obligatoire réglementée par le Code de commerce. La révision contractuelle est une mission facultative, librement choisie, qui offre un niveau d'assurance modérée. Elle convient aux PME souhaitant renforcer la fiabilité de leurs comptes sans être dans le champ légal de l'audit obligatoire.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Combien de jours par mois le CFO Partagé est-il disponible ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">La disponibilité est entièrement modulable : de 1 à 4 jours par mois en moyenne. Nous définissons ensemble un planning de présence adapté à vos échéances — budgets, comités de direction, clôtures. En dehors des jours de présence, votre CFO reste joignable sous 4h ouvrées.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Intervenez-vous côté cédant ou côté acquéreur pour les opérations M&A ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Nous intervenons des deux côtés, selon la mission. Pour les cédants : vendor due diligence (VDD) et préparation du dossier. Pour les acquéreurs : acquisition due diligence (ADD) financière et fiscale. Nous veillons à n'intervenir que pour un camp par opération afin de préserver notre indépendance.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Comment se déroule le premier entretien ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Le premier entretien est gratuit, confidentiel et sans engagement. Il dure 45 minutes à 1 heure, en présentiel ou en visioconférence. Nous abordons votre situation, vos enjeux et besoins. Une lettre de mission vous est adressée dans les 48h suivant l'entretien.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">L'Offre 360° peut-elle remplacer mon expert-comptable actuel ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Oui. L'Offre 360° intègre la tenue comptable, la fiscalité, le social et le juridique. Si vous disposez d'une équipe interne, nous pouvons aussi intervenir en supervision ou en conseil stratégique. La transition depuis un autre cabinet se fait de manière fluide et organisée.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Vos honoraires sont-ils déductibles fiscalement ?<span class="plus">+</span></div>
+        <div class="faq-r"><div class="faq-r-inner">Oui. Les honoraires d'expertise comptable sont des charges d'exploitation déductibles du résultat imposable. Les PME adhérentes à un Centre de Gestion Agréé (CGA) bénéficient en outre d'une réduction d'impôt spécifique sur les honoraires comptables. Nous vous accompagnons dans ces démarches.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Prêt à hisser votre entreprise<br/><em>au niveau supérieur ?</em></h2>
+    <p>Un entretien confidentiel, gratuit et sans engagement. Votre expert vous recontacte sous 24h.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primaire">Prendre rendez-vous maintenant <span class="arrow">→</span></a>
+      <a href="mailto:pmeconsultance@gmail.com" class="btn-secondaire">Nous écrire directement</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" /></div>
+        <p>Cabinet d'expertise comptable et de conseil stratégique dédié aux PME &amp; ETI. Inscrit à l'Ordre des Experts-Comptables.</p>
+      </div>
+      <div>
+        <h5>Nos missions</h5>
+        <ul>
+          <li><a href="#offres" onclick="openTab('revision')">Révision des comptes</a></li>
+          <li><a href="#offres" onclick="openTab('trois60')">Offre 360°</a></li>
+          <li><a href="#offres" onclick="openTab('cfo')">CFO Partagé</a></li>
+          <li><a href="#offres" onclick="openTab('ma')">Conseil M&amp;A</a></li>
+          <li><a href="#offres" onclick="openTab('fe')">Facturation Électronique</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Cabinet</h5>
+        <ul>
+          <li><a href="#valeur">Notre valeur ajoutée</a></li>
+          <li><a href="#processus">Notre approche</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="index.html">Offres TPE / Entrepreneurs →</a></li>
+          <li><a href="facturation-electronique.html">Facturation Électronique →</a></li>
+          <li><a href="independants-sci-lmnp.html">Indépendants / SCI / LMNP →</a></li>
+          <li><a href="https://www.youtube.com/@FEConsultance" target="_blank" rel="noopener">Chaîne YouTube @FEConsultance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          pmeconsultance@gmail.com
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          Sur rendez-vous · France
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PME CONSULTANCE · Tous droits réservés</span>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="cgv.html">CGV</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="politique-ia.html">Politique IA</a>
+      </div>
+      <span class="signature">Expertise · Conseils · Disruption · Valeur Ajoutée</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <strong>Message envoyé ✓</strong>
+  Nous vous recontactons sous 24h ouvrées. Merci de votre confiance.
+</div>
+
+<script>
+// Menu mobile
+document.getElementById('menuToggle').addEventListener('click',function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+document.querySelectorAll('.nav a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});});
+
+// Onglets offres
+function openTab(panel){
+  document.querySelectorAll('.offre-tab').forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+  document.querySelectorAll('.offre-panel').forEach(function(p){p.classList.remove('active');});
+  var btn=document.querySelector('[data-panel="'+panel+'"]');
+  var pnl=document.getElementById('panel-'+panel);
+  if(btn&&pnl){btn.classList.add('active');btn.setAttribute('aria-selected','true');pnl.classList.add('active');}
+}
+document.querySelectorAll('.offre-tab').forEach(function(tab){
+  tab.addEventListener('click',function(){openTab(this.dataset.panel);});
+});
+
+// Pré-sélection depuis les CTA de mission
+function preselectMission(val){
+  var map={revision:'chk-revision','360':'chk-360',cfo:'chk-cfo',ma:'chk-ma',fe:'chk-fe'};
+  var id=map[val];
+  if(id){var cb=document.getElementById(id);if(cb)cb.checked=true;}
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.parentElement;
+    var was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');});
+    if(!was)item.classList.add('open');
+  });
+});
+
+// Formulaire
+/* ⚠️ À remplacer par l'ID de votre formulaire Formspree (voir guide de mise en ligne) */
+var FORMSPREE_ID_CONTACT = 'VOTRE_ID_FORMSPREE';
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var form=this;
+  if(!document.getElementById('prenom').value||!document.getElementById('email').value){
+    alert('Merci de renseigner au minimum votre prénom et votre email professionnel.');return;
+  }
+  var missions=Array.prototype.slice.call(document.querySelectorAll('input[name="mission"]:checked')).map(function(c){return c.value;});
+  var payload={
+    _subject:'Nouvelle demande de contact PME-ETI',
+    prenom:document.getElementById('prenom').value,
+    nom:document.getElementById('nom').value,
+    poste:document.getElementById('poste').value,
+    societe:document.getElementById('societe').value,
+    chiffre_affaires:document.getElementById('ca').value,
+    telephone:document.getElementById('telephone').value,
+    email:document.getElementById('email').value,
+    missions:missions.length?missions.join(', '):'Non précisé',
+    message:document.getElementById('message').value
+  };
+  fetch('https://formspree.io/f/'+FORMSPREE_ID_CONTACT,{
+    method:'POST',
+    headers:{'Accept':'application/json','Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+  }).catch(function(){/* affichage du toast quoi qu'il arrive, fallback mailto disponible dans le CTA final */});
+  var toast=document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(function(){toast.classList.remove('show');},5000);
+  form.reset();
+});
+
+// Smooth scroll ancres
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+// Animations Intersection Observer
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='translateY(0)';}
+  });
+},{threshold:0.1});
+document.querySelectorAll('.offre-right,.diff-item,.etape,.pourquoi-item').forEach(function(el){
+  el.style.opacity='0';el.style.transform='translateY(22px)';
+  el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
