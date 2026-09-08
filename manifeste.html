@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Le manifeste de PME CONSULTANCE : pourquoi ce cabinet d'expertise comptable a été créé, pour qui, et selon quelle philosophie. Signé Pascal Mercier, expert-comptable fondateur." />
+<meta name="keywords" content="cabinet expertise comptable premium, expert comptable fondateur, PME Consultance, manifeste, vision cabinet comptable" />
+<meta name="author" content="PME CONSULTANCE" />
+<meta property="og:title" content="Notre Manifeste — PME CONSULTANCE" />
+<meta property="og:description" content="Pourquoi PME CONSULTANCE a été créé : le manifeste du cabinet, signé Pascal Mercier, expert-comptable fondateur." />
+<meta property="og:type" content="website" />
+<title>Notre Manifeste — PME CONSULTANCE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ivoire:#F5F1E8;
+  --ivoire-clair:#FAF7F0;
+  --ivoire-fonce:#EDE7D7;
+  --noir:#1A1A1A;
+  --anthracite:#2C2C2C;
+  --gris-texte:#5C5C5C;
+  --gris-clair:#9A958A;
+  --or:#B8985A;
+  --or-fonce:#9A7E48;
+  --marine:#0E1B2C;
+  --blanc:#FFFFFF;
+  --ombre:0 4px 30px rgba(26,26,26,0.06);
+  --ombre-hover:0 12px 40px rgba(26,26,26,0.12);
+  --transition:cubic-bezier(0.4,0,0.2,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--ivoire);
+  color:var(--noir);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.15;color:var(--noir);text-wrap:balance}
+h1{font-size:clamp(2.3rem,5vw,4.1rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+.italique{font-style:italic;color:var(--gris-texte)}
+
+a{color:inherit;text-decoration:none;transition:color .3s var(--transition)}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.section{padding:110px 0}
+
+/* ===== Header (identique au site) ===== */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(245,241,232,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,152,90,0.12)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;gap:12px;height:55px}
+.logo img{height:44px;width:auto;object-fit:contain}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{font-size:.86rem;font-weight:400;color:var(--anthracite);position:relative;white-space:nowrap}
+.nav a:hover{color:var(--or)}
+.nav a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:1px;background:var(--or);transition:width .3s var(--transition)}
+.nav a:hover::after{width:100%}
+.nav a.active{color:var(--or)}
+.nav a.active::after{width:100%}
+.btn-header{background:var(--noir);color:var(--ivoire);padding:13px 24px;font-size:.83rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;border:1px solid var(--noir);transition:all .35s var(--transition)}
+.btn-header:hover{background:var(--or);border-color:var(--or);color:var(--blanc)}
+.menu-mobile{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--noir)}
+
+/* ===== Boutons (identiques au site) ===== */
+.btn-primaire{display:inline-flex;align-items:center;gap:14px;background:var(--noir);color:var(--ivoire);padding:18px 36px;font-size:.9rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--noir);cursor:pointer;transition:all .4s var(--transition)}
+.btn-primaire:hover{background:var(--or);border-color:var(--or);transform:translateY(-2px);box-shadow:0 12px 30px rgba(184,152,90,0.3)}
+.btn-primaire .arrow{transition:transform .3s var(--transition)}
+.btn-primaire:hover .arrow{transform:translateX(6px)}
+
+/* ===== Hero manifeste ===== */
+.mf-hero{padding:168px 0 70px;background:radial-gradient(ellipse at top right,rgba(184,152,90,0.06) 0%,transparent 55%),var(--ivoire)}
+.mf-hero-inner{max-width:820px;margin:0 auto;text-align:center}
+.mf-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:26px;font-weight:500}
+.mf-eyebrow::before,.mf-eyebrow::after{content:'';width:26px;height:1px;background:var(--or)}
+.mf-hero h1{margin-bottom:30px}
+.mf-hero h1 em{color:var(--or);font-style:italic;font-weight:300}
+.mf-hero .lede{font-size:1.08rem;color:var(--gris-texte);max-width:620px;margin:0 auto;line-height:1.8}
+
+/* Séparateur "diamant" — motif repris du monogramme de la marque */
+.diamant{display:flex;align-items:center;justify-content:center;gap:14px;margin:64px auto;max-width:220px}
+.diamant::before,.diamant::after{content:'';flex:1;height:1px;background:linear-gradient(to var(--dir,right),transparent,rgba(184,152,90,0.55))}
+.diamant::after{--dir:left}
+.diamant span{width:7px;height:7px;background:var(--or);transform:rotate(45deg);flex-shrink:0}
+
+/* ===== Corps du manifeste ===== */
+.mf-corps{max-width:680px;margin:0 auto;padding:0 32px}
+.mf-corps p{font-size:1.06rem;color:var(--anthracite);margin-bottom:30px;line-height:1.85}
+.mf-corps p.grande{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.5rem,2.6vw,2rem);color:var(--noir);line-height:1.4;text-align:center;margin:52px 0;font-weight:400}
+.mf-corps p.grande em{color:var(--or);font-style:italic}
+.mf-corps p:last-child{margin-bottom:0}
+
+/* ===== Bandeau plaque (fond sombre, façon médaillon de maison) ===== */
+.mf-plaque{background:var(--noir);padding:96px 0;margin:96px 0;text-align:center}
+.mf-plaque img{max-width:230px;margin:0 auto 46px;opacity:.96}
+.mf-valeurs{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:22px;font-family:'Inter',sans-serif}
+.mf-valeurs span.mot{font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or);font-weight:500}
+.mf-valeurs span.pt{color:rgba(184,152,90,0.4);font-size:.7rem}
+
+/* ===== Fondateur ===== */
+.mf-fondateur{padding:20px 0 40px}
+.mf-fondateur-card{max-width:960px;margin:0 auto;background:var(--ivoire-clair);border:1px solid rgba(184,152,90,0.18);box-shadow:var(--ombre)}
+.mf-fondateur-grid{display:grid;grid-template-columns:1fr 300px;gap:0}
+.mf-fondateur-texte{padding:64px 60px}
+.mf-fondateur-texte p{font-size:1.02rem;color:var(--anthracite);margin-bottom:26px;line-height:1.8}
+.mf-signature{margin-top:44px;padding-top:34px;border-top:1px solid rgba(184,152,90,0.25)}
+.mf-signature .nom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7rem;color:var(--noir);margin-bottom:6px}
+.mf-signature .fonction{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);font-weight:500;margin-bottom:4px}
+.mf-signature .lieu{font-size:.85rem;color:var(--gris-clair)}
+.mf-portrait-zone{position:relative;background:var(--ivoire-fonce);border-left:1px solid rgba(184,152,90,0.18);min-height:100%;overflow:hidden}
+.mf-portrait-zone img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+
+/* ===== CTA ===== */
+.mf-cta{background:var(--ivoire-fonce);padding:90px 0;text-align:center;border-top:1px solid rgba(184,152,90,0.15)}
+.mf-cta h2{margin-bottom:18px}
+.mf-cta p{color:var(--gris-texte);max-width:480px;margin:0 auto 38px;font-size:1rem}
+
+/* ===== Footer (identique au site) ===== */
+.footer{background:var(--noir);color:var(--ivoire-fonce);padding:80px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px}
+.footer-brand .logo-footer{height:80px;margin-bottom:20px}
+.footer-brand .logo-footer img{height:100%;width:auto;object-fit:contain}
+.footer-brand p{font-size:.92rem;color:rgba(245,241,232,0.6);max-width:300px;line-height:1.7}
+.footer .signature{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--or)}
+.footer h5{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--or);margin-bottom:22px;font-style:italic}
+.footer ul{list-style:none}
+.footer li{margin-bottom:12px}
+.footer ul a{font-size:.9rem;color:rgba(245,241,232,0.75)}
+.footer ul a:hover{color:var(--or)}
+.footer-contact-item{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:.88rem;color:rgba(245,241,232,0.75)}
+.footer-contact-item svg{color:var(--or);flex-shrink:0}
+.footer-bottom{border-top:1px solid rgba(245,241,232,0.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:.82rem;color:rgba(245,241,232,0.5)}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.footer-legal a{color:rgba(245,241,232,0.5)}
+.footer-legal a:hover{color:var(--or)}
+.pmc-cookies-trigger{background:none;border:none;color:rgba(245,241,232,0.5);font-size:.82rem;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline;padding:0}
+.pmc-cookies-trigger:hover{color:var(--or)}
+
+@media (max-width:980px){
+  .nav{display:none}
+  .menu-mobile{display:block}
+  .nav.open{display:flex;position:absolute;top:80px;left:0;right:0;background:var(--ivoire);flex-direction:column;padding:30px;border-top:1px solid rgba(184,152,90,0.15);gap:20px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .mf-fondateur-grid{grid-template-columns:1fr}
+  .mf-portrait-zone{min-height:320px}
+  .mf-fondateur-texte{padding:48px 34px}
+  .section{padding:80px 0}
+}
+@media (max-width:520px){
+  .container{padding:0 20px}
+  .mf-hero{padding:140px 0 50px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .mf-corps{padding:0 22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+</style>
+<link rel="stylesheet" href="assets/cookies-banner.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="PME CONSULTANCE - Accueil">
+        <img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#offres">Nos offres</a>
+        <a href="index.html#pourquoi">Pourquoi nous</a>
+        <a href="manifeste.html" class="active" aria-current="page">Notre vision</a>
+        <a href="index.html#processus">Comment ça marche</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="pme-eti.html">Offre PME/ETI</a>
+        <a href="index.html#devis" class="btn-header">Devis en 60s</a>
+      </nav>
+      <button class="menu-mobile" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="mf-hero">
+  <div class="container">
+    <div class="mf-hero-inner">
+      <span class="mf-eyebrow">Manifeste du cabinet</span>
+      <h1>Que cherche-t-on vraiment,<br/><em>quand on entreprend&nbsp;?</em></h1>
+      <p class="lede">Après plus de 25&nbsp;ans d’exercice professionnel dans le métier de l’expertise comptable et de la direction financière d’un groupe de sociétés, j’ai régulièrement constaté que beaucoup d’entrepreneurs se posaient cette question — celle-là même qui m’est venue, à mon tour, avec la création du cabinet PME&nbsp;CONSULTANCE.</p>
+    </div>
+  </div>
+</section>
+
+<div class="mf-corps">
+
+  <p>Pas uniquement la croissance. Pas, non plus, le chiffre. Pas forcément la gloire.</p>
+
+  <p>On cherche une raison de durer. Une manière de poser une pierre qui résiste aux saisons, aux modes, aux vents.</p>
+
+  <p>À force de courir après les clics, les levées de fonds et les tableaux de bord, on en oublie l’essentiel&nbsp;: une entreprise n’est pas une machine à faire du bruit. C’est un corps vivant, qui respire, qui s’équilibre, qui porte une intention.</p>
+
+  <div class="diamant"><span></span></div>
+
+  <p>Paris nous regarde. Elle nous regarde passer, trop vite, trop bruyants.</p>
+
+  <p class="grande">Nous avons choisi, avec PME CONSULTANCE, de <em>ralentir pour mieux voir.</em></p>
+
+  <p>La comptabilité, dans ce tumulte, est souvent reléguée au rang de contrainte technique. Une formalité. Un mal nécessaire.</p>
+
+  <p class="grande">Et si c’était l’inverse&nbsp;?</p>
+
+  <p>Si les chiffres étaient le seul endroit où l’entreprise ne peut pas se mentir&nbsp;? Le seul miroir où sa vérité profonde apparaît, nue, sans fard&nbsp;?</p>
+
+  <p>Nous ne sommes pas venus pour cocher des cases.<br/>Nous sommes venus pour écouter ce que les chiffres murmurent avant que les stratégies ne crient.</p>
+
+  <p>Le digital, chez nous, n’est pas une promesse de vitesse. C’est un outil de silence. Il aspire le bruit administratif pour laisser place à l’essentiel&nbsp;: la réflexion, l’anticipation, l’intuition éclairée.</p>
+
+  <p class="grande">Nous avons ouvert notre atelier en Île-de-France.<br/>Pas un cabinet. <em>Un lieu de gravité.</em></p>
+
+</div>
+
+<div class="mf-plaque">
+  <img src="assets/pmc-monogramme-or.jpg" alt="Monogramme PME Consultance" />
+  <div class="mf-valeurs">
+    <span class="mot">Expertise</span><span class="pt">◆</span>
+    <span class="mot">Conseils</span><span class="pt">◆</span>
+    <span class="mot">Disruption</span><span class="pt">◆</span>
+    <span class="mot">Valeur Ajoutée</span>
+  </div>
+</div>
+
+<div class="mf-corps">
+
+  <p>Nous y accueillons ceux qui comprennent que le véritable luxe, aujourd’hui, c’est le temps qu’on se donne pour penser. C’est la profondeur dans un monde de surface. C’est l’exigence dans un océan de facilité.</p>
+
+  <p>Notre métier n’est pas de faire des comptes.<br/>Notre métier est de donner du sens à la matière&nbsp;: transformer les flux en trajectoires, les dépenses en intentions, les recettes en héritage.</p>
+
+  <p>Nous ne serons pas vos techniciens.<br/>Nous serons vos témoins. Ceux qui veillent sur votre équilibre pendant que vous regardez l’horizon.</p>
+
+  <div class="diamant"><span></span></div>
+
+  <p class="grande">Une grande entreprise ne se reconnaît pas à sa valorisation.<br/>Elle se reconnaît à sa <em>capacité à traverser le temps sans perdre son âme.</em></p>
+
+  <p>Nous ouvrons pour vous accompagner. Dans le murmure. Pour ceux qui cherchent encore un sens à leur course.</p>
+
+</div>
+
+<section class="mf-fondateur">
+  <div class="container">
+    <div class="mf-fondateur-card">
+      <div class="mf-fondateur-grid">
+        <div class="mf-fondateur-texte">
+          <p>Si cette profondeur vous parle, contactez-nous. Pas forcément pour un devis. Pour une rencontre.</p>
+          <div class="mf-signature">
+            <div class="nom">Pascal Mercier</div>
+            <div class="fonction">Expert-comptable fondateur</div>
+            <div class="lieu">PME CONSULTANCE · Paris · Île-de-France, 2026</div>
+          </div>
+        </div>
+        <div class="mf-portrait-zone">
+          <img src="assets/pascal-mercier-portrait.jpg" alt="Pascal Mercier, expert-comptable fondateur de PME CONSULTANCE, à son bureau" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mf-cta">
+  <div class="container">
+    <h2>Une rencontre, avant un devis</h2>
+    <p>Parlons de votre entreprise et de ce qu’elle cherche vraiment à devenir.</p>
+    <a href="index.html#devis" class="btn-primaire">Prendre rendez-vous<span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-footer"><img src="assets/PMC_logo_horizontal.png" alt="PME CONSULTANCE" /></div>
+        <p>Cabinet d’expertise comptable & de conseil 100% en ligne, dédié aux entrepreneurs, micro-entrepreneurs et TPE françaises.</p>
+        <p class="signature" style="margin-top:18px">Expertise · Conseils · Disruption · Valeur Ajoutée</p>
+      </div>
+      <div>
+        <h5>Nos offres</h5>
+        <ul>
+          <li><a href="index.html#offres">Pack Création d’entreprise</a></li>
+          <li><a href="index.html#offres">Pack Micro-entrepreneur</a></li>
+          <li><a href="index.html#offres">Pack Bilan annuel TPE</a></li>
+          <li><a href="independants-sci-lmnp.html">Indépendants / SCI / LMNP</a></li>
+          <li><a href="index.html#devis">Devis sur-mesure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Le cabinet</h5>
+        <ul>
+          <li><a href="manifeste.html">Notre vision</a></li>
+          <li><a href="index.html#pourquoi">Notre méthode</a></li>
+          <li><a href="index.html#processus">Comment ça marche</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="pme-eti.html">Offre PME / ETI →</a></li>
+          <li><a href="facturation-electronique.html">Facturation Électronique →</a></li>
+          <li><a href="https://www.youtube.com/@FEConsultance" target="_blank" rel="noopener">Chaîne YouTube @FEConsultance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+          <span>contact@pmeconsultance.fr</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>Sur rendez-vous uniquement</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>France entière · 100% en ligne</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 PME CONSULTANCE — Cabinet inscrit à l’Ordre des Experts-Comptables</div>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cgv.html">CGV</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="politique-ia.html">Politique IA</a>
+        <button type="button" class="pmc-cookies-trigger" data-pmc-cookies="open">Gérer mes cookies</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('nav').classList.toggle('open')});
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav').classList.remove('open')}));
+window.addEventListener('scroll',()=>{
+  const h=document.querySelector('.header');
+  if(window.scrollY>30) h.style.boxShadow='0 2px 20px rgba(26,26,26,0.06)';
+  else h.style.boxShadow='none';
+});
+</script>
+<script src="assets/cookies-banner.js" defer></script>
+</body>
+</html>
