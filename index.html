@@ -606,10 +606,10 @@ img{max-width:100%;display:block}
             <span class="euro">€</span><span id="resultatMontant">0</span><span class="per" id="resultatPeriode"></span>
           </div>
           <p style="color:var(--gris-texte);max-width:480px;margin:20px auto;font-size:.95rem" id="resultatMessage">
-            Votre demande vient d'être transmise à notre équipe. Un expert PME CONSULTANCE vous contactera sous <strong>24h</strong> pour valider votre projet et vous envoyer votre devis détaillé par email.
+            Votre demande vient d'être transmise à notre équipe et votre devis détaillé vous parvient par email sous <strong>24h</strong>. Vous pouvez aussi réserver directement un créneau dans notre agenda ci-dessous.
           </p>
           <div style="display:flex;gap:14px;justify-content:center;margin-top:30px;flex-wrap:wrap">
-            <a href="mailto:contact@pmeconsultance.fr" class="btn-primaire" style="font-size:.85rem;padding:14px 28px">Prendre RDV directement</a>
+            <a href="URL_RESERVATION_GOOGLE_CALENDAR" target="_blank" rel="noopener" id="btnReserverRdv" class="btn-primaire" style="font-size:.85rem;padding:14px 28px">Réserver mon rendez-vous</a>
             <button class="btn-secondaire" onclick="resetDevis()" style="font-size:.85rem;padding:14px 28px">Refaire un devis</button>
           </div>
         </div>
@@ -753,6 +753,9 @@ const PACKS={
 const FORMSPREE_ID_DEVIS = 'VOTRE_ID_FORMSPREE';
 /* ⚠️ À remplacer par l'URL de webhook Make.com pour l'envoi automatique du devis commercial (voir guide d'automatisation) */
 const MAKE_WEBHOOK_URL_DEVIS = 'VOTRE_URL_WEBHOOK_MAKE';
+/* ⚠️ À remplacer par l'URL publique de votre page de réservation Google Calendar (créée depuis le compte pmeconsultance@gmail.com — voir instructions du cabinet). Une fois configurée, chaque réservation crée automatiquement l'événement dans l'agenda et envoie une confirmation par email au client et au cabinet. */
+const GOOGLE_CALENDAR_BOOKING_URL = 'URL_RESERVATION_GOOGLE_CALENDAR';
+document.querySelectorAll('#btnReserverRdv').forEach(a=>{a.href = GOOGLE_CALENDAR_BOOKING_URL;});
 
 let etat={pack:null,volume:null,options:[],contact:{}};
 let etapeActuelle=1;
