@@ -609,7 +609,7 @@ img{max-width:100%;display:block}
             Votre demande vient d'être transmise à notre équipe et votre devis détaillé vous parvient par email sous <strong>24h</strong>. Vous pouvez aussi réserver directement un créneau dans notre agenda ci-dessous.
           </p>
           <div style="display:flex;gap:14px;justify-content:center;margin-top:30px;flex-wrap:wrap">
-            <a href="URL_RESERVATION_GOOGLE_CALENDAR" target="_blank" rel="noopener" id="btnReserverRdv" class="btn-primaire" style="font-size:.85rem;padding:14px 28px">Réserver mon rendez-vous</a>
+            <a href="https://calendar.app.google/9hbpQLjNWwukbh6V6" target="_blank" rel="noopener" id="btnReserverRdv" class="btn-primaire" style="font-size:.85rem;padding:14px 28px">Réserver mon rendez-vous</a>
             <button class="btn-secondaire" onclick="resetDevis()" style="font-size:.85rem;padding:14px 28px">Refaire un devis</button>
           </div>
         </div>
@@ -754,7 +754,7 @@ const FORMSPREE_ID_DEVIS = 'VOTRE_ID_FORMSPREE';
 /* ⚠️ À remplacer par l'URL de webhook Make.com pour l'envoi automatique du devis commercial (voir guide d'automatisation) */
 const MAKE_WEBHOOK_URL_DEVIS = 'VOTRE_URL_WEBHOOK_MAKE';
 /* ⚠️ À remplacer par l'URL publique de votre page de réservation Google Calendar (créée depuis le compte pmeconsultance@gmail.com — voir instructions du cabinet). Une fois configurée, chaque réservation crée automatiquement l'événement dans l'agenda et envoie une confirmation par email au client et au cabinet. */
-const GOOGLE_CALENDAR_BOOKING_URL = 'URL_RESERVATION_GOOGLE_CALENDAR';
+const GOOGLE_CALENDAR_BOOKING_URL = 'https://calendar.app.google/9hbpQLjNWwukbh6V6';
 document.querySelectorAll('#btnReserverRdv').forEach(a=>{a.href = GOOGLE_CALENDAR_BOOKING_URL;});
 
 let etat={pack:null,volume:null,options:[],contact:{}};
