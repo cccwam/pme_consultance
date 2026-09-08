@@ -109,6 +109,7 @@ img{max-width:100%;display:block}
 .offre-tab{padding:14px 30px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--gris-texte);transition:all .3s var(--transition);font-family:'Inter',sans-serif;position:relative}
 .offre-tab:hover{color:var(--or)}
 .offre-tab.active{background:var(--marine);color:var(--ivoire)}
+.offre-tab .tab-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--or);color:var(--blanc);padding:4px 14px;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;white-space:nowrap}
 .offre-tab.active::after{content:'';position:absolute;bottom:-7px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid var(--marine)}
 
 .offre-panel{display:none;animation:fadeIn .45s var(--transition)}
@@ -393,7 +394,7 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="offres-tabs" role="tablist">
-      <button class="offre-tab active" data-panel="revision" role="tab" aria-selected="true">📋 Révision des comptes</button>
+      <button class="offre-tab active" data-panel="revision" role="tab" aria-selected="true"><span class="tab-badge">Le plus choisi</span>📋 Révision des comptes</button>
       <button class="offre-tab" data-panel="trois60" role="tab" aria-selected="false">🔭 Offre 360°</button>
       <button class="offre-tab" data-panel="cfo" role="tab" aria-selected="false">🎯 CFO Partagé</button>
       <button class="offre-tab" data-panel="ma" role="tab" aria-selected="false">🤝 M&amp;A</button>
