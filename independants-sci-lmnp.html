@@ -598,6 +598,7 @@ img{max-width:100%;display:block}
       </div>
 
       <form id="devisForm" novalidate>
+        <input type="text" id="hp" aria-hidden="true" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" />
         <div class="form-grid">
           <div class="form-grp">
             <label class="form-lbl" for="prenom">Prénom *</label>
@@ -817,10 +818,8 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 });
 
 // Formulaire
-/* ⚠️ À remplacer par l'ID de votre formulaire Formspree (voir guide de mise en ligne) */
-var FORMSPREE_ID_INDEP = 'VOTRE_ID_FORMSPREE';
-/* ⚠️ À remplacer par l'URL de webhook Make.com pour l'envoi automatique du devis commercial (voir guide d'automatisation) */
-var MAKE_WEBHOOK_URL_INDEP = 'VOTRE_URL_WEBHOOK_MAKE';
+/* ⚠️ À remplacer par l'URL de votre Web App Apps Script (voir apps-script/devis-webapp.gs) */
+var APPS_SCRIPT_URL = 'VOTRE_URL_EXEC_APPS_SCRIPT';
 
 document.getElementById('devisForm').addEventListener('submit',function(e){
   e.preventDefault();
@@ -835,6 +834,7 @@ document.getElementById('devisForm').addEventListener('submit',function(e){
   var totalTtc=Math.round((totalHt+tva)*100)/100;
   var payload={
     _subject:'Nouveau devis site — '+p.nom,
+    source:'Indépendants / SCI / LMNP — Devis',
     offre:p.nom,
     designation_prestation:p.ligne,
     option_immatriculation_lmnp:optionImmat?'Oui (+200€ HT, one-shot)':'Non',
@@ -847,18 +847,14 @@ document.getElementById('devisForm').addEventListener('submit',function(e){
     entreprise:document.getElementById('entreprise').value,
     telephone:document.getElementById('telephone').value,
     email:document.getElementById('email').value,
-    message:document.getElementById('message').value
+    message:document.getElementById('message').value,
+    website:document.getElementById('hp').value
   };
-  fetch('https://formspree.io/f/'+FORMSPREE_ID_INDEP,{
+  fetch(APPS_SCRIPT_URL,{
     method:'POST',
-    headers:{'Accept':'application/json','Content-Type':'application/json'},
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
     body:JSON.stringify(payload)
   }).catch(function(){/* toast affiché quoi qu'il arrive, fallback mailto disponible dans le CTA final */});
-  fetch(MAKE_WEBHOOK_URL_INDEP,{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(payload)
-  }).catch(function(){/* l'envoi automatique du devis commercial est secondaire : la demande est de toute façon enregistrée via Formspree ci-dessus */});
   var toast=document.getElementById('toast');
   toast.classList.add('show');
   setTimeout(function(){toast.classList.remove('show');},5000);

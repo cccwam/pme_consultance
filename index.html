@@ -592,6 +592,7 @@ img{max-width:100%;display:block}
         <input type="tel" class="devis-input" id="telephone" required />
         <label class="devis-label">Nom de votre activité (optionnel)</label>
         <input type="text" class="devis-input" id="entreprise" />
+        <input type="text" id="hp" aria-hidden="true" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" />
         <div class="devis-actions">
           <button class="btn-devis btn-devis-prev">← Retour</button>
           <button class="btn-devis btn-devis-next" id="btnDevisFinal">Calculer mon devis →</button>
@@ -749,10 +750,8 @@ const PACKS={
     options:[{label:'Veille & Conformité continue',desc:'1er mois — hotline & contrôle des flux',prix:89,periode:' / mois'},{label:'Pilotage financier augmenté',desc:'1er mois — trésorerie & reporting',prix:250,periode:' / mois'}]}
 };
 
-/* ⚠️ À remplacer par l'ID de votre formulaire Formspree (voir guide de mise en ligne) */
-const FORMSPREE_ID_DEVIS = 'VOTRE_ID_FORMSPREE';
-/* ⚠️ À remplacer par l'URL de webhook Make.com pour l'envoi automatique du devis commercial (voir guide d'automatisation) */
-const MAKE_WEBHOOK_URL_DEVIS = 'VOTRE_URL_WEBHOOK_MAKE';
+/* ⚠️ À remplacer par l'URL de votre Web App Apps Script (voir apps-script/devis-webapp.gs) */
+const APPS_SCRIPT_URL = 'VOTRE_URL_EXEC_APPS_SCRIPT';
 
 let etat={pack:null,volume:null,options:[],contact:{}};
 let etapeActuelle=1;
@@ -878,6 +877,7 @@ function envoyerDevis(pack,totalFinal,optionsChoisies){
   const totalTtc=Math.round((totalHt+tva)*100)/100;
   const payload={
     _subject:`Nouveau devis site — ${pack.nom}`,
+    source:'Accueil — Devis',
     offre:pack.nom,
     volume:etat.volume?etat.volume.label:'',
     options:optionsChoisies.length?optionsChoisies.join(', '):'Aucune',
@@ -889,21 +889,17 @@ function envoyerDevis(pack,totalFinal,optionsChoisies){
     nom:etat.contact.nom,
     email:etat.contact.email,
     telephone:etat.contact.telephone,
-    entreprise:etat.contact.entreprise
+    entreprise:etat.contact.entreprise,
+    website:document.getElementById('hp').value
   };
-  fetch(`https://formspree.io/f/${FORMSPREE_ID_DEVIS}`,{
+  fetch(APPS_SCRIPT_URL,{
     method:'POST',
-    headers:{'Accept':'application/json','Content-Type':'application/json'},
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
     body:JSON.stringify(payload)
   }).catch(()=>{
     const msg=document.getElementById('resultatMessage');
     if(msg) msg.innerHTML='Votre demande a bien été enregistrée. Si vous n\'avez pas de nouvelles sous 24h, écrivez-nous directement à <strong>contact@pmeconsultance.fr</strong>.';
   });
-  fetch(MAKE_WEBHOOK_URL_DEVIS,{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(payload)
-  }).catch(()=>{/* l'envoi automatique du devis commercial est secondaire : la demande est de toute façon enregistrée via Formspree ci-dessus */});
 }
 
 function resetDevis(){
