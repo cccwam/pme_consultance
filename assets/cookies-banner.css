@@ -192,14 +192,34 @@
 }
 
 /* ===== RESPONSIVE ===== */
+.pmc-cookies-desc-short{display:none}
 @media (max-width:680px){
   .pmc-cookies-banner{
     bottom:0;left:0;right:0;
-    padding:24px 22px;
+    padding:22px 22px 20px;
+    max-height:80vh;
+    overflow-y:auto;
   }
-  .pmc-cookies-banner h3{font-size:1.3rem}
-  .pmc-cookies-actions{flex-direction:column;align-items:stretch}
+  .pmc-cookies-banner h3{font-size:1.15rem;margin-bottom:8px}
+  .pmc-cookies-desc-full{display:none}
+  .pmc-cookies-desc-short{
+    display:block;
+    font-size:.86rem;line-height:1.5;color:#4A4A4A;
+    margin:0 0 16px;
+  }
+  .pmc-cookies-desc-short a{color:#9A7E48;text-decoration:underline;text-underline-offset:3px}
+  .pmc-cookies-desc-short a:hover{color:#1A1A1A}
+  .pmc-cookies-actions{flex-direction:column;align-items:stretch;gap:10px}
   .pmc-cookies-btn{width:100%;text-align:center}
+  .pmc-cookies-btn-custom{
+    width:auto;align-self:flex-start;
+    background:none;border:none;
+    padding:4px 0 0;
+    text-decoration:underline;text-underline-offset:2px;
+    text-align:left;font-size:.78rem;letter-spacing:normal;text-transform:none;
+    color:#7A756B;
+  }
+  .pmc-cookies-btn-custom:hover{background:none;border:none;color:#1A1A1A}
   .pmc-cookies-modal-header,.pmc-cookies-modal-body,.pmc-cookies-modal-footer{
     padding-left:22px;padding-right:22px;
   }

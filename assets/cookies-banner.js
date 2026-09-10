@@ -104,11 +104,15 @@
     banner.setAttribute('aria-describedby','pmcBannerDesc');
     banner.innerHTML = `
       <h3 id="pmcBannerTitle">Nous respectons <em>votre vie privée</em></h3>
-      <p id="pmcBannerDesc">
+      <p id="pmcBannerDesc" class="pmc-cookies-desc-full">
         Ce site dépose uniquement des cookies strictement nécessaires à son fonctionnement.
         Avec votre accord, nous utilisons également des cookies de mesure d'audience anonymisée
         pour améliorer votre expérience. Vous pouvez accepter, refuser ou personnaliser vos choix à tout moment.
         Pour en savoir plus, consultez notre <a href="cookies.html">Politique cookies</a>.
+      </p>
+      <p class="pmc-cookies-desc-short" aria-hidden="true">
+        Nous utilisons des cookies pour améliorer votre expérience. Vous pouvez accepter, refuser ou
+        <a href="cookies.html">en savoir plus</a>.
       </p>
       <div class="pmc-cookies-actions">
         <button type="button" class="pmc-cookies-btn pmc-cookies-btn-accept" id="pmcAcceptAll">Tout accepter</button>
