@@ -4,6 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="PME CONSULTANCE — Accompagnement à la réforme de facturation électronique (RFE) 2026-2027 : diagnostic, choix de plateforme agréée, déploiement, veille conformité. Devis en 24h." />
+<link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<meta name="theme-color" content="#1A1A1A">
 <meta name="keywords" content="facturation électronique, réforme facturation électronique, plateforme agréée, PDP, e-invoicing, e-reporting, expert-comptable facturation électronique, conformité RFE" />
 <meta name="author" content="PME CONSULTANCE" />
 <meta property="og:title" content="PME CONSULTANCE — Accompagnement Facturation Électronique 2026-2027" />
@@ -43,8 +49,8 @@ img{max-width:100%;display:block}
 /* HEADER */
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,27,44,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,152,90,0.2);transition:all .4s var(--transition)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
-.logo{display:flex;align-items:center;height:55px}
-.logo img{height:48px;width:auto;object-fit:contain}
+.logo{display:flex;align-items:center;height:55px;margin-left:-14px}
+.logo img{height:60px;width:auto;object-fit:contain}
 .nav{display:flex;align-items:center;gap:30px}
 .nav a{font-size:.85rem;font-weight:400;color:rgba(245,241,232,0.72);position:relative;letter-spacing:.02em}
 .nav a:hover{color:var(--or)}
@@ -332,6 +338,62 @@ img{max-width:100%;display:block}
 :focus-visible{outline:2px solid var(--or);outline-offset:3px}
 </style>
 <link rel="stylesheet" href="assets/cookies-banner.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelles sont les dates clés à retenir ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Réception des factures électroniques obligatoire pour toutes les entreprises assujetties à la TVA dès le 1er septembre 2026. Émission des factures électroniques et e-reporting (flux B2C, international, secteurs exonérés) obligatoires pour les grandes entreprises et ETI dès le 1er septembre 2026, puis pour les PME, TPE, micro-entreprises et auto-entrepreneurs à partir du 1er septembre 2027."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que risque-t-on en cas de non-conformité ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "50 € par facture non émise dans les règles, plafonnés à 15 000 € par an, et 500 € par défaut de télétransmission d'e-reporting, également plafonnés à 15 000 € par an. À cela s'ajoutent des risques opérationnels indirects : blocage de flux, rejet de factures par des partenaires déjà conformes, et un risque de contrôle fiscal renforcé, la donnée facture devenant nativement disponible pour l'administration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'une Plateforme Agréée et comment la choisir parmi plus de 150 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depuis le recentrage du Portail Public de Facturation en 2024, chaque entreprise doit choisir et payer sa propre Plateforme Agréée (PA) pour émettre et recevoir ses factures électroniques. Plus de 150 plateformes sont agréées par la DGFiP, avec des fonctionnalités, des tarifs et des niveaux d'intégration très différents. Notre mission de Déploiement sur-mesure inclut une recommandation argumentée et indépendante, sans lien capitalistique avec aucun éditeur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi passer par un cabinet plutôt qu'un auto-diagnostic en ligne à 79 € ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les outils d'auto-diagnostic en ligne sont utiles pour une première sensibilisation, mais ils ne remplacent pas l'accompagnement à la mise en œuvre et n'engagent aucune responsabilité professionnelle. Notre mission va jusqu'au déploiement complet et à la formation de vos équipes, avec la responsabilité d'un expert-comptable inscrit à l'Ordre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cet accompagnement remplace-t-il mon expert-comptable actuel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Il s'agit d'une mission ponctuelle et indépendante, réalisable en complément de votre expert-comptable actuel. Si vous souhaitez ensuite devenir client PME CONSULTANCE pour votre comptabilité, nous intégrons naturellement cette brique à votre suivi global."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que se passe-t-il après le déploiement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La réglementation continuera d'évoluer au-delà de votre mise en conformité. Nous proposons un abonnement de Veille & Conformité continue pour sécuriser durablement vos flux, puis, si vous le souhaitez, l'option Pilotage financier augmenté pour transformer vos données de facturation en véritable outil de gestion de trésorerie."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -340,7 +402,7 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="PME CONSULTANCE – Accueil">
-        <img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" />
+        <img src="assets/PMC_logo_horizontal.png" alt="PME CONSULTANCE" />
       </a>
       <nav class="nav" id="nav">
         <a href="index.html">Offres TPE</a>
@@ -470,7 +532,7 @@ img{max-width:100%;display:block}
       <div class="offre-left">
         <div class="offre-numero">01</div>
         <h2 class="offre-titre">Diagnostic Flash</h2>
-        <p class="offre-accroche">Le point de départ indispensable : savoir précisément où vous en êtes avant le 1er septembre 2026.</p>
+        <p class="offre-accroche">Le point de départ indispensable : savoir précisément où vous en êtes avec la première tranche d'obligations du 1er septembre 2026.</p>
         <div class="offre-cibles-titre">Pour qui ?</div>
         <div class="offre-cibles-list">
           <span class="cible-tag">Tous profils, premier contact</span>
@@ -682,7 +744,7 @@ img{max-width:100%;display:block}
     </div>
     <div class="chiffres-grid">
       <div class="chiffre-item"><div class="chiffre-val">150+</div><div class="chiffre-lbl">Plateformes agréées</div><div class="chiffre-dsc">Analysées pour un choix indépendant et argumenté</div></div>
-      <div class="chiffre-item"><div class="chiffre-val">18 mois</div><div class="chiffre-lbl">Fenêtre réglementaire</div><div class="chiffre-dsc">Entre le second semestre 2026 et le premier semestre 2027</div></div>
+      <div class="chiffre-item"><div class="chiffre-val">12 mois</div><div class="chiffre-lbl">Fenêtre règlementaire</div><div class="chiffre-dsc">Entre Septembre 2026 et Septembre 2027</div></div>
       <div class="chiffre-item"><div class="chiffre-val">15 000 €</div><div class="chiffre-lbl">Sanction plafond / an</div><div class="chiffre-dsc">Par obligation (facturation ou e-reporting) non respectée</div></div>
       <div class="chiffre-item"><div class="chiffre-val">24h</div><div class="chiffre-lbl">Devis détaillé</div><div class="chiffre-dsc">Un engagement, pas une promesse marketing</div></div>
     </div>
@@ -885,7 +947,7 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" /></div>
+        <div class="footer-logo"><img src="assets/PMC_logo_horizontal.png" alt="PME CONSULTANCE" /></div>
         <p>Cabinet d'expertise comptable et de conseil, indépendant et haut de gamme. Inscrit à l'Ordre des Experts-Comptables.</p>
       </div>
       <div>
@@ -912,7 +974,7 @@ img{max-width:100%;display:block}
         <h5>Contact</h5>
         <div class="footer-contact-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          contact@pmeconsultance.fr
+          <a href="mailto:contact@pmeconsultance.fr">contact@pmeconsultance.fr</a>
         </div>
         <div class="footer-contact-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>

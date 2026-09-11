@@ -44,8 +44,8 @@ img{max-width:100%;display:block}
   border-bottom:1px solid var(--bordure);
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
-.logo{display:flex;align-items:center;height:55px;border:none}
-.logo img{height:48px;width:auto;object-fit:contain}
+.logo{display:flex;align-items:center;height:55px;border:none;margin-left:-14px}
+.logo img{height:60px;width:auto;object-fit:contain}
 .nav-legal{display:flex;align-items:center;gap:32px}
 .nav-legal a{font-size:.88rem;color:var(--anthracite);border:none}
 .nav-legal a:hover{color:var(--or)}

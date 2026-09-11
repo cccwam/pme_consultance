@@ -4,6 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="PME CONSULTANCE — Expertise comptable & conseil stratégique pour les PME-ETI. Révision des comptes, Offre 360°, CFO Partagé, M&A. Votre partenaire financier de confiance." />
+<link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<meta name="theme-color" content="#1A1A1A">
 <meta name="keywords" content="expert comptable PME ETI, révision comptes annuels, CFO partagé, offre 360 expertise comptable, conseil M&A, cession acquisition PME" />
 <meta name="author" content="PME CONSULTANCE" />
 <meta property="og:title" content="PME CONSULTANCE — Expertise comptable & conseil stratégique PME-ETI" />
@@ -46,8 +52,8 @@ img{max-width:100%;display:block}
 .annonce-bar .pastille{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--marine);margin-right:9px;vertical-align:middle}
 .header{position:fixed;top:42px;left:0;right:0;z-index:1000;background:rgba(14,27,44,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,152,90,0.2);transition:all .4s var(--transition)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
-.logo{display:flex;align-items:center;height:55px}
-.logo img{height:48px;width:auto;object-fit:contain}
+.logo{display:flex;align-items:center;height:55px;margin-left:-14px}
+.logo img{height:60px;width:auto;object-fit:contain}
 .nav{display:flex;align-items:center;gap:36px}
 .nav a{font-size:.88rem;font-weight:400;color:rgba(245,241,232,0.72);position:relative;letter-spacing:.02em}
 .nav a:hover{color:var(--or)}
@@ -79,13 +85,12 @@ img{max-width:100%;display:block}
 .hero-trust-item svg{flex-shrink:0;color:var(--or)}
 
 /* HERO CARDS */
-.hero-visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center}
+.hero-visual{position:relative;height:646px;display:flex;align-items:center;justify-content:center}
 .hero-card{position:absolute;backdrop-filter:blur(10px);padding:28px 30px;border:1px solid rgba(184,152,90,0.22);box-shadow:0 20px 50px rgba(0,0,0,0.3);transition:transform .4s var(--transition)}
 .hero-card-a{top:10px;left:0;width:258px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite}
 .hero-card-b{bottom:20px;right:0;width:272px;background:rgba(255,255,255,0.05);animation:flotter 6s ease-in-out infinite .9s}
-.hero-card-c{top:44%;left:26%;width:248px;background:var(--or);animation:flotter-mid 6s ease-in-out infinite 1.7s}
+.hero-card-c{top:31.3%;left:26%;width:248px;background:var(--or);animation:flotter 6s ease-in-out infinite 1.7s}
 @keyframes flotter{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes flotter-mid{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 12px))}}
 .hero-card .tag{display:inline-block;padding:3px 10px;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;background:rgba(184,152,90,0.15);color:var(--or)}
 .hero-card-c .tag{background:rgba(14,27,44,0.15);color:var(--marine)}
 .hero-card .num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--or);line-height:1;margin-bottom:7px}
@@ -294,6 +299,62 @@ img{max-width:100%;display:block}
 :focus-visible{outline:2px solid var(--or);outline-offset:3px}
 </style>
 <link rel="stylesheet" href="assets/cookies-banner.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle différence entre révision contractuelle et commissariat aux comptes ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le commissariat aux comptes est une mission légale obligatoire réglementée par le Code de commerce. La révision contractuelle est une mission facultative, librement choisie, qui offre un niveau d'assurance modérée. Elle convient aux PME souhaitant renforcer la fiabilité de leurs comptes sans être dans le champ légal de l'audit obligatoire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de jours par mois le CFO Partagé est-il disponible ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La disponibilité est entièrement modulable : de 1 à 4 jours par mois en moyenne. Nous définissons ensemble un planning de présence adapté à vos échéances — budgets, comités de direction, clôtures. En dehors des jours de présence, votre CFO reste joignable sous 4h ouvrées."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous côté cédant ou côté acquéreur pour les opérations M&A ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous intervenons des deux côtés, selon la mission. Pour les cédants : vendor due diligence (VDD) et préparation du dossier. Pour les acquéreurs : acquisition due diligence (ADD) financière et fiscale. Nous veillons à n'intervenir que pour un camp par opération afin de préserver notre indépendance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment se déroule le premier entretien ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le premier entretien est gratuit, confidentiel et sans engagement. Il dure 45 minutes à 1 heure, en présentiel ou en visioconférence. Nous abordons votre situation, vos enjeux et besoins. Une lettre de mission vous est adressée dans les 48h suivant l'entretien."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'Offre 360° peut-elle remplacer mon expert-comptable actuel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. L'Offre 360° intègre la tenue comptable, la fiscalité, le social et le juridique. Si vous disposez d'une équipe interne, nous pouvons aussi intervenir en supervision ou en conseil stratégique. La transition depuis un autre cabinet se fait de manière fluide et organisée."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vos honoraires sont-ils déductibles fiscalement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Les honoraires d'expertise comptable sont des charges d'exploitation déductibles du résultat imposable."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -304,7 +365,7 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="PME CONSULTANCE – Accueil">
-        <img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" />
+        <img src="assets/PMC_logo_horizontal.png" alt="PME CONSULTANCE" />
       </a>
       <nav class="nav" id="nav">
         <a href="#offres">Nos missions</a>
@@ -419,7 +480,7 @@ img{max-width:100%;display:block}
       <div class="offre-right">
         <div class="offre-badge">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L3 6 v6 c0 5 4 10 9 10 5 0 9-5 9-10 V6 z"/></svg>
-          Mission certifiante · Norme ISRE 2400
+          Mission certifiante · Norme professionnelle NP 2300
         </div>
         <div class="offre-prix-bloc">
           <div class="offre-prix-label">À partir de</div>
@@ -657,7 +718,7 @@ img{max-width:100%;display:block}
         <div class="diff-num">A</div>
         <div class="diff-icone"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
         <h3>Comptes révisés &amp; certifiés</h3>
-        <p>Un regard indépendant sur vos états financiers. Des conclusions formalisées selon les normes ISRE 2400. Une sécurité renforcée pour vos partenaires financiers.</p>
+        <p>Un regard indépendant sur vos états financiers. Des conclusions formalisées selon les normes professionnelles NP 2300. Une sécurité renforcée pour vos partenaires financiers.</p>
       </div>
       <div class="diff-item">
         <div class="diff-num">B</div>
@@ -827,7 +888,7 @@ img{max-width:100%;display:block}
       </div>
       <div class="faq-item">
         <div class="faq-q">Vos honoraires sont-ils déductibles fiscalement ?<span class="plus">+</span></div>
-        <div class="faq-r"><div class="faq-r-inner">Oui. Les honoraires d'expertise comptable sont des charges d'exploitation déductibles du résultat imposable. Les PME adhérentes à un Centre de Gestion Agréé (CGA) bénéficient en outre d'une réduction d'impôt spécifique sur les honoraires comptables. Nous vous accompagnons dans ces démarches.</div></div>
+        <div class="faq-r"><div class="faq-r-inner">Oui. Les honoraires d'expertise comptable sont des charges d'exploitation déductibles du résultat imposable.</div></div>
       </div>
     </div>
   </div>
@@ -850,7 +911,7 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><img src="assets/pme-lateral-blanc.png" alt="PME CONSULTANCE" /></div>
+        <div class="footer-logo"><img src="assets/PMC_logo_horizontal.png" alt="PME CONSULTANCE" /></div>
         <p>Cabinet d'expertise comptable et de conseil stratégique dédié aux PME &amp; ETI. Inscrit à l'Ordre des Experts-Comptables.</p>
       </div>
       <div>
@@ -880,7 +941,7 @@ img{max-width:100%;display:block}
         <h5>Contact</h5>
         <div class="footer-contact-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          pmeconsultance@gmail.com
+          <a href="mailto:pmeconsultance@gmail.com">pmeconsultance@gmail.com</a>
         </div>
         <div class="footer-contact-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
