@@ -100,6 +100,7 @@ img{max-width:100%;display:block}
 .hero-sous{font-size:1.15rem;color:var(--gris-texte);margin-bottom:42px;max-width:520px;line-height:1.75}
 .hero-cta{display:flex;gap:18px;flex-wrap:wrap}
 .btn-primaire{display:inline-flex;align-items:center;gap:14px;background:var(--noir);color:var(--ivoire);padding:18px 36px;font-size:.92rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--noir);cursor:pointer;transition:all .4s var(--transition)}
+.btn-primaire .lc{text-transform:lowercase}
 .btn-primaire:hover{background:var(--or);border-color:var(--or);transform:translateY(-2px);box-shadow:0 12px 30px rgba(184,152,90,0.3)}
 .btn-primaire .arrow{transition:transform .3s var(--transition)}
 .btn-primaire:hover .arrow{transform:translateX(6px)}
@@ -107,17 +108,18 @@ img{max-width:100%;display:block}
 .btn-secondaire:hover{background:var(--noir);color:var(--ivoire)}
 
 .hero-trust{margin-top:50px;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+@media (min-width:981px){.hero-trust-item:first-child{flex-basis:100%}}
 .hero-trust-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--gris-texte)}
 .hero-trust-item svg{flex-shrink:0;color:var(--or)}
 
 .hero-visual{position:relative;height:560px;display:flex;align-items:center;justify-content:center}
-.hero-photo-desktop{position:absolute;top:476px;right:278px;width:340px;height:328px;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);border:1px solid rgba(184,152,90,0.18);z-index:0}
+.hero-photo-desktop{position:absolute;top:500px;right:313px;width:320px;height:328px;border-radius:22px;overflow:hidden;box-shadow:var(--ombre);border:1px solid rgba(184,152,90,0.18);z-index:0}
 .hero-photo-desktop img{width:100%;height:100%;object-fit:cover;object-position:50% 4%;display:block;filter:saturate(.96)}
 .hero-photo-mobile{display:none}
 .hero-card{position:absolute;z-index:1;background:var(--blanc);padding:32px;border:1px solid rgba(184,152,90,0.15);box-shadow:var(--ombre);transition:transform .4s var(--transition)}
 .hero-card-1{top:0;left:0;width:280px;animation:flotter 6s ease-in-out infinite}
 .hero-card-2{bottom:30px;right:0;width:300px;animation:flotter 6s ease-in-out infinite .8s}
-.hero-card-3{top:31.5%;left:15%;width:360px;max-width:80%;background:var(--noir);color:var(--ivoire);padding-top:48px;padding-bottom:48px}
+.hero-card-3{top:26%;left:15%;width:360px;max-width:80%;background:var(--noir);color:var(--ivoire);padding-top:48px;padding-bottom:48px}
 @keyframes flotter{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 .hero-card-3{animation:flotter 6s ease-in-out infinite 1.6s}
 .hero-card .num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--or);line-height:1;margin-bottom:8px}
@@ -425,7 +427,7 @@ img{max-width:100%;display:block}
           Votre comptabilité, enfin simple. PME CONSULTANCE accompagne les entrepreneurs, micro-entrepreneurs et TPE françaises avec un expert dédié, des forfaits transparents et des outils 100% digitaux — pour vous laisser du temps pour l'essentiel : votre activité.<br/><em class="italique">Expertise · Conseils · Disruption · Valeur Ajoutée.</em>
         </p>
         <div class="hero-cta">
-          <a href="#devis" class="btn-primaire">Obtenir mon devis en 60s<span class="arrow">→</span></a>
+          <a href="#devis" class="btn-primaire"><span class="btn-label">Obtenir mon devis en 60 <span class="lc">s.</span></span><span class="arrow">→</span></a>
           <a href="#offres" class="btn-secondaire">Découvrir nos offres</a>
         </div>
         <div class="hero-photo-mobile">
