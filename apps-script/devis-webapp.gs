@@ -43,10 +43,10 @@ const LABELS = {
   briques: 'Briques', message: 'Message'
 };
 
-function textOutput(msg, code) {
-  var out = ContentService.createTextOutput(msg).setMimeType(ContentService.MimeType.TEXT);
-  if (code) out.setHttpCode(code);
-  return out;
+// Note : les Web Apps Apps Script ne permettent pas de contrôler le code HTTP
+// (toujours 200) — le client doit donc lire le corps de la réponse ("ok"/"err").
+function textOutput(msg) {
+  return ContentService.createTextOutput(msg).setMimeType(ContentService.MimeType.TEXT);
 }
 
 function doPost(e) {
@@ -56,9 +56,9 @@ function doPost(e) {
     // Pot de miel : invisible pour les humains, rempli par les bots.
     if (d.website) return textOutput('ok');
 
-    if (SOURCES.indexOf(d.source) === -1) return textOutput('err', 400);
-    if (!d.prenom || !d.nom || !d.email) return textOutput('err', 400);
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(d.email))) return textOutput('err', 400);
+    if (SOURCES.indexOf(d.source) === -1) return textOutput('err');
+    if (!d.prenom || !d.nom || !d.email) return textOutput('err');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(d.email))) return textOutput('err');
 
     var row = [new Date()].concat(COLUMNS.map(function (k) {
       return d[k] != null ? d[k] : '';
@@ -78,10 +78,10 @@ function doPost(e) {
 
     return textOutput('ok');
   } catch (err) {
-    return textOutput('err', 500);
+    return textOutput('err');
   }
 }
 
 function doGet() {
-  return textOutput('404', 404);
+  return textOutput('404');
 }
