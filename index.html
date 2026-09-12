@@ -154,6 +154,12 @@ img{max-width:100%;display:block}
 .offre .prix-montant .euro{font-size:1.6rem;vertical-align:top;margin-right:4px;color:var(--or)}
 .offre .prix-montant .periode{font-size:.95rem;color:var(--gris-texte);font-family:'Inter',sans-serif;margin-left:6px}
 .offre .prix-mention{font-size:.78rem;color:var(--gris-clair);margin-top:8px;letter-spacing:.04em}
+.offre-tarifs-table{width:100%;border-collapse:collapse;margin:12px 0 4px}
+.offre-tarifs-table tr{border-bottom:1px solid rgba(26,26,26,0.08)}
+.offre-tarifs-table tr:last-child{border-bottom:none}
+.offre-tarifs-table td{padding:8px 0;font-size:.85rem;color:var(--anthracite)}
+.offre-tarifs-table td.montant{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;color:var(--noir);text-align:right;white-space:nowrap}
+.offre-tarifs-table .euro{color:var(--or)}
 .offre ul{list-style:none;margin-bottom:36px;flex-grow:1}
 .offre li{padding:10px 0 10px 30px;position:relative;font-size:.92rem;color:var(--anthracite);border-bottom:1px solid rgba(26,26,26,0.04)}
 .offre li:last-child{border-bottom:none}
@@ -534,7 +540,7 @@ img{max-width:100%;display:block}
           <li>Tableau de bord temps réel</li>
           <li>Conseils fiscaux illimités par chat</li>
           <li>Optimisation cotisations sociales</li>
-          <li>Déclaration revenus 2042-C-PRO incluse</li>
+          <li>Déclaration revenus 2042-C-PRO possible sur option</li>
         </ul>
         <button class="btn-offre" data-pack="micro">Souscrire ce pack</button>
       </div>
@@ -570,9 +576,14 @@ img{max-width:100%;display:block}
         <h3>Pack Facturation Électronique</h3>
         <p class="accroche">Obtenez les effets positifs de la réforme 2026-2027 avant vos concurrents.</p>
         <div class="prix">
-          <span class="prix-label">À partir de</span>
-          <div class="prix-montant"><span class="euro">€</span>350<span class="periode">HT</span></div>
-          <p class="prix-mention">Diagnostic Flash : 350€ (micro) à 1 500€ (ETI) · Mission complète : 1 040€ à 8 000€ HT selon profil</p>
+          <span class="prix-label">Diagnostic Flash — tarif selon profil</span>
+          <table class="offre-tarifs-table">
+            <tr><td>Micro-entrepreneur / Indépendant</td><td class="montant"><span class="euro">€</span>350</td></tr>
+            <tr><td>TPE (1-10 salariés)</td><td class="montant"><span class="euro">€</span>490</td></tr>
+            <tr><td>PME (11-250 salariés)</td><td class="montant"><span class="euro">€</span>890</td></tr>
+            <tr><td>ETI (250+ salariés)</td><td class="montant">dès <span class="euro">€</span>1 500</td></tr>
+          </table>
+          <p class="prix-mention">Tous profils concernés, y compris les micro-entrepreneurs · Mission complète (diagnostic + déploiement) : 1 040€ à 8 000€ HT selon profil</p>
         </div>
         <ul>
           <li>Audit de vos flux + score de préparation</li>
@@ -852,10 +863,10 @@ const PACKS={
     options:[{label:'Prévisionnel sur 3 ans',desc:'Etablissement étude prévisionnel 3 ans attestée',prix:350},{label:'PV DAU non rémunération gérant',desc:'Rédaction et formalités juridiques',prix:240,applicableVolumes:['unip']},{label:"Pacte d'associés",desc:'Clauses sur-mesure',prix:350,applicableVolumes:['multi']},{label:'Assistance dépôt capital social',desc:'Proposition solution digitalisée dépôt capital',prix:0,gratuit:true,applicableVolumes:['unip','multi']},{label:'Inscription Autoentrepreneur.urssaf.fr',desc:'Création espace en ligne',prix:0,gratuit:true,applicableVolumes:['micro']},{label:'Assistance choix plateforme agréée',desc:'Proposition solutions plateforme agréée adéquates',prix:0,gratuit:true,applicableVolumes:['micro']}]},
   micro:{nom:'Pack Micro-entrepreneur',base:39,periode:'/ mois HT',question:"Quel est votre chiffre d'affaires annuel prévisionnel ?",
     volumes:[{label:'< 25 000 €',desc:'Activité débutante',value:'s',mult:0.85},{label:'25 000 € - 60 000 €',desc:'Activité régulière',value:'m',mult:1},{label:'> 60 000 €',desc:'Activité soutenue',value:'l',mult:1.4}],
-    options:[{label:'Suivi TVA',desc:'Si vous dépassez les seuils',prix:15,periode:' / mois'},{label:'Tableau de bord premium',desc:'KPI temps réel',prix:9,periode:' / mois'},{label:'Déclaration revenus 2042',desc:'Incluse',prix:0,gratuit:true},{label:'Bilan annuel express',desc:'Synthèse fiscale',prix:120,periode:' / an'}]},
+    options:[{label:'Suivi TVA',desc:'Si vous dépassez les seuils',prix:15,periode:' / mois'},{label:'Tableau de bord premium',desc:'KPI temps réel',prix:9,periode:' / mois'},{label:'Déclaration revenus 2042-C-PRO',desc:'Déclaration IR annuelle',prix:250,periode:' / an'},{label:'Bilan annuel express',desc:'Synthèse fiscale',prix:120,periode:' / an'}]},
   bilan:{nom:'Pack Bilan annuel TPE',base:890,periode:'/ an HT',question:"Quel est votre chiffre d'affaires annuel ?",
     volumes:[{label:'< 100 K€',desc:'Très petite structure',value:'s',mult:1},{label:'100 K€ - 500 K€',desc:'TPE en croissance',value:'m',mult:1.6},{label:'> 500 K€',desc:'PME établie',value:'l',mult:2.4}],
-    options:[{label:'Tenue comptable mensuelle',desc:'Saisie des pièces',prix:1200,periode:' / an'},{label:'Gestion paie (1-3 salariés)',desc:'Bulletins & DSN',prix:780,periode:' / an'},{label:'Conseil fiscal trimestriel',desc:'4 RDV/an',prix:480,periode:' / an'},{label:'Reporting CAC',desc:'Si éligible',prix:600,periode:' / an'}]},
+    options:[{label:'Tenue comptable mensuelle',desc:'Saisie des pièces',prix:1200,periode:' / an'},{label:'Gestion paie (1-3 salariés)',desc:'Bulletins & DSN',prix:780,periode:' / an'},{label:'Conseil fiscal trimestriel',desc:'4 RDV/an',prix:480,periode:' / an'},{label:'Reporting KPI mensuel',desc:'Si éligible',prix:600,periode:' / an'}]},
   facturation:{nom:'Pack Facturation Électronique',base:1780,periode:'forfait mission complète HT',question:'Quelle est la taille de votre structure ?',
     volumes:[{label:'Micro / Indépendant',desc:'Diagnostic + Déploiement',value:'micro',mult:0.5842696629213483},{label:'TPE (1-10 salariés)',desc:'Diagnostic + Déploiement',value:'tpe',mult:1},{label:'PME (11-250 salariés)',desc:'Diagnostic + Déploiement',value:'pme',mult:2.1292134831460676},{label:'ETI (250+ salariés)',desc:'Montant plancher, devis au-delà',value:'eti',mult:4.49438202247191}],
     options:[{label:'Veille & Conformité continue',desc:'Hotline & contrôle des flux',prixParVolume:{micro:39,tpe:89,pme:190,eti:450},periode:' / mois'},{label:'Pilotage financier augmenté',desc:'Trésorerie & reporting',prixParVolume:{micro:null,tpe:250,pme:590,eti:1200},periode:' / mois'}]}
