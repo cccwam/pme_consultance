@@ -769,6 +769,7 @@ img{max-width:100%;display:block}
     </div>
     <div class="contact-card">
       <form id="contactForm" novalidate>
+        <input type="text" id="hp" aria-hidden="true" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" />
         <div class="form-grid">
           <div class="form-grp">
             <label class="form-lbl" for="prenom">Prénom *</label>
@@ -1005,8 +1006,8 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 });
 
 // Formulaire
-/* ⚠️ À remplacer par l'ID de votre formulaire Formspree (voir guide de mise en ligne) */
-var FORMSPREE_ID_CONTACT = 'VOTRE_ID_FORMSPREE';
+// Web App Apps Script (source : apps-script/devis-webapp.gs)
+var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyIWlRIISUGHsG9zVvi6WOgmYP1hiNXwsbhKqKXuq95PGPqKCK9300YzsJlWi_S_UUH_A/exec';
 
 document.getElementById('contactForm').addEventListener('submit',function(e){
   e.preventDefault();
@@ -1017,6 +1018,7 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
   var missions=Array.prototype.slice.call(document.querySelectorAll('input[name="mission"]:checked')).map(function(c){return c.value;});
   var payload={
     _subject:'Nouvelle demande de contact PME-ETI',
+    source:'PME/ETI — Contact',
     prenom:document.getElementById('prenom').value,
     nom:document.getElementById('nom').value,
     poste:document.getElementById('poste').value,
@@ -1025,11 +1027,12 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
     telephone:document.getElementById('telephone').value,
     email:document.getElementById('email').value,
     missions:missions.length?missions.join(', '):'Non précisé',
-    message:document.getElementById('message').value
+    message:document.getElementById('message').value,
+    website:document.getElementById('hp').value
   };
-  fetch('https://formspree.io/f/'+FORMSPREE_ID_CONTACT,{
+  fetch(APPS_SCRIPT_URL,{
     method:'POST',
-    headers:{'Accept':'application/json','Content-Type':'application/json'},
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
     body:JSON.stringify(payload)
   }).catch(function(){/* affichage du toast quoi qu'il arrive, fallback mailto disponible dans le CTA final */});
   var toast=document.getElementById('toast');
