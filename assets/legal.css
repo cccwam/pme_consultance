@@ -180,6 +180,16 @@ img{max-width:100%;display:block}
   display:flex;justify-content:space-between;align-items:center;
   flex-wrap:wrap;gap:14px;font-size:.8rem;color:rgba(245,241,232,0.5);
 }
+.footer-social{
+  display:flex;gap:12px;margin-bottom:26px;flex-wrap:wrap;
+}
+.footer-social a{
+  display:flex;align-items:center;justify-content:center;width:36px;height:36px;
+  border-radius:50%;background:rgba(184,152,90,0.1);color:var(--or);
+  transition:all .3s var(--transition);
+}
+.footer-social a:hover{background:var(--or);color:var(--noir)}
+.footer-social svg{width:17px;height:17px}
 
 /* ===== ANCRES & SIGNATURE ===== */
 [id]{scroll-margin-top:100px}
