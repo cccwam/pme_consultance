@@ -147,6 +147,8 @@ img{max-width:100%;display:block}
 .offre.urgent .badge-urgent{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--noir);color:var(--or);padding:6px 20px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--or);white-space:nowrap}
 .offre.surmesure{border-top:3px solid var(--or-fonce)}
 .offre.surmesure .badge-surmesure{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--ivoire-fonce);color:var(--or-fonce);padding:6px 20px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--or-fonce);white-space:nowrap}
+.offre.strategique{border-top:3px solid var(--marine)}
+.offre.strategique .badge-strategique{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--marine);color:var(--or-clair);padding:6px 20px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--marine);white-space:nowrap}
 .offre-icone{width:64px;height:64px;border-radius:50%;background:var(--ivoire);display:flex;align-items:center;justify-content:center;margin-bottom:24px;color:var(--or)}
 .offre h3{margin-bottom:10px}
 .offre .accroche{font-size:.92rem;color:var(--gris-texte);margin-bottom:30px;font-style:italic;min-height:48px}
@@ -221,7 +223,7 @@ img{max-width:100%;display:block}
 
 .choix-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
 .choix-grid.quatre{grid-template-columns:repeat(4,1fr)}
-.choix-grid.cinq{grid-template-columns:repeat(3,minmax(0,190px));justify-content:center}
+.choix-grid.six{grid-template-columns:repeat(3,minmax(0,190px));justify-content:center}
 .choix-grid.deux{grid-template-columns:repeat(2,1fr)}
 .choix{padding:24px 18px;border:1.5px solid rgba(26,26,26,0.1);text-align:center;cursor:pointer;transition:all .3s var(--transition);background:var(--ivoire-clair)}
 .choix:hover{border-color:var(--or);background:var(--blanc)}
@@ -300,7 +302,7 @@ img{max-width:100%;display:block}
   .menu-mobile{display:block}
   .nav.open{display:flex;position:absolute;top:80px;left:0;right:0;background:var(--ivoire);flex-direction:column;padding:30px;border-top:1px solid rgba(184,152,90,0.15)}
   .devis-card{padding:40px 30px}
-  .choix-grid,.choix-grid.quatre,.choix-grid.cinq{grid-template-columns:1fr;gap:12px}
+  .choix-grid,.choix-grid.quatre,.choix-grid.six{grid-template-columns:1fr;gap:12px}
   .devis-row{grid-template-columns:1fr}
   .progress-step .label{display:none}
   .section{padding:80px 0}
@@ -636,13 +638,35 @@ img{max-width:100%;display:block}
         </ul>
         <button class="btn-offre" data-pack="facturation">Souscrire ce pack</button>
       </div>
+
+      <div class="offre strategique">
+        <div class="badge-strategique">Stratégique</div>
+        <div class="offre-icone">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+        </div>
+        <h3>Pack PME · ETI</h3>
+        <p class="accroche">Un partenaire stratégique pour piloter, sécuriser et valoriser votre PME ou ETI.</p>
+        <div class="prix">
+          <span class="prix-label">4 expertises PME/ETI — à partir de</span>
+          <table class="offre-tarifs-table">
+            <tr><td>Offre 360° (pilotage continu)</td><td class="montant"><span class="euro">€</span>890<span style="font-size:.62rem;color:var(--gris-clair)">/mois</span></td></tr>
+            <tr><td>Mission CFO Partagé</td><td class="montant"><span class="euro">€</span>1 500<span style="font-size:.62rem;color:var(--gris-clair)">/mois</span></td></tr>
+            <tr><td>Révision des comptes annuels</td><td class="montant"><span class="euro">€</span>2 500<span style="font-size:.62rem;color:var(--gris-clair)">/exercice</span></td></tr>
+          </table>
+          <p class="prix-mention">De 5 M€ à 150 M€ de CA · Conseil M&amp;A sur devis · Devis personnalisé selon votre structure</p>
+        </div>
+        <ul>
+          <li>Un interlocuteur unique, vision transversale de votre entreprise</li>
+          <li>Révision des comptes, DAF à temps partagé ou conseil M&amp;A selon vos enjeux</li>
+          <li>Reporting financier sur-mesure et réactivité 24h garantie</li>
+          <li>Confidentialité & déontologie absolues</li>
+        </ul>
+        <a class="btn-offre-nav" href="pme-eti.html">Découvrir l'offre complète →</a>
+      </div>
     </div>
 
     <p class="offres-note">
       Besoin d'un accompagnement PME/ETI sur la facturation électronique ? <a href="facturation-electronique.html">Découvrez l'offre complète et son barème par profil →</a>
-    </p>
-    <p class="offres-note-cta">
-      Pour les PME et ETI, découvrez toute la gamme d'offres d'accompagnement sur-mesure que nous pouvons vous proposer. <a href="pme-eti.html">ICI</a>
     </p>
   </div>
 </section>
@@ -711,12 +735,13 @@ img{max-width:100%;display:block}
       <div class="devis-step active" data-step="1">
         <h3>Quel est votre besoin ?</h3>
         <p class="question">Sélectionnez l'offre qui correspond à votre situation.</p>
-        <div class="choix-grid cinq">
+        <div class="choix-grid six">
           <div class="choix" data-value="creation"><div class="pict">🏛</div><div class="titre">Création d'entreprise</div><div class="desc">Lancer une nouvelle structure</div></div>
           <div class="choix" data-value="indep-sci-lmnp"><div class="pict">🧩</div><div class="titre">Indépendant · SCI · LMNP</div><div class="desc">3 statuts, un pack sur-mesure</div></div>
           <div class="choix" data-value="bilan"><div class="pict">📊</div><div class="titre">Bilan annuel TPE</div><div class="desc">Comptes annuels & liasse</div></div>
           <div class="choix" data-value="micro"><div class="pict">👤</div><div class="titre">Micro-entrepreneur</div><div class="desc">Suivi annuel & déclarations</div></div>
           <div class="choix" data-value="facturation"><div class="pict">🧾</div><div class="titre">Facturation Électronique</div><div class="desc">Diagnostic, plateforme & déploiement</div></div>
+          <div class="choix" data-value="pme-eti"><div class="pict">📈</div><div class="titre">PME · ETI</div><div class="desc">Accompagnement stratégique sur-mesure</div></div>
         </div>
         <div class="devis-actions"><button class="btn-devis btn-devis-next" disabled>Suivant →</button></div>
       </div>
@@ -957,6 +982,10 @@ document.querySelectorAll('.devis-step[data-step="1"] .choix').forEach(c=>{
   c.addEventListener('click',()=>{
     if(c.dataset.value==='indep-sci-lmnp'){
       window.location.href='independants-sci-lmnp.html#devis';
+      return;
+    }
+    if(c.dataset.value==='pme-eti'){
+      window.location.href='pme-eti.html#contact';
       return;
     }
     document.querySelectorAll('.devis-step[data-step="1"] .choix').forEach(x=>x.classList.remove('selected'));
