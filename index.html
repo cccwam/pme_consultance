@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="PME CONSULTANCE — Cabinet d'expertise comptable et de conseil 100% en ligne. Création d'entreprise, micro-entrepreneur, bilan annuel TPE. Devis instantané en 60 secondes." />
+<meta name="description" content="PME CONSULTANCE — Cabinet d'expertise comptable et de conseil 100% en ligne. Création d'entreprise, micro-entrepreneur, indépendants, SCI, LMNP, bilan annuel TPE. Devis instantané en 60 secondes." />
 <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="assets/favicon/site.webmanifest">
 <meta name="theme-color" content="#1A1A1A">
-<meta name="keywords" content="expert comptable en ligne, création entreprise, micro-entrepreneur, bilan annuel TPE, cabinet expertise comptable, comptabilité PME" />
+<meta name="keywords" content="expert comptable en ligne, création entreprise, micro-entrepreneur, indépendants, SCI, LMNP, bilan annuel TPE, cabinet expertise comptable, comptabilité PME" />
 <meta name="author" content="PME CONSULTANCE" />
 <meta property="og:title" content="PME CONSULTANCE — Expertise comptable & conseil pour TPE/PME" />
 <meta property="og:description" content="Cabinet d'expertise comptable 100% en ligne. Devis instantané. Tarifs transparents." />
@@ -137,7 +137,7 @@ img{max-width:100%;display:block}
 .confiance-item p{font-size:.85rem;color:var(--gris-texte)}
 
 .offres{background:var(--ivoire);position:relative}
-.offres-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.offres-grid{display:grid;grid-template-columns:repeat(3,minmax(0,360px));justify-content:center;gap:26px}
 .offre{background:var(--blanc);padding:48px 38px;border:1px solid rgba(26,26,26,0.06);position:relative;transition:all .5s var(--transition);display:flex;flex-direction:column}
 .offre:hover{transform:translateY(-8px);box-shadow:var(--ombre-hover);border-color:var(--or)}
 .offre.populaire{border:2px solid var(--or);transform:scale(1.03)}
@@ -145,6 +145,8 @@ img{max-width:100%;display:block}
 .offre.populaire .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--or);color:var(--blanc);padding:6px 22px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
 .offre.urgent{border-top:3px solid var(--or)}
 .offre.urgent .badge-urgent{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--noir);color:var(--or);padding:6px 20px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--or);white-space:nowrap}
+.offre.surmesure{border-top:3px solid var(--or-fonce)}
+.offre.surmesure .badge-surmesure{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--ivoire-fonce);color:var(--or-fonce);padding:6px 20px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--or-fonce);white-space:nowrap}
 .offre-icone{width:64px;height:64px;border-radius:50%;background:var(--ivoire);display:flex;align-items:center;justify-content:center;margin-bottom:24px;color:var(--or)}
 .offre h3{margin-bottom:10px}
 .offre .accroche{font-size:.92rem;color:var(--gris-texte);margin-bottom:30px;font-style:italic;min-height:48px}
@@ -166,6 +168,8 @@ img{max-width:100%;display:block}
 .offre li::before{content:'';position:absolute;left:0;top:18px;width:14px;height:8px;border-left:1.5px solid var(--or);border-bottom:1.5px solid var(--or);transform:rotate(-45deg)}
 .offre .btn-offre{width:100%;padding:16px;background:transparent;color:var(--noir);border:1px solid var(--noir);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .35s var(--transition)}
 .offre .btn-offre:hover{background:var(--noir);color:var(--ivoire)}
+.offre .btn-offre-nav{display:block;width:100%;padding:16px;background:transparent;color:var(--noir);border:1px solid var(--noir);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;text-align:center;text-decoration:none;cursor:pointer;transition:all .35s var(--transition)}
+.offre .btn-offre-nav:hover{background:var(--noir);color:var(--ivoire)}
 .offre.populaire .btn-offre{background:var(--noir);color:var(--ivoire)}
 .offre.populaire .btn-offre:hover{background:var(--or);border-color:var(--or)}
 
@@ -217,6 +221,7 @@ img{max-width:100%;display:block}
 
 .choix-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
 .choix-grid.quatre{grid-template-columns:repeat(4,1fr)}
+.choix-grid.cinq{grid-template-columns:repeat(3,minmax(0,190px));justify-content:center}
 .choix-grid.deux{grid-template-columns:repeat(2,1fr)}
 .choix{padding:24px 18px;border:1.5px solid rgba(26,26,26,0.1);text-align:center;cursor:pointer;transition:all .3s var(--transition);background:var(--ivoire-clair)}
 .choix:hover{border-color:var(--or);background:var(--blanc)}
@@ -295,7 +300,7 @@ img{max-width:100%;display:block}
   .menu-mobile{display:block}
   .nav.open{display:flex;position:absolute;top:80px;left:0;right:0;background:var(--ivoire);flex-direction:column;padding:30px;border-top:1px solid rgba(184,152,90,0.15)}
   .devis-card{padding:40px 30px}
-  .choix-grid,.choix-grid.quatre{grid-template-columns:1fr;gap:12px}
+  .choix-grid,.choix-grid.quatre,.choix-grid.cinq{grid-template-columns:1fr;gap:12px}
   .devis-row{grid-template-columns:1fr}
   .progress-step .label{display:none}
   .section{padding:80px 0}
@@ -532,27 +537,29 @@ img{max-width:100%;display:block}
         <button class="btn-offre" data-pack="creation">Souscrire ce pack</button>
       </div>
 
-      <div class="offre">
+      <div class="offre surmesure">
+        <div class="badge-surmesure">Sur-mesure</div>
         <div class="offre-icone">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <h3>Pack Micro-entrepreneur</h3>
-        <p class="accroche">L'accompagnement complet de votre micro-entreprise au quotidien.</p>
+        <h3>Pack Indépendant · SCI · LMNP</h3>
+        <p class="accroche">Une expertise calibrée sur votre statut réel, pas sur un profil générique.</p>
         <div class="prix">
-          <span class="prix-label">À partir de</span>
-          <div class="prix-montant"><span class="euro">€</span>33<span class="periode">/ mois HT</span></div>
-          <p class="prix-mention">33€ à 55€ / mois selon chiffre d'affaires annuel · Engagement annuel, sans surcoût</p>
+          <span class="prix-label">3 packs distincts — à partir de</span>
+          <table class="offre-tarifs-table">
+            <tr><td>Indépendant &amp; Profession Libérale</td><td class="montant"><span class="euro">€</span>250<span style="font-size:.62rem;color:var(--gris-clair)">/mois</span></td></tr>
+            <tr><td>SCI</td><td class="montant"><span class="euro">€</span>900<span style="font-size:.62rem;color:var(--gris-clair)">/an</span></td></tr>
+            <tr><td>LMNP</td><td class="montant"><span class="euro">€</span>600<span style="font-size:.62rem;color:var(--gris-clair)">/an</span></td></tr>
+          </table>
+          <p class="prix-mention">Tarif définitif après échange sur votre situation · Devis personnalisé sous 24h</p>
         </div>
         <ul>
-          <li>Déclarations URSSAF mensuelles ou trimestrielles</li>
-          <li>Déclarations TVA si applicable</li>
-          <li>Suivi du seuil de chiffre d'affaires</li>
-          <li>Tableau de bord temps réel</li>
-          <li>Conseils fiscaux illimités par chat</li>
-          <li>Optimisation cotisations sociales</li>
-          <li>Déclaration revenus 2042-C-PRO possible sur option</li>
+          <li>Un pack calibré sur votre statut exact, jamais un forfait générique</li>
+          <li>Visa fiscal, secrétariat juridique ou amortissement selon votre profil</li>
+          <li>Un expert dédié, joignable à distance</li>
+          <li>Conformité gérée sans effort de votre part</li>
         </ul>
-        <button class="btn-offre" data-pack="micro">Souscrire ce pack</button>
+        <a class="btn-offre-nav" href="independants-sci-lmnp.html">Découvrir vos 3 packs →</a>
       </div>
 
       <div class="offre populaire">
@@ -578,6 +585,30 @@ img{max-width:100%;display:block}
         </ul>
         <button class="btn-offre" data-pack="bilan">Souscrire ce pack</button>
       </div>
+
+      <div class="offre">
+        <div class="offre-icone">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg>
+        </div>
+        <h3>Pack Micro-entrepreneur</h3>
+        <p class="accroche">L'accompagnement complet de votre micro-entreprise au quotidien.</p>
+        <div class="prix">
+          <span class="prix-label">À partir de</span>
+          <div class="prix-montant"><span class="euro">€</span>33<span class="periode">/ mois HT</span></div>
+          <p class="prix-mention">33€ à 55€ / mois selon chiffre d'affaires annuel · Engagement annuel, sans surcoût</p>
+        </div>
+        <ul>
+          <li>Déclarations URSSAF mensuelles ou trimestrielles</li>
+          <li>Déclarations TVA si applicable</li>
+          <li>Suivi du seuil de chiffre d'affaires</li>
+          <li>Tableau de bord temps réel</li>
+          <li>Conseils fiscaux illimités par chat</li>
+          <li>Optimisation cotisations sociales</li>
+          <li>Déclaration revenus 2042-C-PRO possible sur option</li>
+        </ul>
+        <button class="btn-offre" data-pack="micro">Souscrire ce pack</button>
+      </div>
+
       <div class="offre urgent">
         <div class="badge-urgent">Obligatoire dès 2026</div>
         <div class="offre-icone">
@@ -612,9 +643,6 @@ img{max-width:100%;display:block}
     </p>
     <p class="offres-note-cta">
       Pour les PME et ETI, découvrez toute la gamme d'offres d'accompagnement sur-mesure que nous pouvons vous proposer. <a href="pme-eti.html">ICI</a>
-    </p>
-    <p class="offres-note">
-      Vous êtes indépendant, en profession libérale, gérant de SCI ou en LMNP ? <a href="independants-sci-lmnp.html">Découvrez nos 3 packs dédiés →</a>
     </p>
   </div>
 </section>
@@ -683,10 +711,11 @@ img{max-width:100%;display:block}
       <div class="devis-step active" data-step="1">
         <h3>Quel est votre besoin ?</h3>
         <p class="question">Sélectionnez l'offre qui correspond à votre situation.</p>
-        <div class="choix-grid quatre">
+        <div class="choix-grid cinq">
           <div class="choix" data-value="creation"><div class="pict">🏛</div><div class="titre">Création d'entreprise</div><div class="desc">Lancer une nouvelle structure</div></div>
-          <div class="choix" data-value="micro"><div class="pict">👤</div><div class="titre">Micro-entrepreneur</div><div class="desc">Suivi annuel & déclarations</div></div>
+          <div class="choix" data-value="indep-sci-lmnp"><div class="pict">🧩</div><div class="titre">Indépendant · SCI · LMNP</div><div class="desc">3 statuts, un pack sur-mesure</div></div>
           <div class="choix" data-value="bilan"><div class="pict">📊</div><div class="titre">Bilan annuel TPE</div><div class="desc">Comptes annuels & liasse</div></div>
+          <div class="choix" data-value="micro"><div class="pict">👤</div><div class="titre">Micro-entrepreneur</div><div class="desc">Suivi annuel & déclarations</div></div>
           <div class="choix" data-value="facturation"><div class="pict">🧾</div><div class="titre">Facturation Électronique</div><div class="desc">Diagnostic, plateforme & déploiement</div></div>
         </div>
         <div class="devis-actions"><button class="btn-devis btn-devis-next" disabled>Suivant →</button></div>
@@ -926,6 +955,10 @@ function allerEtape(n){
 
 document.querySelectorAll('.devis-step[data-step="1"] .choix').forEach(c=>{
   c.addEventListener('click',()=>{
+    if(c.dataset.value==='indep-sci-lmnp'){
+      window.location.href='independants-sci-lmnp.html#devis';
+      return;
+    }
     document.querySelectorAll('.devis-step[data-step="1"] .choix').forEach(x=>x.classList.remove('selected'));
     c.classList.add('selected');
     etat.pack=c.dataset.value;
