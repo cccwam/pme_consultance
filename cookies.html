@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSW45QS98W"></script>
-<script>
+<!-- Google tag (gtag.js) - chargée uniquement après consentement "Mesure d'audience" via le bandeau cookies (assets/cookies-banner.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSW45QS98W" type="text/plain" data-pmc-categorie="mesure"></script>
+<script type="text/plain" data-pmc-categorie="mesure">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -25,6 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/legal.css">
+<link rel="stylesheet" href="assets/cookies-banner.css">
 </head>
 <body>
 
@@ -209,9 +210,11 @@
     <div class="footer-bottom">
       <div>© 2026 PME CONSULTANCE — Tous droits réservés</div>
       <div><a href="index.html" style="color:rgba(245,241,232,0.55)">www.pmeconsultance.fr</a></div>
+      <div><button type="button" class="pmc-cookies-trigger" data-pmc-cookies="open" style="color:rgba(245,241,232,0.55)">Gérer mes cookies</button></div>
     </div>
   </div>
 </footer>
 
+<script src="assets/cookies-banner.js" defer></script>
 </body>
 </html>
