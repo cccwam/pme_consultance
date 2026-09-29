@@ -1068,7 +1068,7 @@ img{max-width:100%;display:block}
           </div>
           <div class="form-grp">
             <label class="form-lbl" for="telephone">Téléphone *</label>
-            <input class="form-inp" id="telephone" name="telephone" type="tel" placeholder="+33 6 00 00 00 00" required />
+            <input class="form-inp" id="telephone" name="telephone" type="tel" placeholder="+33 6 12 34 56 78" required />
           </div>
           <div class="form-grp">
             <label class="form-lbl" for="email">Email *</label>
@@ -1282,6 +1282,8 @@ document.getElementById('devisForm').addEventListener('submit',function(e){
   if(!document.getElementById('prenom').value||!document.getElementById('email').value){
     alert('Merci de renseigner au minimum votre prénom et votre email.');return;
   }
+  var telCheck=PMCPhone.validate(document.getElementById('telephone'),true);
+  if(!telCheck.ok){return;}
   var briques=Array.prototype.slice.call(document.querySelectorAll('input[name="brique"]:checked')).map(function(c){return c.value;});
   var payload={
     _subject:'Nouvelle demande — Facturation Électronique',
@@ -1290,7 +1292,7 @@ document.getElementById('devisForm').addEventListener('submit',function(e){
     nom:document.getElementById('nom').value,
     societe:document.getElementById('societe').value,
     taille:document.getElementById('taille').value,
-    telephone:document.getElementById('telephone').value,
+    telephone:telCheck.e164,
     email:document.getElementById('email').value,
     briques:briques.length?briques.join(', '):'Non précisé — diagnostic recommandé',
     message:document.getElementById('message').value,
@@ -1328,5 +1330,6 @@ document.querySelectorAll('.offre-right,.chiffre-item,.etape,.pourquoi-item,.yt-
 });
 </script>
 <script src="assets/cookies-banner.js" defer></script>
+<script src="assets/phone-validation.js"></script>
 </body>
 </html>

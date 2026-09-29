@@ -995,7 +995,7 @@ img{max-width:100%;display:block}
         <label class="devis-label">Email *</label>
         <input type="email" class="devis-input" id="email" required />
         <label class="devis-label">Téléphone *</label>
-        <input type="tel" class="devis-input" id="telephone" required />
+        <input type="tel" class="devis-input" id="telephone" placeholder="+33 6 12 34 56 78" required />
         <label class="devis-label">Nom de votre activité (optionnel)</label>
         <input type="text" class="devis-input" id="entreprise" />
         <input type="text" id="hp" aria-hidden="true" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" />
@@ -1275,7 +1275,7 @@ function genererEtape3(){
 document.querySelectorAll('.btn-devis-next').forEach(btn=>{
   btn.addEventListener('click',()=>{
     if(etapeActuelle===4){
-      const champs=['prenom','nom','email','telephone'];
+      const champs=['prenom','nom','email'];
       let ok=true;
       champs.forEach(c=>{
         const inp=document.getElementById(c);
@@ -1283,6 +1283,9 @@ document.querySelectorAll('.btn-devis-next').forEach(btn=>{
         else inp.style.borderColor='';
         etat.contact[c]=inp.value.trim();
       });
+      const tel=PMCPhone.validate(document.getElementById('telephone'),ok);
+      if(!tel.ok){ok=false}
+      else{etat.contact.telephone=tel.e164}
       etat.contact.entreprise=document.getElementById('entreprise').value.trim();
       if(!ok) return;
     }
@@ -1360,5 +1363,6 @@ majProgress();
 </script>
 
 <script src="assets/cookies-banner.js" defer></script>
+<script src="assets/phone-validation.js"></script>
 </body>
 </html>
