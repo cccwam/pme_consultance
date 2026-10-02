@@ -22,6 +22,21 @@
     '596': {min:9, max:9, first:/^[1-9]/, label:'Martinique (+596) : 9 chiffres après l\'indicatif.'},
     '1':   {min:10, max:10, first:/^[2-9]/, label:'USA / Canada (+1) : 10 chiffres après l\'indicatif.'}
   };
+  // Suites artificielles : 6 chiffres qui se suivent (345678, 987654) ou, pour un n° à 9 chiffres,
+  // paires en progression ou identiques après le 1er chiffre (7 03 04 05 06, 6 12 12 12 12).
+  function isSequence(n){
+    for(var i=0;i+6<=n.length;i++){
+      var up=true,down=true;
+      for(var j=i+1;j<i+6;j++){ var a=+n.charAt(j-1),b=+n.charAt(j); if(b!==a+1) up=false; if(b!==a-1) down=false; }
+      if(up||down) return true;
+    }
+    if(n.length===9){
+      var p=[+n.substr(1,2),+n.substr(3,2),+n.substr(5,2),+n.substr(7,2)], k, same=true, inc=true, dec=true;
+      for(k=1;k<4;k++){ if(p[k]!==p[k-1]) same=false; if(p[k]!==p[k-1]+1) inc=false; if(p[k]!==p[k-1]-1) dec=false; }
+      if(same||inc||dec) return true;
+    }
+    return false;
+  }
   function fail(m){return {ok:false,e164:'',message:m||MSG_FORMAT};}
   function check(raw){
     var v=String(raw||'').trim();
@@ -51,6 +66,9 @@
     if(/(\d)\1{5,}/.test(national)||/^(\d)\1+$/.test(national)||/^(0123456|1234567|12345678|123456789)/.test(national)){
       return fail("Ce numéro ne semble pas valide. Merci d'indiquer un numéro réel, joignable pour votre devis.");
     }
+    if(isSequence(national)||(cc==='33'&&national==='612345678')){
+      return fail("Ce numéro ne semble pas valide. Merci d'indiquer un numéro réel, joignable pour votre devis.");
+    }
     return {ok:true,e164:'+'+d,message:''};
   }
   function showError(inp,msg){
@@ -58,7 +76,8 @@
     if(!msg){ if(el) el.parentNode.removeChild(el); inp.style.borderColor=''; inp.removeAttribute('aria-invalid'); return; }
     if(!el){
       el=document.createElement('div'); el.id=id; el.setAttribute('role','alert');
-      el.style.cssText='color:#c44;font-size:.8rem;line-height:1.4;margin:-8px 0 14px';
+      var inGroup=inp.parentNode&&/form-grp/.test(inp.parentNode.className);
+      el.style.cssText='color:#c44;font-size:.8rem;line-height:1.4;'+(inGroup?'margin:0':'margin:-8px 0 14px');
       inp.parentNode.insertBefore(el,inp.nextSibling);
     }
     el.textContent=msg; inp.style.borderColor='#c44'; inp.setAttribute('aria-invalid','true');

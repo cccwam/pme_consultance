@@ -876,11 +876,11 @@ img{max-width:100%;display:block}
         <div class="form-grid">
           <div class="form-grp">
             <label class="form-lbl" for="prenom">Prénom *</label>
-            <input class="form-inp" id="prenom" name="prenom" type="text" placeholder="Jean-Paul" required />
+            <input class="form-inp" id="prenom" name="prenom" type="text" placeholder="Votre prénom" required />
           </div>
           <div class="form-grp">
             <label class="form-lbl" for="nom">Nom *</label>
-            <input class="form-inp" id="nom" name="nom" type="text" placeholder="Dupont" required />
+            <input class="form-inp" id="nom" name="nom" type="text" placeholder="Votre nom" required />
           </div>
           <div class="form-grp">
             <label class="form-lbl" for="entreprise">Activité / société (optionnel)</label>
@@ -892,7 +892,7 @@ img{max-width:100%;display:block}
           </div>
           <div class="form-grp full">
             <label class="form-lbl" for="email">Email *</label>
-            <input class="form-inp" id="email" name="email" type="email" placeholder="jpdupont@masociete.fr" required />
+            <input class="form-inp" id="email" name="email" type="email" placeholder="Votre adresse email" required />
           </div>
           <div class="form-grp full">
             <label class="form-lbl" for="message">Précisions sur votre situation (optionnel)</label>
@@ -1107,11 +1107,9 @@ var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyIWlRIISUGHsG9zV
 document.getElementById('devisForm').addEventListener('submit',function(e){
   e.preventDefault();
   var form=this;
-  if(!document.getElementById('prenom').value||!document.getElementById('email').value){
-    alert('Merci de renseigner au minimum votre prénom et votre email.');return;
-  }
-  var telCheck=PMCPhone.validate(document.getElementById('telephone'),true);
-  if(!telCheck.ok){return;}
+  var lead=PMCLead.validateForm(form); // prénom, nom, email, téléphone, société (assets/lead-validation.js)
+  if(!lead.ok){return;}
+  var telCheck={ok:true,e164:lead.values.telephone};
   var p=PACKS_SPEC[packActuel];
   var optionImmat=(packActuel==='lmnp'&&document.getElementById('optionLmnp').checked);
   var totalHt=p.base+(optionImmat?200:0);
@@ -1169,5 +1167,6 @@ document.querySelectorAll('.offre-right,.etape,.pourquoi-item').forEach(function
 </script>
 <script src="assets/cookies-banner.js" defer></script>
 <script src="assets/phone-validation.js"></script>
+<script src="assets/lead-validation.js"></script>
 </body>
 </html>

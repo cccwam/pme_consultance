@@ -1275,19 +1275,11 @@ function genererEtape3(){
 document.querySelectorAll('.btn-devis-next').forEach(btn=>{
   btn.addEventListener('click',()=>{
     if(etapeActuelle===4){
-      const champs=['prenom','nom','email'];
-      let ok=true;
-      champs.forEach(c=>{
-        const inp=document.getElementById(c);
-        if(!inp.value.trim()){inp.style.borderColor='#c44';ok=false}
-        else inp.style.borderColor='';
-        etat.contact[c]=inp.value.trim();
-      });
-      const tel=PMCPhone.validate(document.getElementById('telephone'),ok);
-      if(!tel.ok){ok=false}
-      else{etat.contact.telephone=tel.e164}
-      etat.contact.entreprise=document.getElementById('entreprise').value.trim();
-      if(!ok) return;
+      // Contrôle des coordonnées : prénom, nom, email, téléphone, activité (assets/lead-validation.js)
+      const lead=PMCLead.validateForm(document.querySelector('.devis-step[data-step="4"]'));
+      const v=lead.values;
+      etat.contact={prenom:v.prenom,nom:v.nom,email:v.email,telephone:v.telephone,entreprise:v.entreprise||''};
+      if(!lead.ok) return;
     }
     if(etapeActuelle<5) allerEtape(etapeActuelle+1);
   });
@@ -1364,5 +1356,6 @@ majProgress();
 
 <script src="assets/cookies-banner.js" defer></script>
 <script src="assets/phone-validation.js"></script>
+<script src="assets/lead-validation.js"></script>
 </body>
 </html>
