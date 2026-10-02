@@ -1,5 +1,6 @@
 /* Validation du numéro de téléphone — formulaires de demande de devis PME CONSULTANCE
-   Exige un indicatif pays (+33, 0033…) suivi d'un nombre de chiffres cohérent.
+   Exige un indicatif pays (+33, 0033…) suivi d'un nombre de chiffres cohérent ;
+   un numéro français à 10 chiffres saisi sans indicatif (06 12 34 56 78) est converti en +33.
    API : PMCPhone.check(valeur) -> {ok, e164, message} ; PMCPhone.attach(input) */
 (function(){
   var MSG_FORMAT = "Numéro invalide. Indiquez l'indicatif pays suivi de votre numéro, ex. : +33 6 12 34 56 78.";
@@ -43,6 +44,7 @@
     if(!v) return fail('Merci de renseigner votre numéro de téléphone.');
     if(/[^\d\s+().\-]/.test(v)) return fail(MSG_FORMAT);
     var d=v.replace(/[^\d+]/g,'');
+    if(/^0[1-9]\d{8}$/.test(d)) d='+33'+d.slice(1); // numéro français à 10 chiffres saisi sans indicatif (06…) -> +33 6…
     if(d.indexOf('00')===0) d='+'+d.slice(2);
     if(d.charAt(0)!=='+' || d.lastIndexOf('+')>0){
       return fail("Le numéro doit commencer par l'indicatif du pays (ex. +33 pour la France), sans le 0 initial : +33 6 12 34 56 78.");
