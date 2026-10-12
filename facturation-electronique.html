@@ -508,6 +508,40 @@ img{max-width:100%;display:block}
 .footer-legal{display:flex;gap:22px;flex-wrap:wrap}
 .footer .signature{font-style:italic;color:var(--or);font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.04em}
 
+
+/* BRIEF FEC (newsletter) */
+.brief{background:var(--ivoire-fonce);border-top:1px solid rgba(184,152,90,0.15)}
+.brief-card{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;background:var(--blanc);border:1px solid rgba(184,152,90,0.2);box-shadow:var(--ombre)}
+.brief-gauche{background:var(--marine);padding:56px 50px;position:relative;overflow:hidden}
+.brief-gauche::after{content:'';position:absolute;bottom:-160px;right:-160px;width:360px;height:360px;border-radius:50%;border:1px solid rgba(184,152,90,0.12)}
+.brief-gauche .surtitre{font-size:.74rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:18px}
+.brief-gauche h2{color:var(--ivoire);margin-bottom:18px}
+.brief-gauche h2 em{color:var(--or);font-style:italic;font-weight:300}
+.brief-gauche p{color:rgba(245,241,232,0.66);font-size:.97rem;line-height:1.8;margin-bottom:26px}
+.brief-trio{list-style:none;display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.brief-trio li{display:flex;gap:14px;align-items:baseline;font-size:.9rem;color:rgba(245,241,232,0.8)}
+.brief-trio b{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:1.25rem;color:var(--or);min-width:96px}
+.brief-droite{padding:56px 50px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.brief-rdv{display:flex;align-items:baseline;gap:16px;padding-bottom:22px;border-bottom:1px solid rgba(184,152,90,0.22)}
+.brief-rdv .jour{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.6rem;color:var(--or);line-height:1}
+.brief-rdv .det{font-size:.86rem;color:var(--gris-texte);line-height:1.5}
+.brief-yt{font-size:.84rem;color:var(--or-fonce);display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--or);padding-bottom:3px;align-self:flex-start}
+.nl-form{display:flex;flex-direction:column;gap:9px}
+.nl-lbl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gris-texte);font-weight:500}
+.nl-champ{display:flex;border:1px solid rgba(26,26,26,0.16);background:var(--ivoire-clair);transition:border-color .3s}
+.nl-champ:focus-within{border-color:var(--or);background:var(--blanc)}
+.nl-champ input{flex:1;min-width:0;border:none;background:transparent;padding:17px 18px;font-family:'Inter',sans-serif;font-size:.95rem;color:var(--noir)}
+.nl-champ input:focus{outline:none}
+.nl-champ button{display:inline-flex;align-items:center;gap:12px;background:var(--marine);color:var(--ivoire);border:none;padding:0 26px;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .35s var(--transition)}
+.nl-champ button:hover{background:var(--or)}
+.nl-legal{font-size:.76rem;color:var(--gris-clair);line-height:1.6}
+.nl-legal a{text-decoration:underline;text-underline-offset:2px}
+.nl-msg{font-size:.86rem;line-height:1.55;color:var(--or-fonce)}
+.nl-msg.erreur{color:#9B3B2E}
+.hp{position:absolute;left:-9999px}
+@media(max-width:1020px){.brief-card{grid-template-columns:1fr}.brief-gauche,.brief-droite{padding:44px 32px}}
+@media(max-width:560px){.brief-gauche,.brief-droite{padding:36px 22px}.nl-champ{flex-direction:column}.nl-champ button{padding:16px 20px;justify-content:center}.brief-trio li{flex-direction:column;gap:2px}}
+
 /* TOAST */
 .toast{position:fixed;bottom:36px;right:36px;background:var(--marine);color:var(--ivoire);padding:20px 28px;border:1px solid var(--or);font-size:.88rem;z-index:9999;transform:translateY(120px);opacity:0;transition:all .5s var(--transition);max-width:340px;box-shadow:0 20px 40px rgba(0,0,0,0.3)}
 .toast.show{transform:translateY(0);opacity:1}
@@ -555,6 +589,11 @@ img{max-width:100%;display:block}
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 :focus-visible{outline:2px solid var(--or);outline-offset:3px}
+</style>
+<style>
+/* Menu : compaction entre 981 et 1440 px pour garder le logo intact (ajout du lien Le Journal) */
+.header .logo{flex-shrink:0}
+@media (min-width:981px) and (max-width:1440px){.header .nav{gap:clamp(12px,1.3vw,22px)}.header .nav a{font-size:.8rem}.header .btn-header{padding:12px 16px;letter-spacing:.06em}}
 </style>
 <link rel="stylesheet" href="assets/cookies-banner.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="assets/cookies-banner.css"></noscript>
@@ -632,6 +671,7 @@ img{max-width:100%;display:block}
         <a href="#offres">Notre accompagnement</a>
         <a href="#youtube" class="youtube-link">▶ YouTube</a>
         <a href="#faq">FAQ</a>
+        <a href="blog.html">Le Journal</a>
         <a href="#devis" class="btn-header">Devis en 24h</a>
       </nav>
       <button class="menu-mobile" id="menuToggle" aria-label="Menu">☰</button>
@@ -1028,7 +1068,39 @@ img{max-width:100%;display:block}
         <div class="yt-info"><h4>Les sanctions si vous ne respectez pas la facturation électronique</h4></div>
       </a></div>
     </div>
-    <div class="yt-more"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">Voir tous les épisodes sur la chaîne →</a></div>
+    <div class="yt-more"><a href="https://www.youtube.com/@FEConsultance/videos" target="_blank" rel="noopener">Voir tous les épisodes sur la chaîne →</a><span style="color:rgba(245,241,232,0.45);margin:0 14px">ou</span><a href="#brief">Recevoir Le Brief FEC chaque mardi</a></div>
+  </div>
+</section>
+
+<!-- ══ LE BRIEF FEC (newsletter) ══ -->
+<section class="section brief" id="brief">
+  <div class="container">
+    <div class="brief-card">
+      <div class="brief-gauche">
+        <span class="surtitre">La newsletter de la réforme</span>
+        <h2>Le Brief <em>FEC</em></h2>
+        <p>Chaque mardi matin, l’essentiel de la réforme de la facturation électronique en moins de 5 minutes. Le prolongement écrit de notre chaîne @FEConsultance.</p>
+        <ul class="brief-trio">
+          <li><b>Une date</b>le calendrier de la réforme, pas à pas</li>
+          <li><b>Une règle</b>expliquée simplement, avec ses exceptions</li>
+          <li><b>Une décision</b>ce que vous pouvez préparer cette semaine</li>
+        </ul>
+      </div>
+      <div class="brief-droite">
+        <div class="brief-rdv"><span class="jour">Mardi</span><span class="det">Une édition chaque mardi matin,<br/>gratuite et sans engagement.</span></div>
+        <form class="nl-form" id="form-brief" data-liste="brief-facture-electronique" novalidate>
+            <label class="nl-lbl" for="form-brief-email">Votre adresse e-mail</label>
+            <div class="nl-champ">
+              <input type="email" id="form-brief-email" name="EMAIL" placeholder="prenom@entreprise.fr" autocomplete="email" required />
+              <button type="submit">Recevoir le Brief<span class="arrow">→</span></button>
+            </div>
+            <input type="text" class="hp" name="email_address_check" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <p class="nl-msg" role="status" aria-live="polite"></p>
+            <p class="nl-legal">Vous rejoignez la liste « Le Brief Facture Électronique ». Gratuit, désinscription en un clic. Votre adresse n’est jamais cédée. <a href="politique-confidentialite.html">Politique de confidentialité</a></p>
+          </form>
+        <a class="brief-yt" href="https://www.youtube.com/@FEConsultance" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg>Les épisodes sur @FEConsultance</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1183,6 +1255,7 @@ img{max-width:100%;display:block}
         <h5>Le cabinet</h5>
         <ul>
           <li><a href="manifeste.html">Notre vision</a></li>
+          <li><a href="blog.html">Le Journal</a></li>
           <li><a href="index.html">Offres TPE / Entrepreneurs</a></li>
           <li><a href="pme-eti.html">Offre PME / ETI</a></li>
           <li><a href="independants-sci-lmnp.html">Indépendants / SCI / LMNP</a></li>
@@ -1325,6 +1398,51 @@ document.querySelectorAll('.offre-right,.chiffre-item,.etape,.pourquoi-item,.yt-
   el.style.opacity='0';el.style.transform='translateY(22px)';
   el.style.transition='opacity 0.6s ease, transform 0.6s ease';
   obs.observe(el);
+});
+</script>
+<script>
+/* Inscription aux newsletters (Brevo).
+   Renseigner l'URL du formulaire Brevo de chaque liste (Brevo › Contacts › Formulaires › Partager › URL du formulaire, se termine par /serve/…).
+   Tant qu'une URL est vide, le formulaire fonctionne en mode aperçu (aucun envoi). */
+const PMC_BREVO = {
+  'lettre-pme-consultance': '',        // liste « La Lettre PME CONSULTANCE » : à créer dans Brevo, puis coller ici l'URL de son formulaire
+  'brief-facture-electronique': 'https://b5719ed0.sibforms.com/serve/MUIFAB3T3ZHQGubEL-9o-ilKEUgFTBFttMZK8DyAgN7SVPZGIvMQcBTESUfCfI8XNKbRBhioUbNLtagKYiCi6HUxE-l-deN5LYGjBozfLkjGv_yKTOGp1ISEBvQm4Tr4oPRg6AiLsmr7TkP-p804fOoI5K2Y2ohOdFZPJs_CgDHw74eEvWy9Xr9VWwNM9QaWQtegWuO8GvpnbPmfSA=='   // liste « Le Brief Facture Électronique » (formulaire Brevo de juillet)
+};
+const PMC_LISTES = {
+  'lettre-pme-consultance': 'La Lettre PME CONSULTANCE',
+  'brief-facture-electronique': 'Le Brief Facture Électronique'
+};
+document.querySelectorAll('.nl-form').forEach(f => {
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    const champ = f.querySelector('input[type=email]'), msg = f.querySelector('.nl-msg');
+    const hp = f.querySelector('.hp');
+    const email = champ.value.trim();
+    msg.classList.remove('erreur');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+      msg.textContent = 'Cette adresse e-mail semble incomplète. Vérifiez-la, puis validez à nouveau.';
+      msg.classList.add('erreur'); champ.focus(); return;
+    }
+    if (hp && hp.value) return;
+    const liste = f.dataset.liste, url = PMC_BREVO[liste];
+    if (!url) {
+      const sujet = encodeURIComponent('Inscription à ' + PMC_LISTES[liste]);
+      const corps = encodeURIComponent('Bonjour,\n\nJe souhaite recevoir ' + PMC_LISTES[liste] + ' à l’adresse : ' + email + '\n\nMerci.');
+      msg.innerHTML = 'Les inscriptions en ligne ouvrent très prochainement. Votre messagerie va s’ouvrir avec un e-mail prêt à envoyer à <a href="mailto:contact@pmeconsultance.com?subject=' + sujet + '&body=' + corps + '">contact@pmeconsultance.com</a> : il suffit de l’envoyer pour être inscrit.';
+      window.location.href = 'mailto:contact@pmeconsultance.com?subject=' + sujet + '&body=' + corps;
+      return;
+    }
+    const d = new FormData(); d.append('EMAIL', email); d.append('email_address_check', ''); d.append('locale', 'fr');
+    try {
+      await fetch(url, { method: 'POST', body: d, mode: 'no-cors' });
+      msg.textContent = 'Merci. Un e-mail de confirmation vient de vous être envoyé à ' + email + ' : cliquez sur le lien qu’il contient pour valider votre inscription.';
+      f.classList.add('ok'); champ.value = '';
+      if (typeof gtag === 'function') gtag('event', 'inscription_newsletter', { liste: liste });
+    } catch (err) {
+      msg.textContent = 'L’inscription n’a pas abouti. Réessayez dans un instant ou écrivez-nous à administration@pmeconsultance.fr.';
+      msg.classList.add('erreur');
+    }
+  });
 });
 </script>
 <script src="assets/cookies-banner.js" defer></script>

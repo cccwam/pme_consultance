@@ -392,6 +392,11 @@ img{max-width:100%;display:block}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
 :focus-visible{outline:2px solid var(--or);outline-offset:3px}
 </style>
+<style>
+/* Menu : compaction entre 981 et 1440 px pour garder le logo intact (ajout du lien Le Journal) */
+.header .logo{flex-shrink:0}
+@media (min-width:981px) and (max-width:1440px){.header .nav{gap:clamp(12px,1.3vw,22px)}.header .nav a{font-size:.8rem}.header .btn-header{padding:12px 16px;letter-spacing:.06em}}
+</style>
 <link rel="stylesheet" href="assets/cookies-banner.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="assets/cookies-banner.css"></noscript>
 </head>
@@ -410,6 +415,7 @@ img{max-width:100%;display:block}
         <a href="index.html#processus">Comment ça marche</a>
         <a href="index.html#faq">FAQ</a>
         <a href="pme-eti.html">Offre PME/ETI</a>
+        <a href="blog.html">Le Journal</a>
         <a href="index.html#devis" class="btn-header">Devis en 60s</a>
       </nav>
       <button class="menu-mobile" id="menuToggle" aria-label="Menu">☰</button>
@@ -531,6 +537,7 @@ img{max-width:100%;display:block}
         <h5>Le cabinet</h5>
         <ul>
           <li><a href="manifeste.html">Notre vision</a></li>
+          <li><a href="blog.html">Le Journal</a></li>
           <li><a href="index.html#pourquoi">Notre méthode</a></li>
           <li><a href="index.html#processus">Comment ça marche</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
