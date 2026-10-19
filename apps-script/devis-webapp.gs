@@ -23,7 +23,8 @@ const COLUMNS = [
   'source', 'offre', 'volume', 'options', 'designation_prestation',
   'option_immatriculation_lmnp', 'tarif_estime', 'total_ht', 'tva', 'total_ttc',
   'prenom', 'nom', 'email', 'telephone', 'entreprise', 'societe', 'poste',
-  'chiffre_affaires', 'taille', 'missions', 'briques', 'message'
+  'chiffre_affaires', 'taille', 'missions', 'briques', 'message',
+  'provenance' // ajoutée le 19/10/2026 : ajouter l'en-tête « Provenance » en dernière colonne de la feuille Leads
 ];
 
 const SOURCES = [
@@ -40,7 +41,7 @@ const LABELS = {
   prenom: 'Prénom', nom: 'Nom', email: 'Email', telephone: 'Téléphone',
   entreprise: 'Entreprise', societe: 'Société', poste: 'Poste',
   chiffre_affaires: "Chiffre d'affaires", taille: 'Taille', missions: 'Missions',
-  briques: 'Briques', message: 'Message'
+  briques: 'Briques', message: 'Message', provenance: 'Provenance'
 };
 
 // Note : les Web Apps Apps Script ne permettent pas de contrôler le code HTTP

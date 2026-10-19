@@ -1263,7 +1263,8 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
     telephone:telCheck.e164,
     email:document.getElementById('email').value,
     missions:missions.length?missions.join(', '):'Non précisé',
-    message:document.getElementById('message').value,
+    message:(window.PMCLeadSource?PMCLeadSource.completerMessage(document.getElementById('message').value):document.getElementById('message').value),
+    provenance:(window.PMCLeadSource?PMCLeadSource.decrire():''),
     website:document.getElementById('hp').value
   };
   fetch(APPS_SCRIPT_URL,{
@@ -1271,6 +1272,7 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
     headers:{'Content-Type':'text/plain;charset=utf-8'},
     body:JSON.stringify(payload)
   }).catch(function(){/* affichage du toast quoi qu'il arrive, fallback mailto disponible dans le CTA final */});
+  if(window.PMCLeadSource){PMCLeadSource.suivre('contact_pme_eti');}
   var toast=document.getElementById('toast');
   toast.classList.add('show');
   setTimeout(function(){toast.classList.remove('show');},5000);
@@ -1298,6 +1300,7 @@ document.querySelectorAll('.offre-right,.diff-item,.etape,.pourquoi-item').forEa
 });
 </script>
 <script src="assets/cookies-banner.js" defer></script>
+<script src="assets/lead-source.js" defer></script>
 <script src="assets/phone-validation.js"></script>
 <script src="assets/lead-validation.js"></script>
 </body>

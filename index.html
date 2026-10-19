@@ -1335,8 +1335,11 @@ function envoyerDevis(pack,totalFinal,optionsChoisies){
     email:etat.contact.email,
     telephone:etat.contact.telephone,
     entreprise:etat.contact.entreprise,
+    message:(window.PMCLeadSource?PMCLeadSource.completerMessage(''):''),
+    provenance:(window.PMCLeadSource?PMCLeadSource.decrire():''),
     website:document.getElementById('hp').value
   };
+  if(window.PMCLeadSource){PMCLeadSource.suivre('devis_accueil',totalHt);}
   fetch(APPS_SCRIPT_URL,{
     method:'POST',
     headers:{'Content-Type':'text/plain;charset=utf-8'},
@@ -1362,6 +1365,7 @@ majProgress();
 </script>
 
 <script src="assets/cookies-banner.js" defer></script>
+<script src="assets/lead-source.js" defer></script>
 <script src="assets/phone-validation.js"></script>
 <script src="assets/lead-validation.js"></script>
 </body>
