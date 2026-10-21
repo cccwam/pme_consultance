@@ -404,6 +404,11 @@ img{max-width:100%;display:block}
 /* ===== Le Brief F E C, Ressources, Journal ===== */
 .bf-form{max-width:620px;margin:44px auto 0;background:var(--ivoire-clair);border:1px solid rgba(184,152,90,0.22);box-shadow:var(--ombre);padding:10px}
 .bf-form iframe{width:100%;min-height:560px;border:0;display:block;background:transparent}
+.bf-telecharger{margin:40px auto 0;text-align:center}
+.bf-telecharger .alt{font-size:.82rem;color:var(--gris-clair);padding-top:12px}
+.bf-form-intro{max-width:620px;margin:52px auto 0;text-align:center;color:var(--gris-texte);font-size:.97rem}
+.bf-form-intro + .bf-form{margin-top:20px}
+@media (max-width:520px){.bf-telecharger .btn-primaire{padding:16px 22px;font-size:.82rem}}
 .bf-form .alt{font-size:.82rem;color:var(--gris-clair);text-align:center;padding:10px 0 6px}
 .bf-trois{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1040px;margin:0 auto}
 .bf-carte{background:var(--ivoire-clair);border:1px solid rgba(184,152,90,0.18);padding:40px 34px}
@@ -464,8 +469,11 @@ img{max-width:100%;display:block}
   <span class="mf-eyebrow">Cadeau n°1 · Le Brief F E C</span>
   <h1>Prêt pour 2027 ?<br/><em>L'auto-diagnostic en 12 questions</em></h1>
   <p class="lede">Dix minutes pour savoir où en est votre entreprise : réception, émission, e-reporting, organisation. Un score sur 100 et vos trois priorités, chacune reliée à l'édition du Brief qui la traite pas à pas.</p>
+  <div class="bf-telecharger"><a class="btn-primaire" id="pdfAutodiag" href="../assets/ressources/brief-fec-cadeau-01-auto-diagnostic-2027.pdf" target="_blank" rel="noopener">Télécharger le PDF <span class="arrow">→</span></a>
+  <p class="alt">Offert, sans inscription. Trois pages à imprimer.</p></div>
+  <p class="bf-form-intro">Et chaque mardi, recevez Le Brief F E C : une date, une règle, une décision à prendre dans la semaine, et un nouvel outil offert.</p>
   <div class="bf-form"><iframe src="https://b5719ed0.sibforms.com/serve/MUIFAB3T3ZHQGubEL-9o-ilKEUgFTBFttMZK8DyAgN7SVPZGIvMQcBTESUfCfI8XNKbRBhioUbNLtagKYiCi6HUxE-l-deN5LYGjBozfLkjGv_yKTOGp1ISEBvQm4Tr4oPRg6AiLsmr7TkP-p804fOoI5K2Y2ohOdFZPJs_CgDHw74eEvWy9Xr9VWwNM9QaWQtegWuO8GvpnbPmfSA==" title="Recevoir l'auto-diagnostic" loading="lazy"></iframe>
-  <p class="alt">Le PDF vous est envoyé par e-mail après confirmation. <a href="https://b5719ed0.sibforms.com/serve/MUIFAB3T3ZHQGubEL-9o-ilKEUgFTBFttMZK8DyAgN7SVPZGIvMQcBTESUfCfI8XNKbRBhioUbNLtagKYiCi6HUxE-l-deN5LYGjBozfLkjGv_yKTOGp1ISEBvQm4Tr4oPRg6AiLsmr7TkP-p804fOoI5K2Y2ohOdFZPJs_CgDHw74eEvWy9Xr9VWwNM9QaWQtegWuO8GvpnbPmfSA==" target="_blank" rel="noopener" style="border-bottom:1px solid var(--or)">Ouvrir le formulaire dans un nouvel onglet</a>.</p></div>
+  <p class="alt">Inscription confirmée par e-mail, l'auto-diagnostic vous est aussi envoyé. <a href="https://b5719ed0.sibforms.com/serve/MUIFAB3T3ZHQGubEL-9o-ilKEUgFTBFttMZK8DyAgN7SVPZGIvMQcBTESUfCfI8XNKbRBhioUbNLtagKYiCi6HUxE-l-deN5LYGjBozfLkjGv_yKTOGp1ISEBvQm4Tr4oPRg6AiLsmr7TkP-p804fOoI5K2Y2ohOdFZPJs_CgDHw74eEvWy9Xr9VWwNM9QaWQtegWuO8GvpnbPmfSA==" target="_blank" rel="noopener" style="border-bottom:1px solid var(--or)">Ouvrir le formulaire dans un nouvel onglet</a>.</p></div>
 </div></div></section>
 <section style="padding:20px 0 110px"><div class="container"><div class="bf-trois">
   <div class="bf-carte"><div class="num">12</div><h3>questions</h3><p>Recevoir, émettre, déclarer, s'organiser : les quatre blocs de la réforme.</p></div>
@@ -552,6 +560,10 @@ window.addEventListener('scroll',()=>{
   if(window.scrollY>30) h.style.boxShadow='0 2px 20px rgba(26,26,26,0.06)';
   else h.style.boxShadow='none';
 });
+</script>
+<script>
+/* Clic sur le PDF : événement GA4 file_download, seulement si la balise a été autorisée */
+document.getElementById('pdfAutodiag').addEventListener('click',function(){try{if(typeof window.gtag==='function'){window.gtag('event','file_download',{file_name:'auto-diagnostic-pret-pour-2027.pdf',link_url:this.href,link_text:'Cadeau n°1'});}}catch(e){}});
 </script>
 <script src="../assets/cookies-banner.js" defer></script>
 </body>
