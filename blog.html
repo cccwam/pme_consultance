@@ -397,6 +397,15 @@ img{max-width:100%;display:block}
 .blog-une-texte{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;gap:18px}
 .blog-une-texte p{font-size:.95rem;color:var(--gris-texte);line-height:1.8}
 .blog-une-texte a{font-size:.84rem;color:var(--or-fonce);border-bottom:1px solid var(--or);padding-bottom:2px;align-self:flex-start}
+.blog-une-texte .lien{font-size:.84rem;color:var(--or-fonce);border-bottom:1px solid var(--or);padding-bottom:2px;align-self:flex-start}
+a.blog-une{transition:box-shadow .35s var(--transition)}a.blog-une:hover{box-shadow:var(--ombre-hover)}
+.blog-cartes{display:grid;grid-template-columns:1fr;gap:20px;margin:-30px 0 56px}
+.blog-carte{display:block;border:1px solid rgba(184,152,90,0.3);background:var(--blanc);padding:30px 34px;transition:all .35s var(--transition)}
+.blog-carte:hover{border-color:var(--or);box-shadow:var(--ombre-hover)}
+.blog-carte .rub{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or-fonce);font-weight:600}
+.blog-carte h3{font-size:clamp(1.4rem,2.4vw,1.8rem);margin:10px 0 8px}.blog-carte h3 em{color:var(--or);font-style:italic;font-weight:300}
+.blog-carte p{font-size:.92rem;color:var(--gris-texte);max-width:760px}
+.blog-carte .lire{display:inline-block;margin-top:12px;font-size:.82rem;color:var(--or-fonce)}
 .blog-rubs-titre{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gris-clair);font-weight:500;margin-bottom:20px;text-align:center}
 .blog-rubs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:860px;margin:0 auto}
 .blog-rubs span{padding:14px 20px;display:flex;justify-content:space-between;align-items:baseline;border:1px solid rgba(184,152,90,0.3);background:var(--blanc);font-size:.86rem;color:var(--anthracite)}
@@ -508,23 +517,24 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="section-titre">
       <span class="surtitre">Le blog du cabinet</span>
-      <h2>Articles <em>à venir</em></h2>
+      <h2>Les derniers <em>articles</em></h2>
       <p>Un nouvel article chaque semaine, rédigé par le cabinet, sur les décisions qui comptent pour un dirigeant.</p>
     </div>
-    <div class="blog-une">
+    <a class="blog-une" href="blog/dividendes-2027-pfu-dispense-30-novembre.html">
       <div class="blog-une-visuel">
-        <span class="rub">Premier article</span>
-        <h3>Bientôt <em>en ligne.</em></h3>
+        <span class="rub">Fiscalité du dirigeant · 10 novembre 2026</span>
+        <h3>Dividendes 2027 : 31,4 %, <em>le 30 novembre et le juste dosage.</em></h3>
       </div>
       <div class="blog-une-texte">
-        <p>Le blog ouvre prochainement. Les abonnés de La Lettre PME CONSULTANCE seront les premiers prévenus de chaque parution.</p>
-        <a href="#lettre">Être prévenu de la parution</a>
+        <p>Flat tax à 31,4 %, dispense de l'acompte de 12,8 % à demander avant le 30 novembre, flat tax ou barème, salaire ou dividendes : les décisions de fin d'année, chiffrées.</p>
+        <span class="lien">Lire l'article</span>
       </div>
-    </div>
+    </a>
+    
     <p class="blog-rubs-titre">Les rubriques du blog</p>
     <div class="blog-rubs">
       <span>Créer &amp; entreprendre<i>à venir</i></span>
-      <span>Fiscalité du dirigeant<i>à venir</i></span>
+      <span>Fiscalité du dirigeant<i>1 article</i></span>
       <span>Piloter sa PME<i>à venir</i></span>
       <span>Social &amp; RH<i>à venir</i></span>
       <span>IA &amp; outils<i>à venir</i></span>
